@@ -13,12 +13,14 @@ for service integration.
 
 Out extraction service can be hosted on your own infrastructure. We provide two main deployment options
  - for smaller scale and testing solution can be effortlessly deployed using our prepared docker-compose configurations.
- - for production purposes, where horizontal scaling is "a must", we release and maintain helm chart package
+ - for production purposes, where horizontal scaling is "a must", we release and maintain helm chart package.
 
 # API integration
 
 Both Cloud SaaS and On-premise solution define the exact same APIs. For integration
-we offer gRPC and REST APIs you can use to communicate with the service.
+we offer gRPC and REST APIs you can use to communicate with the service. To reduce integration complexity we also
+release and maintain code SDK that should make integration to your programming language of choice as simple
+as adding one more package dependency. For more information please go follow [coding libraries section](coding_libraries/README.md).
 
 ## gRPC
 
@@ -39,7 +41,7 @@ There you can see detailed documentation on the available methods service define
 
 ## REST
 
-REST is argubly, still, most popular choice for bulding backend services APIs. Therefore, our ID extraction service comes with REST as well as gRPC API.
+REST is argubly, still, the most popular choice for bulding backend services APIs. Therefore, our ID extraction service comes with REST as well as gRPC API.
 
 API documentation is maintained and shipped using swagger. You can browse the documentation [here](todo) as it is hosted using Swagger UI.
 
