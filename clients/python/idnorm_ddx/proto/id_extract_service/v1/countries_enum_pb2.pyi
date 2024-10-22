@@ -1,0 +1,272 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from typing import ClassVar as _ClassVar
+
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class Country(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    COUNTRY_UNKNOWN: _ClassVar[Country]
+    COUNTRY_BRUNEI: _ClassVar[Country]
+    COUNTRY_CHILE: _ClassVar[Country]
+    COUNTRY_MAURITIUS: _ClassVar[Country]
+    COUNTRY_PALESTINE: _ClassVar[Country]
+    COUNTRY_PHILIPPINES: _ClassVar[Country]
+    COUNTRY_VIETNAM: _ClassVar[Country]
+    COUNTRY_ALGERIA: _ClassVar[Country]
+    COUNTRY_CAYMAN_ISLANDS: _ClassVar[Country]
+    COUNTRY_NETHERLANDS: _ClassVar[Country]
+    COUNTRY_POLAND: _ClassVar[Country]
+    COUNTRY_SAINT_LUCIA: _ClassVar[Country]
+    COUNTRY_TANZANIA: _ClassVar[Country]
+    COUNTRY_BULGARIA: _ClassVar[Country]
+    COUNTRY_UKRAINE: _ClassVar[Country]
+    COUNTRY_GERMANY: _ClassVar[Country]
+    COUNTRY_MOROCCO: _ClassVar[Country]
+    COUNTRY_NICARAGUA: _ClassVar[Country]
+    COUNTRY_ESTONIA: _ClassVar[Country]
+    COUNTRY_CUBA: _ClassVar[Country]
+    COUNTRY_EGYPT: _ClassVar[Country]
+    COUNTRY_JORDAN: _ClassVar[Country]
+    COUNTRY_MALTA: _ClassVar[Country]
+    COUNTRY_NORTH_MACEDONIA: _ClassVar[Country]
+    COUNTRY_PANAMA: _ClassVar[Country]
+    COUNTRY_ARMENIA: _ClassVar[Country]
+    COUNTRY_GUATEMALA: _ClassVar[Country]
+    COUNTRY_HUNGARY: _ClassVar[Country]
+    COUNTRY_INDONESIA: _ClassVar[Country]
+    COUNTRY_IRAQ: _ClassVar[Country]
+    COUNTRY_NORWAY: _ClassVar[Country]
+    COUNTRY_PAKISTAN: _ClassVar[Country]
+    COUNTRY_UK: _ClassVar[Country]
+    COUNTRY_BAHAMAS: _ClassVar[Country]
+    COUNTRY_NEPAL: _ClassVar[Country]
+    COUNTRY_OMAN: _ClassVar[Country]
+    COUNTRY_THAILAND: _ClassVar[Country]
+    COUNTRY_AFGHANISTAN: _ClassVar[Country]
+    COUNTRY_SERBIA: _ClassVar[Country]
+    COUNTRY_SOUTH_KOREA: _ClassVar[Country]
+    COUNTRY_DOMINICAN_REPUBLIC: _ClassVar[Country]
+    COUNTRY_BELARUS: _ClassVar[Country]
+    COUNTRY_AZERBAIJAN: _ClassVar[Country]
+    COUNTRY_BERMUDA: _ClassVar[Country]
+    COUNTRY_BOSNIA_AND_HERZEGOVINA: _ClassVar[Country]
+    COUNTRY_CANADA: _ClassVar[Country]
+    COUNTRY_COLOMBIA: _ClassVar[Country]
+    COUNTRY_CZECHIA: _ClassVar[Country]
+    COUNTRY_DEMOCRATIC_REPUBLIC_OF_THE_CONGO: _ClassVar[Country]
+    COUNTRY_DENMARK: _ClassVar[Country]
+    COUNTRY_BELGIUM: _ClassVar[Country]
+    COUNTRY_LUXEMBOURG: _ClassVar[Country]
+    COUNTRY_TAIWAN: _ClassVar[Country]
+    COUNTRY_HONDURAS: _ClassVar[Country]
+    COUNTRY_COSTA_RICA: _ClassVar[Country]
+    COUNTRY_LATVIA: _ClassVar[Country]
+    COUNTRY_LITHUANIA: _ClassVar[Country]
+    COUNTRY_PUERTO_RICO: _ClassVar[Country]
+    COUNTRY_SAUDI_ARABIA: _ClassVar[Country]
+    COUNTRY_SCHENGEN_AREA: _ClassVar[Country]
+    COUNTRY_USA: _ClassVar[Country]
+    COUNTRY_JAPAN: _ClassVar[Country]
+    COUNTRY_KUWAIT: _ClassVar[Country]
+    COUNTRY_MALAYSIA: _ClassVar[Country]
+    COUNTRY_SUDAN: _ClassVar[Country]
+    COUNTRY_UZBEKISTAN: _ClassVar[Country]
+    COUNTRY_GREECE: _ClassVar[Country]
+    COUNTRY_TUNISIA: _ClassVar[Country]
+    COUNTRY_URUGUAY: _ClassVar[Country]
+    COUNTRY_JAMAICA: _ClassVar[Country]
+    COUNTRY_NIGERIA: _ClassVar[Country]
+    COUNTRY_VENEZUELA: _ClassVar[Country]
+    COUNTRY_ECUADOR: _ClassVar[Country]
+    COUNTRY_IVORY_COAST: _ClassVar[Country]
+    COUNTRY_KAZAKHSTAN: _ClassVar[Country]
+    COUNTRY_KOSOVO: _ClassVar[Country]
+    COUNTRY_MEXICO: _ClassVar[Country]
+    COUNTRY_SWEDEN: _ClassVar[Country]
+    COUNTRY_ICELAND: _ClassVar[Country]
+    COUNTRY_HONG_KONG: _ClassVar[Country]
+    COUNTRY_SAINT_KITTS_AND_NEVIS: _ClassVar[Country]
+    COUNTRY_SLOVAKIA: _ClassVar[Country]
+    COUNTRY_CYPRUS: _ClassVar[Country]
+    COUNTRY_BRAZIL: _ClassVar[Country]
+    COUNTRY_MALDIVES: _ClassVar[Country]
+    COUNTRY_ALBANIA: _ClassVar[Country]
+    COUNTRY_INDIA: _ClassVar[Country]
+    COUNTRY_IRAN: _ClassVar[Country]
+    COUNTRY_MONACO: _ClassVar[Country]
+    COUNTRY_FINLAND: _ClassVar[Country]
+    COUNTRY_BOLIVIA: _ClassVar[Country]
+    COUNTRY_ISRAEL: _ClassVar[Country]
+    COUNTRY_SINGAPORE: _ClassVar[Country]
+    COUNTRY_SRI_LANKA: _ClassVar[Country]
+    COUNTRY_TRINIDAD_AND_TOBAGO: _ClassVar[Country]
+    COUNTRY_ANTIGUA_AND_BARBUDA: _ClassVar[Country]
+    COUNTRY_LIBYA: _ClassVar[Country]
+    COUNTRY_PORTUGAL: _ClassVar[Country]
+    COUNTRY_ROMANIA: _ClassVar[Country]
+    COUNTRY_SLOVENIA: _ClassVar[Country]
+    COUNTRY_SPAIN: _ClassVar[Country]
+    COUNTRY_TURKEY: _ClassVar[Country]
+    COUNTRY_IRELAND: _ClassVar[Country]
+    COUNTRY_CHINA: _ClassVar[Country]
+    COUNTRY_CROATIA: _ClassVar[Country]
+    COUNTRY_CAMEROON: _ClassVar[Country]
+    COUNTRY_BARBADOS: _ClassVar[Country]
+    COUNTRY_CAMBODIA: _ClassVar[Country]
+    COUNTRY_GEORGIA: _ClassVar[Country]
+    COUNTRY_SOUTH_AFRICA: _ClassVar[Country]
+    COUNTRY_EUROPEAN_UNION: _ClassVar[Country]
+    COUNTRY_BAHRAIN: _ClassVar[Country]
+    COUNTRY_EL_SALVADOR: _ClassVar[Country]
+    COUNTRY_ARGENTINA: _ClassVar[Country]
+    COUNTRY_BANGLADESH: _ClassVar[Country]
+    COUNTRY_AUSTRIA: _ClassVar[Country]
+    COUNTRY_QATAR: _ClassVar[Country]
+    COUNTRY_RUSSIA: _ClassVar[Country]
+    COUNTRY_UAE: _ClassVar[Country]
+    COUNTRY_PARAGUAY: _ClassVar[Country]
+    COUNTRY_MOLDOVA: _ClassVar[Country]
+    COUNTRY_AUSTRALIA: _ClassVar[Country]
+    COUNTRY_NEW_ZEALAND: _ClassVar[Country]
+    COUNTRY_SWITZERLAND: _ClassVar[Country]
+    COUNTRY_MONTENEGRO: _ClassVar[Country]
+    COUNTRY_GHANA: _ClassVar[Country]
+    COUNTRY_KENYA: _ClassVar[Country]
+    COUNTRY_LIECHTENSTEIN: _ClassVar[Country]
+    COUNTRY_PERU: _ClassVar[Country]
+    COUNTRY_FRANCE: _ClassVar[Country]
+    COUNTRY_ITALY: _ClassVar[Country]
+    COUNTRY_HAITI: _ClassVar[Country]
+COUNTRY_UNKNOWN: Country
+COUNTRY_BRUNEI: Country
+COUNTRY_CHILE: Country
+COUNTRY_MAURITIUS: Country
+COUNTRY_PALESTINE: Country
+COUNTRY_PHILIPPINES: Country
+COUNTRY_VIETNAM: Country
+COUNTRY_ALGERIA: Country
+COUNTRY_CAYMAN_ISLANDS: Country
+COUNTRY_NETHERLANDS: Country
+COUNTRY_POLAND: Country
+COUNTRY_SAINT_LUCIA: Country
+COUNTRY_TANZANIA: Country
+COUNTRY_BULGARIA: Country
+COUNTRY_UKRAINE: Country
+COUNTRY_GERMANY: Country
+COUNTRY_MOROCCO: Country
+COUNTRY_NICARAGUA: Country
+COUNTRY_ESTONIA: Country
+COUNTRY_CUBA: Country
+COUNTRY_EGYPT: Country
+COUNTRY_JORDAN: Country
+COUNTRY_MALTA: Country
+COUNTRY_NORTH_MACEDONIA: Country
+COUNTRY_PANAMA: Country
+COUNTRY_ARMENIA: Country
+COUNTRY_GUATEMALA: Country
+COUNTRY_HUNGARY: Country
+COUNTRY_INDONESIA: Country
+COUNTRY_IRAQ: Country
+COUNTRY_NORWAY: Country
+COUNTRY_PAKISTAN: Country
+COUNTRY_UK: Country
+COUNTRY_BAHAMAS: Country
+COUNTRY_NEPAL: Country
+COUNTRY_OMAN: Country
+COUNTRY_THAILAND: Country
+COUNTRY_AFGHANISTAN: Country
+COUNTRY_SERBIA: Country
+COUNTRY_SOUTH_KOREA: Country
+COUNTRY_DOMINICAN_REPUBLIC: Country
+COUNTRY_BELARUS: Country
+COUNTRY_AZERBAIJAN: Country
+COUNTRY_BERMUDA: Country
+COUNTRY_BOSNIA_AND_HERZEGOVINA: Country
+COUNTRY_CANADA: Country
+COUNTRY_COLOMBIA: Country
+COUNTRY_CZECHIA: Country
+COUNTRY_DEMOCRATIC_REPUBLIC_OF_THE_CONGO: Country
+COUNTRY_DENMARK: Country
+COUNTRY_BELGIUM: Country
+COUNTRY_LUXEMBOURG: Country
+COUNTRY_TAIWAN: Country
+COUNTRY_HONDURAS: Country
+COUNTRY_COSTA_RICA: Country
+COUNTRY_LATVIA: Country
+COUNTRY_LITHUANIA: Country
+COUNTRY_PUERTO_RICO: Country
+COUNTRY_SAUDI_ARABIA: Country
+COUNTRY_SCHENGEN_AREA: Country
+COUNTRY_USA: Country
+COUNTRY_JAPAN: Country
+COUNTRY_KUWAIT: Country
+COUNTRY_MALAYSIA: Country
+COUNTRY_SUDAN: Country
+COUNTRY_UZBEKISTAN: Country
+COUNTRY_GREECE: Country
+COUNTRY_TUNISIA: Country
+COUNTRY_URUGUAY: Country
+COUNTRY_JAMAICA: Country
+COUNTRY_NIGERIA: Country
+COUNTRY_VENEZUELA: Country
+COUNTRY_ECUADOR: Country
+COUNTRY_IVORY_COAST: Country
+COUNTRY_KAZAKHSTAN: Country
+COUNTRY_KOSOVO: Country
+COUNTRY_MEXICO: Country
+COUNTRY_SWEDEN: Country
+COUNTRY_ICELAND: Country
+COUNTRY_HONG_KONG: Country
+COUNTRY_SAINT_KITTS_AND_NEVIS: Country
+COUNTRY_SLOVAKIA: Country
+COUNTRY_CYPRUS: Country
+COUNTRY_BRAZIL: Country
+COUNTRY_MALDIVES: Country
+COUNTRY_ALBANIA: Country
+COUNTRY_INDIA: Country
+COUNTRY_IRAN: Country
+COUNTRY_MONACO: Country
+COUNTRY_FINLAND: Country
+COUNTRY_BOLIVIA: Country
+COUNTRY_ISRAEL: Country
+COUNTRY_SINGAPORE: Country
+COUNTRY_SRI_LANKA: Country
+COUNTRY_TRINIDAD_AND_TOBAGO: Country
+COUNTRY_ANTIGUA_AND_BARBUDA: Country
+COUNTRY_LIBYA: Country
+COUNTRY_PORTUGAL: Country
+COUNTRY_ROMANIA: Country
+COUNTRY_SLOVENIA: Country
+COUNTRY_SPAIN: Country
+COUNTRY_TURKEY: Country
+COUNTRY_IRELAND: Country
+COUNTRY_CHINA: Country
+COUNTRY_CROATIA: Country
+COUNTRY_CAMEROON: Country
+COUNTRY_BARBADOS: Country
+COUNTRY_CAMBODIA: Country
+COUNTRY_GEORGIA: Country
+COUNTRY_SOUTH_AFRICA: Country
+COUNTRY_EUROPEAN_UNION: Country
+COUNTRY_BAHRAIN: Country
+COUNTRY_EL_SALVADOR: Country
+COUNTRY_ARGENTINA: Country
+COUNTRY_BANGLADESH: Country
+COUNTRY_AUSTRIA: Country
+COUNTRY_QATAR: Country
+COUNTRY_RUSSIA: Country
+COUNTRY_UAE: Country
+COUNTRY_PARAGUAY: Country
+COUNTRY_MOLDOVA: Country
+COUNTRY_AUSTRALIA: Country
+COUNTRY_NEW_ZEALAND: Country
+COUNTRY_SWITZERLAND: Country
+COUNTRY_MONTENEGRO: Country
+COUNTRY_GHANA: Country
+COUNTRY_KENYA: Country
+COUNTRY_LIECHTENSTEIN: Country
+COUNTRY_PERU: Country
+COUNTRY_FRANCE: Country
+COUNTRY_ITALY: Country
+COUNTRY_HAITI: Country
