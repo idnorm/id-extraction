@@ -39,7 +39,7 @@ class ExtractionClient:
     def scan_document(self, img_bytes: bytes, config: ScanConfig = ScanConfig()) -> ScanDocumentResponse:
         if self._closed:
             raise RuntimeError('Client already closed')
-        request = ScanDocumentRequest(imageJpeg=img_bytes)
+        request = ScanDocumentRequest(imageJpeg=img_bytes, config=config)
         response = self._stub.ScanDocument(request)
         return response
 
@@ -79,6 +79,6 @@ class ExtractionClientAsync:
     async def scan_document(self, img_bytes: bytes, config: ScanConfig = ScanConfig()) -> ScanDocumentResponse:
         if self._closed:
             raise RuntimeError('Client already closed')
-        request = ScanDocumentRequest(imageJpeg=img_bytes)
+        request = ScanDocumentRequest(imageJpeg=img_bytes, config=config)
         response = await self._stub.ScanDocument(request)
         return response
