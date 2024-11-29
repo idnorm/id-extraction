@@ -64,6 +64,8 @@ to offer out-of-the-box options to use in "blocking" or "async" codebase.
 Here is an example of using `ExtractionBlockingClient` to send and receive a request.
 Request and response classes are the same, regardless of the selected client.
 
+To run the code you will need to provide it with an image you want to process and a [license key](../license.md).
+
 ```java
 package org.example;
 

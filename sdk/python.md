@@ -23,6 +23,8 @@ Bellow is an example snippet of using `python` client in code.
 
 We include both "blocking" and "async" example of using our client.
 
+To run the code you will need to provide it with an image you want to process and a [license key](../license.md).
+
 ```python
 import asyncio
 from typing import Tuple

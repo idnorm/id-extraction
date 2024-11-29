@@ -10,6 +10,8 @@ To add our golang client to your go package as a dependency simply run
 
 Bellow, we provide code snippet that demonstrates how send and receive a request to document data extraction service.
 
+To run the code you will need to provide it with an image you want to process and a [license key](../license.md).
+
 ```go
 package main
 
