@@ -56,572 +56,564 @@ public final class DocumentTypesEnum {
     DOCUMENT_TYPE_ADDRESS_CARD(1),
     /**
      * <pre>
-     * AFGHAN_CITIZEN_CARD
-     * </pre>
-     *
-     * <code>DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD = 2;</code>
-     */
-    DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD(2),
-    /**
-     * <pre>
      * ALIEN_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT = 3;</code>
+     * <code>DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT = 2;</code>
      */
-    DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT(3),
+    DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT(2),
     /**
      * <pre>
      * ASYLUM_SEEKER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_ASYLUM_SEEKER_CARD = 4;</code>
+     * <code>DOCUMENT_TYPE_ASYLUM_SEEKER_CARD = 3;</code>
      */
-    DOCUMENT_TYPE_ASYLUM_SEEKER_CARD(4),
+    DOCUMENT_TYPE_ASYLUM_SEEKER_CARD(3),
     /**
      * <pre>
      * BORDER_CROSSING_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_BORDER_CROSSING_CARD = 5;</code>
+     * <code>DOCUMENT_TYPE_BORDER_CROSSING_CARD = 4;</code>
      */
-    DOCUMENT_TYPE_BORDER_CROSSING_CARD(5),
+    DOCUMENT_TYPE_BORDER_CROSSING_CARD(4),
     /**
      * <pre>
      * CITIZENSHIP_CERTIFICATE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE = 6;</code>
+     * <code>DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE = 5;</code>
      */
-    DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE(6),
+    DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE(5),
     /**
      * <pre>
      * CONSULAR_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT = 7;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT = 6;</code>
      */
-    DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT(7),
+    DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT(6),
     /**
      * <pre>
      * CONSULAR_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_PASSPORT = 8;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_PASSPORT = 7;</code>
      */
-    DOCUMENT_TYPE_CONSULAR_PASSPORT(8),
+    DOCUMENT_TYPE_CONSULAR_PASSPORT(7),
     /**
      * <pre>
      * CONSULAR_VOTER_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT = 9;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT = 8;</code>
      */
-    DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT(9),
+    DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT(8),
     /**
      * <pre>
      * DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE = 10;</code>
+     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE = 9;</code>
      */
-    DOCUMENT_TYPE_DRIVERS_LICENSE(10),
+    DOCUMENT_TYPE_DRIVERS_LICENSE(9),
     /**
      * <pre>
      * DRIVERS_LICENSE_AND_SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD = 11;</code>
+     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD = 10;</code>
      */
-    DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD(11),
+    DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD(10),
     /**
      * <pre>
      * DRIVER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_CARD = 12;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_CARD = 11;</code>
      */
-    DOCUMENT_TYPE_DRIVER_CARD(12),
+    DOCUMENT_TYPE_DRIVER_CARD(11),
     /**
      * <pre>
      * DRIVER_PRIVILEGE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD = 13;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD = 12;</code>
      */
-    DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD(13),
+    DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD(12),
     /**
      * <pre>
      * DRIVER_QUALIFICATION_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD = 14;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD = 13;</code>
      */
-    DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD(14),
+    DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD(13),
     /**
      * <pre>
      * EMPLOYMENT_PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_EMPLOYMENT_PASS = 15;</code>
+     * <code>DOCUMENT_TYPE_EMPLOYMENT_PASS = 14;</code>
      */
-    DOCUMENT_TYPE_EMPLOYMENT_PASS(15),
+    DOCUMENT_TYPE_EMPLOYMENT_PASS(14),
     /**
      * <pre>
      * EXIT_ENTRY_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_EXIT_ENTRY_PERMIT = 16;</code>
+     * <code>DOCUMENT_TYPE_EXIT_ENTRY_PERMIT = 15;</code>
      */
-    DOCUMENT_TYPE_EXIT_ENTRY_PERMIT(16),
+    DOCUMENT_TYPE_EXIT_ENTRY_PERMIT(15),
     /**
      * <pre>
      * E_ID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_E_ID = 17;</code>
+     * <code>DOCUMENT_TYPE_E_ID = 16;</code>
      */
-    DOCUMENT_TYPE_E_ID(17),
+    DOCUMENT_TYPE_E_ID(16),
     /**
      * <pre>
      * FIN_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_FIN_CARD = 18;</code>
+     * <code>DOCUMENT_TYPE_FIN_CARD = 17;</code>
      */
-    DOCUMENT_TYPE_FIN_CARD(18),
+    DOCUMENT_TYPE_FIN_CARD(17),
     /**
      * <pre>
      * GLOBAL_ENTRY_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_GLOBAL_ENTRY_CARD = 19;</code>
+     * <code>DOCUMENT_TYPE_GLOBAL_ENTRY_CARD = 18;</code>
      */
-    DOCUMENT_TYPE_GLOBAL_ENTRY_CARD(19),
+    DOCUMENT_TYPE_GLOBAL_ENTRY_CARD(18),
     /**
      * <pre>
      * GREEN_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_GREEN_CARD = 20;</code>
+     * <code>DOCUMENT_TYPE_GREEN_CARD = 19;</code>
      */
-    DOCUMENT_TYPE_GREEN_CARD(20),
+    DOCUMENT_TYPE_GREEN_CARD(19),
     /**
      * <pre>
      * HEALTH_INSURANCE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_HEALTH_INSURANCE_CARD = 21;</code>
+     * <code>DOCUMENT_TYPE_HEALTH_INSURANCE_CARD = 20;</code>
      */
-    DOCUMENT_TYPE_HEALTH_INSURANCE_CARD(21),
+    DOCUMENT_TYPE_HEALTH_INSURANCE_CARD(20),
     /**
      * <pre>
      * IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT = 22;</code>
+     * <code>DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT = 21;</code>
      */
-    DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT(22),
+    DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT(21),
     /**
      * <pre>
      * IMMIGRANT_VISA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IMMIGRANT_VISA = 23;</code>
+     * <code>DOCUMENT_TYPE_IMMIGRANT_VISA = 22;</code>
      */
-    DOCUMENT_TYPE_IMMIGRANT_VISA(23),
+    DOCUMENT_TYPE_IMMIGRANT_VISA(22),
     /**
      * <pre>
      * INDIVIDUAL_NUMBER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD = 24;</code>
+     * <code>DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD = 23;</code>
      */
-    DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD(24),
+    DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD(23),
     /**
      * <pre>
      * INTERNAL_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_INTERNAL_PASSPORT = 25;</code>
+     * <code>DOCUMENT_TYPE_INTERNAL_PASSPORT = 24;</code>
      */
-    DOCUMENT_TYPE_INTERNAL_PASSPORT(25),
+    DOCUMENT_TYPE_INTERNAL_PASSPORT(24),
     /**
      * <pre>
      * MAINLAND_TRAVEL_PERMIT_TAIWAN
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN = 26;</code>
+     * <code>DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN = 25;</code>
      */
-    DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN(26),
+    DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN(25),
     /**
      * <pre>
      * MILITARY_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT = 27;</code>
+     * <code>DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT = 26;</code>
      */
-    DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT(27),
+    DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT(26),
     /**
      * <pre>
      * MINORS_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT = 28;</code>
+     * <code>DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT = 27;</code>
      */
-    DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT(28),
+    DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT(27),
     /**
      * <pre>
      * MINORS_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_PASSPORT = 29;</code>
+     * <code>DOCUMENT_TYPE_MINORS_PASSPORT = 28;</code>
      */
-    DOCUMENT_TYPE_MINORS_PASSPORT(29),
+    DOCUMENT_TYPE_MINORS_PASSPORT(28),
     /**
      * <pre>
      * MINORS_SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_SERVICES_CARD = 30;</code>
+     * <code>DOCUMENT_TYPE_MINORS_SERVICES_CARD = 29;</code>
      */
-    DOCUMENT_TYPE_MINORS_SERVICES_CARD(30),
+    DOCUMENT_TYPE_MINORS_SERVICES_CARD(29),
     /**
      * <pre>
      * MULTI_PURPOSE_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT = 31;</code>
+     * <code>DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT = 30;</code>
      */
-    DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT(31),
+    DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT(30),
     /**
      * <pre>
      * MY_KAD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KAD = 32;</code>
+     * <code>DOCUMENT_TYPE_MY_KAD = 31;</code>
      */
-    DOCUMENT_TYPE_MY_KAD(32),
+    DOCUMENT_TYPE_MY_KAD(31),
     /**
      * <pre>
      * MY_KAS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KAS = 33;</code>
+     * <code>DOCUMENT_TYPE_MY_KAS = 32;</code>
      */
-    DOCUMENT_TYPE_MY_KAS(33),
+    DOCUMENT_TYPE_MY_KAS(32),
     /**
      * <pre>
      * MY_KID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KID = 34;</code>
+     * <code>DOCUMENT_TYPE_MY_KID = 33;</code>
      */
-    DOCUMENT_TYPE_MY_KID(34),
+    DOCUMENT_TYPE_MY_KID(33),
     /**
      * <pre>
      * MY_POLIS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_POLIS = 35;</code>
+     * <code>DOCUMENT_TYPE_MY_POLIS = 34;</code>
      */
-    DOCUMENT_TYPE_MY_POLIS(35),
+    DOCUMENT_TYPE_MY_POLIS(34),
     /**
      * <pre>
      * MY_PR
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_PR = 36;</code>
+     * <code>DOCUMENT_TYPE_MY_PR = 35;</code>
      */
-    DOCUMENT_TYPE_MY_PR(36),
+    DOCUMENT_TYPE_MY_PR(35),
     /**
      * <pre>
      * MY_TENTERA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_TENTERA = 37;</code>
+     * <code>DOCUMENT_TYPE_MY_TENTERA = 36;</code>
      */
-    DOCUMENT_TYPE_MY_TENTERA(37),
+    DOCUMENT_TYPE_MY_TENTERA(36),
     /**
      * <pre>
      * NBI_CLEARANCE_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT = 38;</code>
+     * <code>DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT = 37;</code>
      */
-    DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT(38),
+    DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT(37),
     /**
      * <pre>
      * NEXT_GEN_ALIEN_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT = 39;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT = 38;</code>
      */
-    DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT(39),
+    DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT(38),
     /**
      * <pre>
      * NEXT_GEN_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_PASSPORT = 40;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_PASSPORT = 39;</code>
      */
-    DOCUMENT_TYPE_NEXT_GEN_PASSPORT(40),
+    DOCUMENT_TYPE_NEXT_GEN_PASSPORT(39),
     /**
      * <pre>
      * NEXT_GEN_REFUGEE_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT = 41;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT = 40;</code>
      */
-    DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT(41),
+    DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT(40),
     /**
      * <pre>
      * NEXUS_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXUS_CARD = 42;</code>
+     * <code>DOCUMENT_TYPE_NEXUS_CARD = 41;</code>
      */
-    DOCUMENT_TYPE_NEXUS_CARD(42),
+    DOCUMENT_TYPE_NEXUS_CARD(41),
     /**
      * <pre>
      * PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASS = 43;</code>
+     * <code>DOCUMENT_TYPE_PASS = 42;</code>
      */
-    DOCUMENT_TYPE_PASS(43),
+    DOCUMENT_TYPE_PASS(42),
     /**
      * <pre>
      * PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASSPORT = 44;</code>
+     * <code>DOCUMENT_TYPE_PASSPORT = 43;</code>
      */
-    DOCUMENT_TYPE_PASSPORT(44),
+    DOCUMENT_TYPE_PASSPORT(43),
     /**
      * <pre>
      * PASSPORT_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASSPORT_CARD = 45;</code>
+     * <code>DOCUMENT_TYPE_PASSPORT_CARD = 44;</code>
      */
-    DOCUMENT_TYPE_PASSPORT_CARD(45),
+    DOCUMENT_TYPE_PASSPORT_CARD(44),
     /**
      * <pre>
      * PERMANENT_ACCOUNT_NUMBER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD = 46;</code>
+     * <code>DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD = 45;</code>
      */
-    DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD(46),
+    DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD(45),
     /**
      * <pre>
      * POSTAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT = 47;</code>
+     * <code>DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT = 46;</code>
      */
-    DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT(47),
+    DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT(46),
     /**
      * <pre>
      * PROFESSIONAL_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROFESSIONAL_CARD = 48;</code>
+     * <code>DOCUMENT_TYPE_PROFESSIONAL_CARD = 47;</code>
      */
-    DOCUMENT_TYPE_PROFESSIONAL_CARD(48),
+    DOCUMENT_TYPE_PROFESSIONAL_CARD(47),
     /**
      * <pre>
      * PROFESSIONAL_DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE = 49;</code>
+     * <code>DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE = 48;</code>
      */
-    DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE(49),
+    DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE(48),
     /**
      * <pre>
      * PROOF_OF_AGE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROOF_OF_AGE_CARD = 50;</code>
+     * <code>DOCUMENT_TYPE_PROOF_OF_AGE_CARD = 49;</code>
      */
-    DOCUMENT_TYPE_PROOF_OF_AGE_CARD(50),
+    DOCUMENT_TYPE_PROOF_OF_AGE_CARD(49),
     /**
      * <pre>
      * PROOF_OF_REGISTRATION
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROOF_OF_REGISTRATION = 51;</code>
+     * <code>DOCUMENT_TYPE_PROOF_OF_REGISTRATION = 50;</code>
      */
-    DOCUMENT_TYPE_PROOF_OF_REGISTRATION(51),
+    DOCUMENT_TYPE_PROOF_OF_REGISTRATION(50),
     /**
      * <pre>
      * PROVISIONAL_DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE = 52;</code>
+     * <code>DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE = 51;</code>
      */
-    DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE(52),
+    DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE(51),
     /**
      * <pre>
      * REFUGEE_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT = 53;</code>
+     * <code>DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT = 52;</code>
      */
-    DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT(53),
+    DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT(52),
     /**
      * <pre>
      * RESIDENCE_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_RESIDENCE_PERMIT = 54;</code>
+     * <code>DOCUMENT_TYPE_RESIDENCE_PERMIT = 53;</code>
      */
-    DOCUMENT_TYPE_RESIDENCE_PERMIT(54),
+    DOCUMENT_TYPE_RESIDENCE_PERMIT(53),
     /**
      * <pre>
      * RESIDENT_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT = 55;</code>
+     * <code>DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT = 54;</code>
      */
-    DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT(55),
+    DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT(54),
     /**
      * <pre>
      * SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SERVICES_CARD = 56;</code>
+     * <code>DOCUMENT_TYPE_SERVICES_CARD = 55;</code>
      */
-    DOCUMENT_TYPE_SERVICES_CARD(56),
+    DOCUMENT_TYPE_SERVICES_CARD(55),
     /**
      * <pre>
      * SIS_ID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SIS_ID = 57;</code>
+     * <code>DOCUMENT_TYPE_SIS_ID = 56;</code>
      */
-    DOCUMENT_TYPE_SIS_ID(57),
+    DOCUMENT_TYPE_SIS_ID(56),
     /**
      * <pre>
      * SOCIAL_SECURITY_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SOCIAL_SECURITY_CARD = 58;</code>
+     * <code>DOCUMENT_TYPE_SOCIAL_SECURITY_CARD = 57;</code>
      */
-    DOCUMENT_TYPE_SOCIAL_SECURITY_CARD(58),
+    DOCUMENT_TYPE_SOCIAL_SECURITY_CARD(57),
     /**
      * <pre>
      * SPECIAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT = 59;</code>
+     * <code>DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT = 58;</code>
      */
-    DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT(59),
+    DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT(58),
     /**
      * <pre>
      * S_PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_S_PASS = 60;</code>
+     * <code>DOCUMENT_TYPE_S_PASS = 59;</code>
      */
-    DOCUMENT_TYPE_S_PASS(60),
+    DOCUMENT_TYPE_S_PASS(59),
     /**
      * <pre>
      * TAX_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT = 61;</code>
+     * <code>DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT = 60;</code>
      */
-    DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT(61),
+    DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT(60),
     /**
      * <pre>
      * TEMPORARY_PROTECTION_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT = 62;</code>
+     * <code>DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT = 61;</code>
      */
-    DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT(62),
+    DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT(61),
     /**
      * <pre>
      * TEMPORARY_RESIDENCE_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT = 63;</code>
+     * <code>DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT = 62;</code>
      */
-    DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT(63),
+    DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT(62),
     /**
      * <pre>
      * TRIBAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT = 64;</code>
+     * <code>DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT = 63;</code>
      */
-    DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT(64),
+    DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT(63),
     /**
      * <pre>
      * TWIC_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TWIC_CARD = 65;</code>
+     * <code>DOCUMENT_TYPE_TWIC_CARD = 64;</code>
      */
-    DOCUMENT_TYPE_TWIC_CARD(65),
+    DOCUMENT_TYPE_TWIC_CARD(64),
     /**
      * <pre>
      * UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT = 66;</code>
+     * <code>DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT = 65;</code>
      */
-    DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT(66),
+    DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT(65),
     /**
      * <pre>
      * VETERAN_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT = 67;</code>
+     * <code>DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT = 66;</code>
      */
-    DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT(67),
+    DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT(66),
     /**
      * <pre>
      * VISA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VISA = 68;</code>
+     * <code>DOCUMENT_TYPE_VISA = 67;</code>
      */
-    DOCUMENT_TYPE_VISA(68),
+    DOCUMENT_TYPE_VISA(67),
     /**
      * <pre>
      * VOTER_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT = 69;</code>
+     * <code>DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT = 68;</code>
      */
-    DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT(69),
+    DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT(68),
     /**
      * <pre>
      * WEAPON_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_WEAPON_PERMIT = 70;</code>
+     * <code>DOCUMENT_TYPE_WEAPON_PERMIT = 69;</code>
      */
-    DOCUMENT_TYPE_WEAPON_PERMIT(70),
+    DOCUMENT_TYPE_WEAPON_PERMIT(69),
     /**
      * <pre>
      * WORK_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_WORK_PERMIT = 71;</code>
+     * <code>DOCUMENT_TYPE_WORK_PERMIT = 70;</code>
      */
-    DOCUMENT_TYPE_WORK_PERMIT(71),
+    DOCUMENT_TYPE_WORK_PERMIT(70),
     /**
      * <pre>
      * iKAD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IKAD = 72;</code>
+     * <code>DOCUMENT_TYPE_IKAD = 71;</code>
      */
-    DOCUMENT_TYPE_IKAD(72),
+    DOCUMENT_TYPE_IKAD(71),
     UNRECOGNIZED(-1),
     ;
 
@@ -652,572 +644,564 @@ public final class DocumentTypesEnum {
     public static final int DOCUMENT_TYPE_ADDRESS_CARD_VALUE = 1;
     /**
      * <pre>
-     * AFGHAN_CITIZEN_CARD
-     * </pre>
-     *
-     * <code>DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD = 2;</code>
-     */
-    public static final int DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD_VALUE = 2;
-    /**
-     * <pre>
      * ALIEN_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT = 3;</code>
+     * <code>DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT = 2;</code>
      */
-    public static final int DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT_VALUE = 3;
+    public static final int DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT_VALUE = 2;
     /**
      * <pre>
      * ASYLUM_SEEKER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_ASYLUM_SEEKER_CARD = 4;</code>
+     * <code>DOCUMENT_TYPE_ASYLUM_SEEKER_CARD = 3;</code>
      */
-    public static final int DOCUMENT_TYPE_ASYLUM_SEEKER_CARD_VALUE = 4;
+    public static final int DOCUMENT_TYPE_ASYLUM_SEEKER_CARD_VALUE = 3;
     /**
      * <pre>
      * BORDER_CROSSING_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_BORDER_CROSSING_CARD = 5;</code>
+     * <code>DOCUMENT_TYPE_BORDER_CROSSING_CARD = 4;</code>
      */
-    public static final int DOCUMENT_TYPE_BORDER_CROSSING_CARD_VALUE = 5;
+    public static final int DOCUMENT_TYPE_BORDER_CROSSING_CARD_VALUE = 4;
     /**
      * <pre>
      * CITIZENSHIP_CERTIFICATE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE = 6;</code>
+     * <code>DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE = 5;</code>
      */
-    public static final int DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE_VALUE = 6;
+    public static final int DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE_VALUE = 5;
     /**
      * <pre>
      * CONSULAR_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT = 7;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT = 6;</code>
      */
-    public static final int DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT_VALUE = 7;
+    public static final int DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT_VALUE = 6;
     /**
      * <pre>
      * CONSULAR_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_PASSPORT = 8;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_PASSPORT = 7;</code>
      */
-    public static final int DOCUMENT_TYPE_CONSULAR_PASSPORT_VALUE = 8;
+    public static final int DOCUMENT_TYPE_CONSULAR_PASSPORT_VALUE = 7;
     /**
      * <pre>
      * CONSULAR_VOTER_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT = 9;</code>
+     * <code>DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT = 8;</code>
      */
-    public static final int DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT_VALUE = 9;
+    public static final int DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT_VALUE = 8;
     /**
      * <pre>
      * DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE = 10;</code>
+     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE = 9;</code>
      */
-    public static final int DOCUMENT_TYPE_DRIVERS_LICENSE_VALUE = 10;
+    public static final int DOCUMENT_TYPE_DRIVERS_LICENSE_VALUE = 9;
     /**
      * <pre>
      * DRIVERS_LICENSE_AND_SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD = 11;</code>
+     * <code>DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD = 10;</code>
      */
-    public static final int DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD_VALUE = 11;
+    public static final int DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD_VALUE = 10;
     /**
      * <pre>
      * DRIVER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_CARD = 12;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_CARD = 11;</code>
      */
-    public static final int DOCUMENT_TYPE_DRIVER_CARD_VALUE = 12;
+    public static final int DOCUMENT_TYPE_DRIVER_CARD_VALUE = 11;
     /**
      * <pre>
      * DRIVER_PRIVILEGE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD = 13;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD = 12;</code>
      */
-    public static final int DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD_VALUE = 13;
+    public static final int DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD_VALUE = 12;
     /**
      * <pre>
      * DRIVER_QUALIFICATION_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD = 14;</code>
+     * <code>DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD = 13;</code>
      */
-    public static final int DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD_VALUE = 14;
+    public static final int DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD_VALUE = 13;
     /**
      * <pre>
      * EMPLOYMENT_PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_EMPLOYMENT_PASS = 15;</code>
+     * <code>DOCUMENT_TYPE_EMPLOYMENT_PASS = 14;</code>
      */
-    public static final int DOCUMENT_TYPE_EMPLOYMENT_PASS_VALUE = 15;
+    public static final int DOCUMENT_TYPE_EMPLOYMENT_PASS_VALUE = 14;
     /**
      * <pre>
      * EXIT_ENTRY_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_EXIT_ENTRY_PERMIT = 16;</code>
+     * <code>DOCUMENT_TYPE_EXIT_ENTRY_PERMIT = 15;</code>
      */
-    public static final int DOCUMENT_TYPE_EXIT_ENTRY_PERMIT_VALUE = 16;
+    public static final int DOCUMENT_TYPE_EXIT_ENTRY_PERMIT_VALUE = 15;
     /**
      * <pre>
      * E_ID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_E_ID = 17;</code>
+     * <code>DOCUMENT_TYPE_E_ID = 16;</code>
      */
-    public static final int DOCUMENT_TYPE_E_ID_VALUE = 17;
+    public static final int DOCUMENT_TYPE_E_ID_VALUE = 16;
     /**
      * <pre>
      * FIN_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_FIN_CARD = 18;</code>
+     * <code>DOCUMENT_TYPE_FIN_CARD = 17;</code>
      */
-    public static final int DOCUMENT_TYPE_FIN_CARD_VALUE = 18;
+    public static final int DOCUMENT_TYPE_FIN_CARD_VALUE = 17;
     /**
      * <pre>
      * GLOBAL_ENTRY_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_GLOBAL_ENTRY_CARD = 19;</code>
+     * <code>DOCUMENT_TYPE_GLOBAL_ENTRY_CARD = 18;</code>
      */
-    public static final int DOCUMENT_TYPE_GLOBAL_ENTRY_CARD_VALUE = 19;
+    public static final int DOCUMENT_TYPE_GLOBAL_ENTRY_CARD_VALUE = 18;
     /**
      * <pre>
      * GREEN_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_GREEN_CARD = 20;</code>
+     * <code>DOCUMENT_TYPE_GREEN_CARD = 19;</code>
      */
-    public static final int DOCUMENT_TYPE_GREEN_CARD_VALUE = 20;
+    public static final int DOCUMENT_TYPE_GREEN_CARD_VALUE = 19;
     /**
      * <pre>
      * HEALTH_INSURANCE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_HEALTH_INSURANCE_CARD = 21;</code>
+     * <code>DOCUMENT_TYPE_HEALTH_INSURANCE_CARD = 20;</code>
      */
-    public static final int DOCUMENT_TYPE_HEALTH_INSURANCE_CARD_VALUE = 21;
+    public static final int DOCUMENT_TYPE_HEALTH_INSURANCE_CARD_VALUE = 20;
     /**
      * <pre>
      * IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT = 22;</code>
+     * <code>DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT = 21;</code>
      */
-    public static final int DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT_VALUE = 22;
+    public static final int DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT_VALUE = 21;
     /**
      * <pre>
      * IMMIGRANT_VISA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IMMIGRANT_VISA = 23;</code>
+     * <code>DOCUMENT_TYPE_IMMIGRANT_VISA = 22;</code>
      */
-    public static final int DOCUMENT_TYPE_IMMIGRANT_VISA_VALUE = 23;
+    public static final int DOCUMENT_TYPE_IMMIGRANT_VISA_VALUE = 22;
     /**
      * <pre>
      * INDIVIDUAL_NUMBER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD = 24;</code>
+     * <code>DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD = 23;</code>
      */
-    public static final int DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD_VALUE = 24;
+    public static final int DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD_VALUE = 23;
     /**
      * <pre>
      * INTERNAL_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_INTERNAL_PASSPORT = 25;</code>
+     * <code>DOCUMENT_TYPE_INTERNAL_PASSPORT = 24;</code>
      */
-    public static final int DOCUMENT_TYPE_INTERNAL_PASSPORT_VALUE = 25;
+    public static final int DOCUMENT_TYPE_INTERNAL_PASSPORT_VALUE = 24;
     /**
      * <pre>
      * MAINLAND_TRAVEL_PERMIT_TAIWAN
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN = 26;</code>
+     * <code>DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN = 25;</code>
      */
-    public static final int DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN_VALUE = 26;
+    public static final int DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN_VALUE = 25;
     /**
      * <pre>
      * MILITARY_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT = 27;</code>
+     * <code>DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT = 26;</code>
      */
-    public static final int DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT_VALUE = 27;
+    public static final int DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT_VALUE = 26;
     /**
      * <pre>
      * MINORS_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT = 28;</code>
+     * <code>DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT = 27;</code>
      */
-    public static final int DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT_VALUE = 28;
+    public static final int DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT_VALUE = 27;
     /**
      * <pre>
      * MINORS_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_PASSPORT = 29;</code>
+     * <code>DOCUMENT_TYPE_MINORS_PASSPORT = 28;</code>
      */
-    public static final int DOCUMENT_TYPE_MINORS_PASSPORT_VALUE = 29;
+    public static final int DOCUMENT_TYPE_MINORS_PASSPORT_VALUE = 28;
     /**
      * <pre>
      * MINORS_SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MINORS_SERVICES_CARD = 30;</code>
+     * <code>DOCUMENT_TYPE_MINORS_SERVICES_CARD = 29;</code>
      */
-    public static final int DOCUMENT_TYPE_MINORS_SERVICES_CARD_VALUE = 30;
+    public static final int DOCUMENT_TYPE_MINORS_SERVICES_CARD_VALUE = 29;
     /**
      * <pre>
      * MULTI_PURPOSE_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT = 31;</code>
+     * <code>DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT = 30;</code>
      */
-    public static final int DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT_VALUE = 31;
+    public static final int DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT_VALUE = 30;
     /**
      * <pre>
      * MY_KAD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KAD = 32;</code>
+     * <code>DOCUMENT_TYPE_MY_KAD = 31;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_KAD_VALUE = 32;
+    public static final int DOCUMENT_TYPE_MY_KAD_VALUE = 31;
     /**
      * <pre>
      * MY_KAS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KAS = 33;</code>
+     * <code>DOCUMENT_TYPE_MY_KAS = 32;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_KAS_VALUE = 33;
+    public static final int DOCUMENT_TYPE_MY_KAS_VALUE = 32;
     /**
      * <pre>
      * MY_KID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_KID = 34;</code>
+     * <code>DOCUMENT_TYPE_MY_KID = 33;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_KID_VALUE = 34;
+    public static final int DOCUMENT_TYPE_MY_KID_VALUE = 33;
     /**
      * <pre>
      * MY_POLIS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_POLIS = 35;</code>
+     * <code>DOCUMENT_TYPE_MY_POLIS = 34;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_POLIS_VALUE = 35;
+    public static final int DOCUMENT_TYPE_MY_POLIS_VALUE = 34;
     /**
      * <pre>
      * MY_PR
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_PR = 36;</code>
+     * <code>DOCUMENT_TYPE_MY_PR = 35;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_PR_VALUE = 36;
+    public static final int DOCUMENT_TYPE_MY_PR_VALUE = 35;
     /**
      * <pre>
      * MY_TENTERA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_MY_TENTERA = 37;</code>
+     * <code>DOCUMENT_TYPE_MY_TENTERA = 36;</code>
      */
-    public static final int DOCUMENT_TYPE_MY_TENTERA_VALUE = 37;
+    public static final int DOCUMENT_TYPE_MY_TENTERA_VALUE = 36;
     /**
      * <pre>
      * NBI_CLEARANCE_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT = 38;</code>
+     * <code>DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT = 37;</code>
      */
-    public static final int DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT_VALUE = 38;
+    public static final int DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT_VALUE = 37;
     /**
      * <pre>
      * NEXT_GEN_ALIEN_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT = 39;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT = 38;</code>
      */
-    public static final int DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT_VALUE = 39;
+    public static final int DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT_VALUE = 38;
     /**
      * <pre>
      * NEXT_GEN_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_PASSPORT = 40;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_PASSPORT = 39;</code>
      */
-    public static final int DOCUMENT_TYPE_NEXT_GEN_PASSPORT_VALUE = 40;
+    public static final int DOCUMENT_TYPE_NEXT_GEN_PASSPORT_VALUE = 39;
     /**
      * <pre>
      * NEXT_GEN_REFUGEE_PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT = 41;</code>
+     * <code>DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT = 40;</code>
      */
-    public static final int DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT_VALUE = 41;
+    public static final int DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT_VALUE = 40;
     /**
      * <pre>
      * NEXUS_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_NEXUS_CARD = 42;</code>
+     * <code>DOCUMENT_TYPE_NEXUS_CARD = 41;</code>
      */
-    public static final int DOCUMENT_TYPE_NEXUS_CARD_VALUE = 42;
+    public static final int DOCUMENT_TYPE_NEXUS_CARD_VALUE = 41;
     /**
      * <pre>
      * PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASS = 43;</code>
+     * <code>DOCUMENT_TYPE_PASS = 42;</code>
      */
-    public static final int DOCUMENT_TYPE_PASS_VALUE = 43;
+    public static final int DOCUMENT_TYPE_PASS_VALUE = 42;
     /**
      * <pre>
      * PASSPORT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASSPORT = 44;</code>
+     * <code>DOCUMENT_TYPE_PASSPORT = 43;</code>
      */
-    public static final int DOCUMENT_TYPE_PASSPORT_VALUE = 44;
+    public static final int DOCUMENT_TYPE_PASSPORT_VALUE = 43;
     /**
      * <pre>
      * PASSPORT_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PASSPORT_CARD = 45;</code>
+     * <code>DOCUMENT_TYPE_PASSPORT_CARD = 44;</code>
      */
-    public static final int DOCUMENT_TYPE_PASSPORT_CARD_VALUE = 45;
+    public static final int DOCUMENT_TYPE_PASSPORT_CARD_VALUE = 44;
     /**
      * <pre>
      * PERMANENT_ACCOUNT_NUMBER_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD = 46;</code>
+     * <code>DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD = 45;</code>
      */
-    public static final int DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD_VALUE = 46;
+    public static final int DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD_VALUE = 45;
     /**
      * <pre>
      * POSTAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT = 47;</code>
+     * <code>DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT = 46;</code>
      */
-    public static final int DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT_VALUE = 47;
+    public static final int DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT_VALUE = 46;
     /**
      * <pre>
      * PROFESSIONAL_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROFESSIONAL_CARD = 48;</code>
+     * <code>DOCUMENT_TYPE_PROFESSIONAL_CARD = 47;</code>
      */
-    public static final int DOCUMENT_TYPE_PROFESSIONAL_CARD_VALUE = 48;
+    public static final int DOCUMENT_TYPE_PROFESSIONAL_CARD_VALUE = 47;
     /**
      * <pre>
      * PROFESSIONAL_DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE = 49;</code>
+     * <code>DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE = 48;</code>
      */
-    public static final int DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE_VALUE = 49;
+    public static final int DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE_VALUE = 48;
     /**
      * <pre>
      * PROOF_OF_AGE_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROOF_OF_AGE_CARD = 50;</code>
+     * <code>DOCUMENT_TYPE_PROOF_OF_AGE_CARD = 49;</code>
      */
-    public static final int DOCUMENT_TYPE_PROOF_OF_AGE_CARD_VALUE = 50;
+    public static final int DOCUMENT_TYPE_PROOF_OF_AGE_CARD_VALUE = 49;
     /**
      * <pre>
      * PROOF_OF_REGISTRATION
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROOF_OF_REGISTRATION = 51;</code>
+     * <code>DOCUMENT_TYPE_PROOF_OF_REGISTRATION = 50;</code>
      */
-    public static final int DOCUMENT_TYPE_PROOF_OF_REGISTRATION_VALUE = 51;
+    public static final int DOCUMENT_TYPE_PROOF_OF_REGISTRATION_VALUE = 50;
     /**
      * <pre>
      * PROVISIONAL_DRIVERS_LICENSE
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE = 52;</code>
+     * <code>DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE = 51;</code>
      */
-    public static final int DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE_VALUE = 52;
+    public static final int DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE_VALUE = 51;
     /**
      * <pre>
      * REFUGEE_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT = 53;</code>
+     * <code>DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT = 52;</code>
      */
-    public static final int DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT_VALUE = 53;
+    public static final int DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT_VALUE = 52;
     /**
      * <pre>
      * RESIDENCE_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_RESIDENCE_PERMIT = 54;</code>
+     * <code>DOCUMENT_TYPE_RESIDENCE_PERMIT = 53;</code>
      */
-    public static final int DOCUMENT_TYPE_RESIDENCE_PERMIT_VALUE = 54;
+    public static final int DOCUMENT_TYPE_RESIDENCE_PERMIT_VALUE = 53;
     /**
      * <pre>
      * RESIDENT_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT = 55;</code>
+     * <code>DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT = 54;</code>
      */
-    public static final int DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT_VALUE = 55;
+    public static final int DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT_VALUE = 54;
     /**
      * <pre>
      * SERVICES_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SERVICES_CARD = 56;</code>
+     * <code>DOCUMENT_TYPE_SERVICES_CARD = 55;</code>
      */
-    public static final int DOCUMENT_TYPE_SERVICES_CARD_VALUE = 56;
+    public static final int DOCUMENT_TYPE_SERVICES_CARD_VALUE = 55;
     /**
      * <pre>
      * SIS_ID
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SIS_ID = 57;</code>
+     * <code>DOCUMENT_TYPE_SIS_ID = 56;</code>
      */
-    public static final int DOCUMENT_TYPE_SIS_ID_VALUE = 57;
+    public static final int DOCUMENT_TYPE_SIS_ID_VALUE = 56;
     /**
      * <pre>
      * SOCIAL_SECURITY_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SOCIAL_SECURITY_CARD = 58;</code>
+     * <code>DOCUMENT_TYPE_SOCIAL_SECURITY_CARD = 57;</code>
      */
-    public static final int DOCUMENT_TYPE_SOCIAL_SECURITY_CARD_VALUE = 58;
+    public static final int DOCUMENT_TYPE_SOCIAL_SECURITY_CARD_VALUE = 57;
     /**
      * <pre>
      * SPECIAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT = 59;</code>
+     * <code>DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT = 58;</code>
      */
-    public static final int DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT_VALUE = 59;
+    public static final int DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT_VALUE = 58;
     /**
      * <pre>
      * S_PASS
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_S_PASS = 60;</code>
+     * <code>DOCUMENT_TYPE_S_PASS = 59;</code>
      */
-    public static final int DOCUMENT_TYPE_S_PASS_VALUE = 60;
+    public static final int DOCUMENT_TYPE_S_PASS_VALUE = 59;
     /**
      * <pre>
      * TAX_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT = 61;</code>
+     * <code>DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT = 60;</code>
      */
-    public static final int DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT_VALUE = 61;
+    public static final int DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT_VALUE = 60;
     /**
      * <pre>
      * TEMPORARY_PROTECTION_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT = 62;</code>
+     * <code>DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT = 61;</code>
      */
-    public static final int DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT_VALUE = 62;
+    public static final int DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT_VALUE = 61;
     /**
      * <pre>
      * TEMPORARY_RESIDENCE_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT = 63;</code>
+     * <code>DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT = 62;</code>
      */
-    public static final int DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT_VALUE = 63;
+    public static final int DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT_VALUE = 62;
     /**
      * <pre>
      * TRIBAL_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT = 64;</code>
+     * <code>DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT = 63;</code>
      */
-    public static final int DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT_VALUE = 64;
+    public static final int DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT_VALUE = 63;
     /**
      * <pre>
      * TWIC_CARD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_TWIC_CARD = 65;</code>
+     * <code>DOCUMENT_TYPE_TWIC_CARD = 64;</code>
      */
-    public static final int DOCUMENT_TYPE_TWIC_CARD_VALUE = 65;
+    public static final int DOCUMENT_TYPE_TWIC_CARD_VALUE = 64;
     /**
      * <pre>
      * UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT = 66;</code>
+     * <code>DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT = 65;</code>
      */
-    public static final int DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT_VALUE = 66;
+    public static final int DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT_VALUE = 65;
     /**
      * <pre>
      * VETERAN_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT = 67;</code>
+     * <code>DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT = 66;</code>
      */
-    public static final int DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT_VALUE = 67;
+    public static final int DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT_VALUE = 66;
     /**
      * <pre>
      * VISA
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VISA = 68;</code>
+     * <code>DOCUMENT_TYPE_VISA = 67;</code>
      */
-    public static final int DOCUMENT_TYPE_VISA_VALUE = 68;
+    public static final int DOCUMENT_TYPE_VISA_VALUE = 67;
     /**
      * <pre>
      * VOTER_IDENTIFICATION_DOCUMENT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT = 69;</code>
+     * <code>DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT = 68;</code>
      */
-    public static final int DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT_VALUE = 69;
+    public static final int DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT_VALUE = 68;
     /**
      * <pre>
      * WEAPON_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_WEAPON_PERMIT = 70;</code>
+     * <code>DOCUMENT_TYPE_WEAPON_PERMIT = 69;</code>
      */
-    public static final int DOCUMENT_TYPE_WEAPON_PERMIT_VALUE = 70;
+    public static final int DOCUMENT_TYPE_WEAPON_PERMIT_VALUE = 69;
     /**
      * <pre>
      * WORK_PERMIT
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_WORK_PERMIT = 71;</code>
+     * <code>DOCUMENT_TYPE_WORK_PERMIT = 70;</code>
      */
-    public static final int DOCUMENT_TYPE_WORK_PERMIT_VALUE = 71;
+    public static final int DOCUMENT_TYPE_WORK_PERMIT_VALUE = 70;
     /**
      * <pre>
      * iKAD
      * </pre>
      *
-     * <code>DOCUMENT_TYPE_IKAD = 72;</code>
+     * <code>DOCUMENT_TYPE_IKAD = 71;</code>
      */
-    public static final int DOCUMENT_TYPE_IKAD_VALUE = 72;
+    public static final int DOCUMENT_TYPE_IKAD_VALUE = 71;
 
 
     public final int getNumber() {
@@ -1246,77 +1230,76 @@ public final class DocumentTypesEnum {
       switch (value) {
         case 0: return DOCUMENT_TYPE_NOT_AVAILABLE;
         case 1: return DOCUMENT_TYPE_ADDRESS_CARD;
-        case 2: return DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD;
-        case 3: return DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT;
-        case 4: return DOCUMENT_TYPE_ASYLUM_SEEKER_CARD;
-        case 5: return DOCUMENT_TYPE_BORDER_CROSSING_CARD;
-        case 6: return DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE;
-        case 7: return DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT;
-        case 8: return DOCUMENT_TYPE_CONSULAR_PASSPORT;
-        case 9: return DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT;
-        case 10: return DOCUMENT_TYPE_DRIVERS_LICENSE;
-        case 11: return DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD;
-        case 12: return DOCUMENT_TYPE_DRIVER_CARD;
-        case 13: return DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD;
-        case 14: return DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD;
-        case 15: return DOCUMENT_TYPE_EMPLOYMENT_PASS;
-        case 16: return DOCUMENT_TYPE_EXIT_ENTRY_PERMIT;
-        case 17: return DOCUMENT_TYPE_E_ID;
-        case 18: return DOCUMENT_TYPE_FIN_CARD;
-        case 19: return DOCUMENT_TYPE_GLOBAL_ENTRY_CARD;
-        case 20: return DOCUMENT_TYPE_GREEN_CARD;
-        case 21: return DOCUMENT_TYPE_HEALTH_INSURANCE_CARD;
-        case 22: return DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT;
-        case 23: return DOCUMENT_TYPE_IMMIGRANT_VISA;
-        case 24: return DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD;
-        case 25: return DOCUMENT_TYPE_INTERNAL_PASSPORT;
-        case 26: return DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN;
-        case 27: return DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT;
-        case 28: return DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT;
-        case 29: return DOCUMENT_TYPE_MINORS_PASSPORT;
-        case 30: return DOCUMENT_TYPE_MINORS_SERVICES_CARD;
-        case 31: return DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT;
-        case 32: return DOCUMENT_TYPE_MY_KAD;
-        case 33: return DOCUMENT_TYPE_MY_KAS;
-        case 34: return DOCUMENT_TYPE_MY_KID;
-        case 35: return DOCUMENT_TYPE_MY_POLIS;
-        case 36: return DOCUMENT_TYPE_MY_PR;
-        case 37: return DOCUMENT_TYPE_MY_TENTERA;
-        case 38: return DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT;
-        case 39: return DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT;
-        case 40: return DOCUMENT_TYPE_NEXT_GEN_PASSPORT;
-        case 41: return DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT;
-        case 42: return DOCUMENT_TYPE_NEXUS_CARD;
-        case 43: return DOCUMENT_TYPE_PASS;
-        case 44: return DOCUMENT_TYPE_PASSPORT;
-        case 45: return DOCUMENT_TYPE_PASSPORT_CARD;
-        case 46: return DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD;
-        case 47: return DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT;
-        case 48: return DOCUMENT_TYPE_PROFESSIONAL_CARD;
-        case 49: return DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE;
-        case 50: return DOCUMENT_TYPE_PROOF_OF_AGE_CARD;
-        case 51: return DOCUMENT_TYPE_PROOF_OF_REGISTRATION;
-        case 52: return DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE;
-        case 53: return DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT;
-        case 54: return DOCUMENT_TYPE_RESIDENCE_PERMIT;
-        case 55: return DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT;
-        case 56: return DOCUMENT_TYPE_SERVICES_CARD;
-        case 57: return DOCUMENT_TYPE_SIS_ID;
-        case 58: return DOCUMENT_TYPE_SOCIAL_SECURITY_CARD;
-        case 59: return DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT;
-        case 60: return DOCUMENT_TYPE_S_PASS;
-        case 61: return DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT;
-        case 62: return DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT;
-        case 63: return DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT;
-        case 64: return DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT;
-        case 65: return DOCUMENT_TYPE_TWIC_CARD;
-        case 66: return DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT;
-        case 67: return DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT;
-        case 68: return DOCUMENT_TYPE_VISA;
-        case 69: return DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT;
-        case 70: return DOCUMENT_TYPE_WEAPON_PERMIT;
-        case 71: return DOCUMENT_TYPE_WORK_PERMIT;
-        case 72: return DOCUMENT_TYPE_IKAD;
+        case 2: return DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT;
+        case 3: return DOCUMENT_TYPE_ASYLUM_SEEKER_CARD;
+        case 4: return DOCUMENT_TYPE_BORDER_CROSSING_CARD;
+        case 5: return DOCUMENT_TYPE_CITIZENSHIP_CERTIFICATE;
+        case 6: return DOCUMENT_TYPE_CONSULAR_IDENTIFICATION_DOCUMENT;
+        case 7: return DOCUMENT_TYPE_CONSULAR_PASSPORT;
+        case 8: return DOCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATION_DOCUMENT;
+        case 9: return DOCUMENT_TYPE_DRIVERS_LICENSE;
+        case 10: return DOCUMENT_TYPE_DRIVERS_LICENSE_AND_SERVICES_CARD;
+        case 11: return DOCUMENT_TYPE_DRIVER_CARD;
+        case 12: return DOCUMENT_TYPE_DRIVER_PRIVILEGE_CARD;
+        case 13: return DOCUMENT_TYPE_DRIVER_QUALIFICATION_CARD;
+        case 14: return DOCUMENT_TYPE_EMPLOYMENT_PASS;
+        case 15: return DOCUMENT_TYPE_EXIT_ENTRY_PERMIT;
+        case 16: return DOCUMENT_TYPE_E_ID;
+        case 17: return DOCUMENT_TYPE_FIN_CARD;
+        case 18: return DOCUMENT_TYPE_GLOBAL_ENTRY_CARD;
+        case 19: return DOCUMENT_TYPE_GREEN_CARD;
+        case 20: return DOCUMENT_TYPE_HEALTH_INSURANCE_CARD;
+        case 21: return DOCUMENT_TYPE_IDENTIFICATION_DOCUMENT;
+        case 22: return DOCUMENT_TYPE_IMMIGRANT_VISA;
+        case 23: return DOCUMENT_TYPE_INDIVIDUAL_NUMBER_CARD;
+        case 24: return DOCUMENT_TYPE_INTERNAL_PASSPORT;
+        case 25: return DOCUMENT_TYPE_MAINLAND_TRAVEL_PERMIT_TAIWAN;
+        case 26: return DOCUMENT_TYPE_MILITARY_IDENTIFICATION_DOCUMENT;
+        case 27: return DOCUMENT_TYPE_MINORS_IDENTIFICATION_DOCUMENT;
+        case 28: return DOCUMENT_TYPE_MINORS_PASSPORT;
+        case 29: return DOCUMENT_TYPE_MINORS_SERVICES_CARD;
+        case 30: return DOCUMENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DOCUMENT;
+        case 31: return DOCUMENT_TYPE_MY_KAD;
+        case 32: return DOCUMENT_TYPE_MY_KAS;
+        case 33: return DOCUMENT_TYPE_MY_KID;
+        case 34: return DOCUMENT_TYPE_MY_POLIS;
+        case 35: return DOCUMENT_TYPE_MY_PR;
+        case 36: return DOCUMENT_TYPE_MY_TENTERA;
+        case 37: return DOCUMENT_TYPE_NBI_CLEARANCE_DOCUMENT;
+        case 38: return DOCUMENT_TYPE_NEXT_GEN_ALIEN_PASSPORT;
+        case 39: return DOCUMENT_TYPE_NEXT_GEN_PASSPORT;
+        case 40: return DOCUMENT_TYPE_NEXT_GEN_REFUGEE_PASSPORT;
+        case 41: return DOCUMENT_TYPE_NEXUS_CARD;
+        case 42: return DOCUMENT_TYPE_PASS;
+        case 43: return DOCUMENT_TYPE_PASSPORT;
+        case 44: return DOCUMENT_TYPE_PASSPORT_CARD;
+        case 45: return DOCUMENT_TYPE_PERMANENT_ACCOUNT_NUMBER_CARD;
+        case 46: return DOCUMENT_TYPE_POSTAL_IDENTIFICATION_DOCUMENT;
+        case 47: return DOCUMENT_TYPE_PROFESSIONAL_CARD;
+        case 48: return DOCUMENT_TYPE_PROFESSIONAL_DRIVERS_LICENSE;
+        case 49: return DOCUMENT_TYPE_PROOF_OF_AGE_CARD;
+        case 50: return DOCUMENT_TYPE_PROOF_OF_REGISTRATION;
+        case 51: return DOCUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE;
+        case 52: return DOCUMENT_TYPE_REFUGEE_IDENTIFICATION_DOCUMENT;
+        case 53: return DOCUMENT_TYPE_RESIDENCE_PERMIT;
+        case 54: return DOCUMENT_TYPE_RESIDENT_IDENTIFICATION_DOCUMENT;
+        case 55: return DOCUMENT_TYPE_SERVICES_CARD;
+        case 56: return DOCUMENT_TYPE_SIS_ID;
+        case 57: return DOCUMENT_TYPE_SOCIAL_SECURITY_CARD;
+        case 58: return DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_DOCUMENT;
+        case 59: return DOCUMENT_TYPE_S_PASS;
+        case 60: return DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT;
+        case 61: return DOCUMENT_TYPE_TEMPORARY_PROTECTION_PERMIT;
+        case 62: return DOCUMENT_TYPE_TEMPORARY_RESIDENCE_PERMIT;
+        case 63: return DOCUMENT_TYPE_TRIBAL_IDENTIFICATION_DOCUMENT;
+        case 64: return DOCUMENT_TYPE_TWIC_CARD;
+        case 65: return DOCUMENT_TYPE_UNIFORMED_SERVICES_IDENTIFICATION_DOCUMENT;
+        case 66: return DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOCUMENT;
+        case 67: return DOCUMENT_TYPE_VISA;
+        case 68: return DOCUMENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT;
+        case 69: return DOCUMENT_TYPE_WEAPON_PERMIT;
+        case 70: return DOCUMENT_TYPE_WORK_PERMIT;
+        case 71: return DOCUMENT_TYPE_IKAD;
         default: return null;
       }
     }
@@ -1383,80 +1366,79 @@ public final class DocumentTypesEnum {
   static {
     java.lang.String[] descriptorData = {
       "\n&proto/ddx/v1/document_types_enum.proto" +
-      "\022\014proto.ddx.v1*\267\026\n\014DocumentType\022\037\n\033DOCUM" +
+      "\022\014proto.ddx.v1*\220\026\n\014DocumentType\022\037\n\033DOCUM" +
       "ENT_TYPE_NOT_AVAILABLE\020\000\022\036\n\032DOCUMENT_TYP" +
-      "E_ADDRESS_CARD\020\001\022%\n!DOCUMENT_TYPE_AFGHAN" +
-      "_CITIZEN_CARD\020\002\022/\n+DOCUMENT_TYPE_ALIEN_I" +
-      "DENTIFICATION_DOCUMENT\020\003\022$\n DOCUMENT_TYP" +
-      "E_ASYLUM_SEEKER_CARD\020\004\022&\n\"DOCUMENT_TYPE_" +
-      "BORDER_CROSSING_CARD\020\005\022)\n%DOCUMENT_TYPE_" +
-      "CITIZENSHIP_CERTIFICATE\020\006\0222\n.DOCUMENT_TY" +
-      "PE_CONSULAR_IDENTIFICATION_DOCUMENT\020\007\022#\n" +
-      "\037DOCUMENT_TYPE_CONSULAR_PASSPORT\020\010\0228\n4DO" +
-      "CUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATIO" +
-      "N_DOCUMENT\020\t\022!\n\035DOCUMENT_TYPE_DRIVERS_LI" +
-      "CENSE\020\n\0223\n/DOCUMENT_TYPE_DRIVERS_LICENSE" +
-      "_AND_SERVICES_CARD\020\013\022\035\n\031DOCUMENT_TYPE_DR" +
-      "IVER_CARD\020\014\022\'\n#DOCUMENT_TYPE_DRIVER_PRIV" +
-      "ILEGE_CARD\020\r\022+\n\'DOCUMENT_TYPE_DRIVER_QUA" +
-      "LIFICATION_CARD\020\016\022!\n\035DOCUMENT_TYPE_EMPLO" +
-      "YMENT_PASS\020\017\022#\n\037DOCUMENT_TYPE_EXIT_ENTRY" +
-      "_PERMIT\020\020\022\026\n\022DOCUMENT_TYPE_E_ID\020\021\022\032\n\026DOC" +
-      "UMENT_TYPE_FIN_CARD\020\022\022#\n\037DOCUMENT_TYPE_G" +
-      "LOBAL_ENTRY_CARD\020\023\022\034\n\030DOCUMENT_TYPE_GREE" +
-      "N_CARD\020\024\022\'\n#DOCUMENT_TYPE_HEALTH_INSURAN" +
-      "CE_CARD\020\025\022)\n%DOCUMENT_TYPE_IDENTIFICATIO" +
-      "N_DOCUMENT\020\026\022 \n\034DOCUMENT_TYPE_IMMIGRANT_" +
-      "VISA\020\027\022(\n$DOCUMENT_TYPE_INDIVIDUAL_NUMBE" +
-      "R_CARD\020\030\022#\n\037DOCUMENT_TYPE_INTERNAL_PASSP" +
-      "ORT\020\031\022/\n+DOCUMENT_TYPE_MAINLAND_TRAVEL_P" +
-      "ERMIT_TAIWAN\020\032\0222\n.DOCUMENT_TYPE_MILITARY" +
-      "_IDENTIFICATION_DOCUMENT\020\033\0220\n,DOCUMENT_T" +
-      "YPE_MINORS_IDENTIFICATION_DOCUMENT\020\034\022!\n\035" +
-      "DOCUMENT_TYPE_MINORS_PASSPORT\020\035\022&\n\"DOCUM" +
-      "ENT_TYPE_MINORS_SERVICES_CARD\020\036\0227\n3DOCUM" +
-      "ENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_DO" +
-      "CUMENT\020\037\022\030\n\024DOCUMENT_TYPE_MY_KAD\020 \022\030\n\024DO" +
-      "CUMENT_TYPE_MY_KAS\020!\022\030\n\024DOCUMENT_TYPE_MY" +
-      "_KID\020\"\022\032\n\026DOCUMENT_TYPE_MY_POLIS\020#\022\027\n\023DO" +
-      "CUMENT_TYPE_MY_PR\020$\022\034\n\030DOCUMENT_TYPE_MY_" +
-      "TENTERA\020%\022(\n$DOCUMENT_TYPE_NBI_CLEARANCE" +
-      "_DOCUMENT\020&\022)\n%DOCUMENT_TYPE_NEXT_GEN_AL" +
-      "IEN_PASSPORT\020\'\022#\n\037DOCUMENT_TYPE_NEXT_GEN" +
-      "_PASSPORT\020(\022+\n\'DOCUMENT_TYPE_NEXT_GEN_RE" +
-      "FUGEE_PASSPORT\020)\022\034\n\030DOCUMENT_TYPE_NEXUS_" +
-      "CARD\020*\022\026\n\022DOCUMENT_TYPE_PASS\020+\022\032\n\026DOCUME" +
-      "NT_TYPE_PASSPORT\020,\022\037\n\033DOCUMENT_TYPE_PASS" +
-      "PORT_CARD\020-\022/\n+DOCUMENT_TYPE_PERMANENT_A" +
-      "CCOUNT_NUMBER_CARD\020.\0220\n,DOCUMENT_TYPE_PO" +
-      "STAL_IDENTIFICATION_DOCUMENT\020/\022#\n\037DOCUME" +
-      "NT_TYPE_PROFESSIONAL_CARD\0200\022.\n*DOCUMENT_" +
-      "TYPE_PROFESSIONAL_DRIVERS_LICENSE\0201\022#\n\037D" +
-      "OCUMENT_TYPE_PROOF_OF_AGE_CARD\0202\022\'\n#DOCU" +
-      "MENT_TYPE_PROOF_OF_REGISTRATION\0203\022-\n)DOC" +
-      "UMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE\0204" +
-      "\0221\n-DOCUMENT_TYPE_REFUGEE_IDENTIFICATION" +
-      "_DOCUMENT\0205\022\"\n\036DOCUMENT_TYPE_RESIDENCE_P" +
-      "ERMIT\0206\0222\n.DOCUMENT_TYPE_RESIDENT_IDENTI" +
-      "FICATION_DOCUMENT\0207\022\037\n\033DOCUMENT_TYPE_SER" +
-      "VICES_CARD\0208\022\030\n\024DOCUMENT_TYPE_SIS_ID\0209\022&" +
-      "\n\"DOCUMENT_TYPE_SOCIAL_SECURITY_CARD\020:\0221" +
-      "\n-DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_D" +
-      "OCUMENT\020;\022\030\n\024DOCUMENT_TYPE_S_PASS\020<\022-\n)D" +
-      "OCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMENT" +
-      "\020=\022-\n)DOCUMENT_TYPE_TEMPORARY_PROTECTION" +
-      "_PERMIT\020>\022,\n(DOCUMENT_TYPE_TEMPORARY_RES" +
-      "IDENCE_PERMIT\020?\0220\n,DOCUMENT_TYPE_TRIBAL_" +
-      "IDENTIFICATION_DOCUMENT\020@\022\033\n\027DOCUMENT_TY" +
-      "PE_TWIC_CARD\020A\022<\n8DOCUMENT_TYPE_UNIFORME" +
-      "D_SERVICES_IDENTIFICATION_DOCUMENT\020B\0221\n-" +
-      "DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DOC" +
-      "UMENT\020C\022\026\n\022DOCUMENT_TYPE_VISA\020D\022/\n+DOCUM" +
-      "ENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT\020E" +
-      "\022\037\n\033DOCUMENT_TYPE_WEAPON_PERMIT\020F\022\035\n\031DOC" +
-      "UMENT_TYPE_WORK_PERMIT\020G\022\026\n\022DOCUMENT_TYP" +
-      "E_IKAD\020HB4Z2github.com/veridil/id-extrac" +
-      "t-service/proto/ddx/v1b\006proto3"
+      "E_ADDRESS_CARD\020\001\022/\n+DOCUMENT_TYPE_ALIEN_" +
+      "IDENTIFICATION_DOCUMENT\020\002\022$\n DOCUMENT_TY" +
+      "PE_ASYLUM_SEEKER_CARD\020\003\022&\n\"DOCUMENT_TYPE" +
+      "_BORDER_CROSSING_CARD\020\004\022)\n%DOCUMENT_TYPE" +
+      "_CITIZENSHIP_CERTIFICATE\020\005\0222\n.DOCUMENT_T" +
+      "YPE_CONSULAR_IDENTIFICATION_DOCUMENT\020\006\022#" +
+      "\n\037DOCUMENT_TYPE_CONSULAR_PASSPORT\020\007\0228\n4D" +
+      "OCUMENT_TYPE_CONSULAR_VOTER_IDENTIFICATI" +
+      "ON_DOCUMENT\020\010\022!\n\035DOCUMENT_TYPE_DRIVERS_L" +
+      "ICENSE\020\t\0223\n/DOCUMENT_TYPE_DRIVERS_LICENS" +
+      "E_AND_SERVICES_CARD\020\n\022\035\n\031DOCUMENT_TYPE_D" +
+      "RIVER_CARD\020\013\022\'\n#DOCUMENT_TYPE_DRIVER_PRI" +
+      "VILEGE_CARD\020\014\022+\n\'DOCUMENT_TYPE_DRIVER_QU" +
+      "ALIFICATION_CARD\020\r\022!\n\035DOCUMENT_TYPE_EMPL" +
+      "OYMENT_PASS\020\016\022#\n\037DOCUMENT_TYPE_EXIT_ENTR" +
+      "Y_PERMIT\020\017\022\026\n\022DOCUMENT_TYPE_E_ID\020\020\022\032\n\026DO" +
+      "CUMENT_TYPE_FIN_CARD\020\021\022#\n\037DOCUMENT_TYPE_" +
+      "GLOBAL_ENTRY_CARD\020\022\022\034\n\030DOCUMENT_TYPE_GRE" +
+      "EN_CARD\020\023\022\'\n#DOCUMENT_TYPE_HEALTH_INSURA" +
+      "NCE_CARD\020\024\022)\n%DOCUMENT_TYPE_IDENTIFICATI" +
+      "ON_DOCUMENT\020\025\022 \n\034DOCUMENT_TYPE_IMMIGRANT" +
+      "_VISA\020\026\022(\n$DOCUMENT_TYPE_INDIVIDUAL_NUMB" +
+      "ER_CARD\020\027\022#\n\037DOCUMENT_TYPE_INTERNAL_PASS" +
+      "PORT\020\030\022/\n+DOCUMENT_TYPE_MAINLAND_TRAVEL_" +
+      "PERMIT_TAIWAN\020\031\0222\n.DOCUMENT_TYPE_MILITAR" +
+      "Y_IDENTIFICATION_DOCUMENT\020\032\0220\n,DOCUMENT_" +
+      "TYPE_MINORS_IDENTIFICATION_DOCUMENT\020\033\022!\n" +
+      "\035DOCUMENT_TYPE_MINORS_PASSPORT\020\034\022&\n\"DOCU" +
+      "MENT_TYPE_MINORS_SERVICES_CARD\020\035\0227\n3DOCU" +
+      "MENT_TYPE_MULTI_PURPOSE_IDENTIFICATION_D" +
+      "OCUMENT\020\036\022\030\n\024DOCUMENT_TYPE_MY_KAD\020\037\022\030\n\024D" +
+      "OCUMENT_TYPE_MY_KAS\020 \022\030\n\024DOCUMENT_TYPE_M" +
+      "Y_KID\020!\022\032\n\026DOCUMENT_TYPE_MY_POLIS\020\"\022\027\n\023D" +
+      "OCUMENT_TYPE_MY_PR\020#\022\034\n\030DOCUMENT_TYPE_MY" +
+      "_TENTERA\020$\022(\n$DOCUMENT_TYPE_NBI_CLEARANC" +
+      "E_DOCUMENT\020%\022)\n%DOCUMENT_TYPE_NEXT_GEN_A" +
+      "LIEN_PASSPORT\020&\022#\n\037DOCUMENT_TYPE_NEXT_GE" +
+      "N_PASSPORT\020\'\022+\n\'DOCUMENT_TYPE_NEXT_GEN_R" +
+      "EFUGEE_PASSPORT\020(\022\034\n\030DOCUMENT_TYPE_NEXUS" +
+      "_CARD\020)\022\026\n\022DOCUMENT_TYPE_PASS\020*\022\032\n\026DOCUM" +
+      "ENT_TYPE_PASSPORT\020+\022\037\n\033DOCUMENT_TYPE_PAS" +
+      "SPORT_CARD\020,\022/\n+DOCUMENT_TYPE_PERMANENT_" +
+      "ACCOUNT_NUMBER_CARD\020-\0220\n,DOCUMENT_TYPE_P" +
+      "OSTAL_IDENTIFICATION_DOCUMENT\020.\022#\n\037DOCUM" +
+      "ENT_TYPE_PROFESSIONAL_CARD\020/\022.\n*DOCUMENT" +
+      "_TYPE_PROFESSIONAL_DRIVERS_LICENSE\0200\022#\n\037" +
+      "DOCUMENT_TYPE_PROOF_OF_AGE_CARD\0201\022\'\n#DOC" +
+      "UMENT_TYPE_PROOF_OF_REGISTRATION\0202\022-\n)DO" +
+      "CUMENT_TYPE_PROVISIONAL_DRIVERS_LICENSE\020" +
+      "3\0221\n-DOCUMENT_TYPE_REFUGEE_IDENTIFICATIO" +
+      "N_DOCUMENT\0204\022\"\n\036DOCUMENT_TYPE_RESIDENCE_" +
+      "PERMIT\0205\0222\n.DOCUMENT_TYPE_RESIDENT_IDENT" +
+      "IFICATION_DOCUMENT\0206\022\037\n\033DOCUMENT_TYPE_SE" +
+      "RVICES_CARD\0207\022\030\n\024DOCUMENT_TYPE_SIS_ID\0208\022" +
+      "&\n\"DOCUMENT_TYPE_SOCIAL_SECURITY_CARD\0209\022" +
+      "1\n-DOCUMENT_TYPE_SPECIAL_IDENTIFICATION_" +
+      "DOCUMENT\020:\022\030\n\024DOCUMENT_TYPE_S_PASS\020;\022-\n)" +
+      "DOCUMENT_TYPE_TAX_IDENTIFICATION_DOCUMEN" +
+      "T\020<\022-\n)DOCUMENT_TYPE_TEMPORARY_PROTECTIO" +
+      "N_PERMIT\020=\022,\n(DOCUMENT_TYPE_TEMPORARY_RE" +
+      "SIDENCE_PERMIT\020>\0220\n,DOCUMENT_TYPE_TRIBAL" +
+      "_IDENTIFICATION_DOCUMENT\020?\022\033\n\027DOCUMENT_T" +
+      "YPE_TWIC_CARD\020@\022<\n8DOCUMENT_TYPE_UNIFORM" +
+      "ED_SERVICES_IDENTIFICATION_DOCUMENT\020A\0221\n" +
+      "-DOCUMENT_TYPE_VETERAN_IDENTIFICATION_DO" +
+      "CUMENT\020B\022\026\n\022DOCUMENT_TYPE_VISA\020C\022/\n+DOCU" +
+      "MENT_TYPE_VOTER_IDENTIFICATION_DOCUMENT\020" +
+      "D\022\037\n\033DOCUMENT_TYPE_WEAPON_PERMIT\020E\022\035\n\031DO" +
+      "CUMENT_TYPE_WORK_PERMIT\020F\022\026\n\022DOCUMENT_TY" +
+      "PE_IKAD\020GB4Z2github.com/veridil/id-extra" +
+      "ct-service/proto/ddx/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

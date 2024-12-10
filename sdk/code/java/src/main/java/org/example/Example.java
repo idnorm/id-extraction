@@ -2,6 +2,7 @@ package org.example;
 
 import com.google.protobuf.ByteString;
 import com.idnorm.extraction.ExtractionBlockingClient;
+import proto.ddx.v1.Service;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -38,44 +39,66 @@ public class Example {
 
         System.out.println("Sending request...");
 
-        var result = cli.scanDocument(imgData);
+        // request service to return all visual fields
+        var scanConfig = Service.ScanConfig.newBuilder().setReturnVisualFields(
+                Service.ScanConfig.ReturnVisualFields.getDefaultInstance()
+        ).build();
 
-        if (result.hasDetection()) {
+        var result = cli.scanDocument(imgData, scanConfig);
+
+        if (result.getStatus() != Service.ScanDocumentResponse.Status.STATUS_DOCUMENT_NOT_FOUND) {
+            System.out.println("Response status: " + result.getStatus());
+
             // Prints detected card quad
             System.out.println("Detected card quad:");
             System.out.println(result.getDetection());
+            if (result.hasData()) {
+                var data = result.getData();
+                // Prints all detected text fields
+                for (var field : data.getTextFieldList()) {
+                    System.out.println(field.getType() + ": " + field.getValue());
+                }
 
-            // Prints all detected text fields
-            for (var field : result.getTextFieldList()) {
-                System.out.println(field.getType() + ": " + field.getValue());
-            }
+                // Prints all detected date fields
+                for (var field : data.getDateFieldList()) {
+                    System.out.printf("%s: %s", field.getType(), field.getValue());
+                    if (field.hasDate()) {
+                        System.out.printf("| Parsed - Day: %d, Month: %d, Year: %d", field.getDate().getDay(), field.getDate().getMonth(), field.getDate().getYear());
+                    }
+                    System.out.println();
+                }
 
-            // Stores all detected visual field images to current working dir
-            for (var field : result.getVisualFieldList()) {
-                var img = field.getImage();
-                var filename = field.getType() + ".jpg";
-                try {
-                    img.writeTo(new java.io.FileOutputStream(filename));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                // Print all detected sex fields
+                for (var field : data.getSexFieldList()) {
+                    System.out.printf("Sex: %s | Parsed - %s", field.getValue(), field.getSex());
+                }
+
+                // Stores all detected visual field images to current working dir
+                for (var field : data.getVisualFieldList()) {
+                    var img = field.getImage();
+                    var filename = field.getType() + ".jpg";
+                    try {
+                        img.writeTo(new java.io.FileOutputStream(filename));
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+
+                if (data.hasMrz()) {
+                    // Prints detected MRZ
+                    System.out.println("Detected MRZ:");
+                    System.out.println(data.getMrz());
+                }
+
+                if (data.hasPdf417Barcode()) {
+                    // Prints detected PDF417 barcode
+                    System.out.println("Detected PDF417 barcode:");
+                    System.out.println(data.getPdf417Barcode());
                 }
             }
         } else {
-
             // Prints status
             System.out.println(result.getStatus());
-        }
-
-        if (result.hasMrz()) {
-            // Prints detected MRZ
-            System.out.println("Detected MRZ:");
-            System.out.println(result.getMrz());
-        }
-
-        if (result.hasPdf417Barcode()) {
-            // Prints detected PDF417 barcode
-            System.out.println("Detected PDF417 barcode:");
-            System.out.println(result.getPdf417Barcode());
         }
 
     }

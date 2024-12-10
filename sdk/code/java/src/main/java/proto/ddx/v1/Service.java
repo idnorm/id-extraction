@@ -10103,294 +10103,33 @@ public final class Service {
 
     /**
      * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    java.util.List<proto.ddx.v1.Fields.TextField> 
-        getTextFieldList();
+    boolean hasData();
     /**
      * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+     * @return The data.
      */
-    proto.ddx.v1.Fields.TextField getTextField(int index);
+    proto.ddx.v1.Service.DocumentData getData();
     /**
      * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
      */
-    int getTextFieldCount();
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
-        getTextFieldOrBuilderList();
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    java.util.List<proto.ddx.v1.Fields.VisualField> 
-        getVisualFieldList();
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    proto.ddx.v1.Fields.VisualField getVisualField(int index);
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    int getVisualFieldCount();
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
-        getVisualFieldOrBuilderList();
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    java.util.List<proto.ddx.v1.Fields.DateField> 
-        getDateFieldList();
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    proto.ddx.v1.Fields.DateField getDateField(int index);
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    int getDateFieldCount();
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
-        getDateFieldOrBuilderList();
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    java.util.List<proto.ddx.v1.Fields.SexField> 
-        getSexFieldList();
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    proto.ddx.v1.Fields.SexField getSexField(int index);
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    int getSexFieldCount();
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
-        getSexFieldOrBuilderList();
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-     * @return Whether the mrz field is set.
-     */
-    boolean hasMrz();
-    /**
-     * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-     * @return The mrz.
-     */
-    proto.ddx.v1.Service.Mrz getMrz();
-    /**
-     * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-     */
-    proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder();
-
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     * @return Whether the pdf417Barcode field is set.
-     */
-    boolean hasPdf417Barcode();
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     * @return The pdf417Barcode.
-     */
-    proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode();
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     */
-    proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder();
-
-    /**
-     * <pre>
-     * Optional, empty by default, returned if specified in requests "config" field.
-     * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
-     * </pre>
-     *
-     * <code>bytes documentImage = 10 [json_name = "documentImage"];</code>
-     * @return The documentImage.
-     */
-    com.google.protobuf.ByteString getDocumentImage();
+    proto.ddx.v1.Service.DocumentDataOrBuilder getDataOrBuilder();
   }
   /**
    * <pre>
@@ -10419,11 +10158,6 @@ public final class Service {
     }
     private ScanDocumentResponse() {
       status_ = 0;
-      textField_ = java.util.Collections.emptyList();
-      visualField_ = java.util.Collections.emptyList();
-      dateField_ = java.util.Collections.emptyList();
-      sexField_ = java.util.Collections.emptyList();
-      documentImage_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -10708,390 +10442,45 @@ public final class Service {
       return classification_ == null ? proto.ddx.v1.Service.DocumentClass.getDefaultInstance() : classification_;
     }
 
-    public static final int TEXTFIELD_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private java.util.List<proto.ddx.v1.Fields.TextField> textField_;
+    public static final int DATA_FIELD_NUMBER = 4;
+    private proto.ddx.v1.Service.DocumentData data_;
     /**
      * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
     @java.lang.Override
-    public java.util.List<proto.ddx.v1.Fields.TextField> getTextFieldList() {
-      return textField_;
-    }
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
-        getTextFieldOrBuilderList() {
-      return textField_;
-    }
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    @java.lang.Override
-    public int getTextFieldCount() {
-      return textField_.size();
-    }
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.TextField getTextField(int index) {
-      return textField_.get(index);
-    }
-    /**
-     * <pre>
-     * field holds detected document textual fields.
-     * Textual fields are all the fields that have textual representation and we expect
-     * out users to use the OCRed and transcribed text.
-     * Will be empty if status is not OK
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
-        int index) {
-      return textField_.get(index);
-    }
-
-    public static final int VISUALFIELD_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private java.util.List<proto.ddx.v1.Fields.VisualField> visualField_;
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<proto.ddx.v1.Fields.VisualField> getVisualFieldList() {
-      return visualField_;
-    }
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
-        getVisualFieldOrBuilderList() {
-      return visualField_;
-    }
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    @java.lang.Override
-    public int getVisualFieldCount() {
-      return visualField_.size();
-    }
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.VisualField getVisualField(int index) {
-      return visualField_.get(index);
-    }
-    /**
-     * <pre>
-     * visualField holds detected document visual fields.
-     * Visual fields are those whose values can't be extracted as text, and are
-     * expected to be extracted as an image or position in the given image.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
-        int index) {
-      return visualField_.get(index);
-    }
-
-    public static final int DATEFIELD_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private java.util.List<proto.ddx.v1.Fields.DateField> dateField_;
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<proto.ddx.v1.Fields.DateField> getDateFieldList() {
-      return dateField_;
-    }
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
-        getDateFieldOrBuilderList() {
-      return dateField_;
-    }
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    @java.lang.Override
-    public int getDateFieldCount() {
-      return dateField_.size();
-    }
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.DateField getDateField(int index) {
-      return dateField_.get(index);
-    }
-    /**
-     * <pre>
-     * dateField holds detected document date fields.
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-     * representation.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
-        int index) {
-      return dateField_.get(index);
-    }
-
-    public static final int SEXFIELD_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private java.util.List<proto.ddx.v1.Fields.SexField> sexField_;
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<proto.ddx.v1.Fields.SexField> getSexFieldList() {
-      return sexField_;
-    }
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
-        getSexFieldOrBuilderList() {
-      return sexField_;
-    }
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    @java.lang.Override
-    public int getSexFieldCount() {
-      return sexField_.size();
-    }
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.SexField getSexField(int index) {
-      return sexField_.get(index);
-    }
-    /**
-     * <pre>
-     * sexField holds detected document gender fields
-     * Compared to textual fields, they don't just hold textual information present on the document
-     * but offer gender information as an parsed enumeration.
-     * </pre>
-     *
-     * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
-        int index) {
-      return sexField_.get(index);
-    }
-
-    public static final int MRZ_FIELD_NUMBER = 8;
-    private proto.ddx.v1.Service.Mrz mrz_;
-    /**
-     * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-     * @return Whether the mrz field is set.
-     */
-    @java.lang.Override
-    public boolean hasMrz() {
+    public boolean hasData() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-     * @return The mrz.
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+     * @return The data.
      */
     @java.lang.Override
-    public proto.ddx.v1.Service.Mrz getMrz() {
-      return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+    public proto.ddx.v1.Service.DocumentData getData() {
+      return data_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : data_;
     }
     /**
      * <pre>
-     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * data holds all information extracted from the document
+     * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
      * </pre>
      *
-     * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
+     * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
      */
     @java.lang.Override
-    public proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder() {
-      return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
-    }
-
-    public static final int PDF417BARCODE_FIELD_NUMBER = 9;
-    private proto.ddx.v1.Barcode.Pdf417Barcode pdf417Barcode_;
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     * @return Whether the pdf417Barcode field is set.
-     */
-    @java.lang.Override
-    public boolean hasPdf417Barcode() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     * @return The pdf417Barcode.
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode() {
-      return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
-    }
-    /**
-     * <pre>
-     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder() {
-      return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
-    }
-
-    public static final int DOCUMENTIMAGE_FIELD_NUMBER = 10;
-    private com.google.protobuf.ByteString documentImage_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <pre>
-     * Optional, empty by default, returned if specified in requests "config" field.
-     * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
-     * </pre>
-     *
-     * <code>bytes documentImage = 10 [json_name = "documentImage"];</code>
-     * @return The documentImage.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getDocumentImage() {
-      return documentImage_;
+    public proto.ddx.v1.Service.DocumentDataOrBuilder getDataOrBuilder() {
+      return data_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : data_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11117,26 +10506,8 @@ public final class Service {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getClassification());
       }
-      for (int i = 0; i < textField_.size(); i++) {
-        output.writeMessage(4, textField_.get(i));
-      }
-      for (int i = 0; i < visualField_.size(); i++) {
-        output.writeMessage(5, visualField_.get(i));
-      }
-      for (int i = 0; i < dateField_.size(); i++) {
-        output.writeMessage(6, dateField_.get(i));
-      }
-      for (int i = 0; i < sexField_.size(); i++) {
-        output.writeMessage(7, sexField_.get(i));
-      }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(8, getMrz());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeMessage(9, getPdf417Barcode());
-      }
-      if (!documentImage_.isEmpty()) {
-        output.writeBytes(10, documentImage_);
+        output.writeMessage(4, getData());
       }
       getUnknownFields().writeTo(output);
     }
@@ -11159,33 +10530,9 @@ public final class Service {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getClassification());
       }
-      for (int i = 0; i < textField_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, textField_.get(i));
-      }
-      for (int i = 0; i < visualField_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, visualField_.get(i));
-      }
-      for (int i = 0; i < dateField_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, dateField_.get(i));
-      }
-      for (int i = 0; i < sexField_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, sexField_.get(i));
-      }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getMrz());
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getPdf417Barcode());
-      }
-      if (!documentImage_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, documentImage_);
+          .computeMessageSize(4, getData());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -11213,26 +10560,11 @@ public final class Service {
         if (!getClassification()
             .equals(other.getClassification())) return false;
       }
-      if (!getTextFieldList()
-          .equals(other.getTextFieldList())) return false;
-      if (!getVisualFieldList()
-          .equals(other.getVisualFieldList())) return false;
-      if (!getDateFieldList()
-          .equals(other.getDateFieldList())) return false;
-      if (!getSexFieldList()
-          .equals(other.getSexFieldList())) return false;
-      if (hasMrz() != other.hasMrz()) return false;
-      if (hasMrz()) {
-        if (!getMrz()
-            .equals(other.getMrz())) return false;
+      if (hasData() != other.hasData()) return false;
+      if (hasData()) {
+        if (!getData()
+            .equals(other.getData())) return false;
       }
-      if (hasPdf417Barcode() != other.hasPdf417Barcode()) return false;
-      if (hasPdf417Barcode()) {
-        if (!getPdf417Barcode()
-            .equals(other.getPdf417Barcode())) return false;
-      }
-      if (!getDocumentImage()
-          .equals(other.getDocumentImage())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -11254,32 +10586,10 @@ public final class Service {
         hash = (37 * hash) + CLASSIFICATION_FIELD_NUMBER;
         hash = (53 * hash) + getClassification().hashCode();
       }
-      if (getTextFieldCount() > 0) {
-        hash = (37 * hash) + TEXTFIELD_FIELD_NUMBER;
-        hash = (53 * hash) + getTextFieldList().hashCode();
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
       }
-      if (getVisualFieldCount() > 0) {
-        hash = (37 * hash) + VISUALFIELD_FIELD_NUMBER;
-        hash = (53 * hash) + getVisualFieldList().hashCode();
-      }
-      if (getDateFieldCount() > 0) {
-        hash = (37 * hash) + DATEFIELD_FIELD_NUMBER;
-        hash = (53 * hash) + getDateFieldList().hashCode();
-      }
-      if (getSexFieldCount() > 0) {
-        hash = (37 * hash) + SEXFIELD_FIELD_NUMBER;
-        hash = (53 * hash) + getSexFieldList().hashCode();
-      }
-      if (hasMrz()) {
-        hash = (37 * hash) + MRZ_FIELD_NUMBER;
-        hash = (53 * hash) + getMrz().hashCode();
-      }
-      if (hasPdf417Barcode()) {
-        hash = (37 * hash) + PDF417BARCODE_FIELD_NUMBER;
-        hash = (53 * hash) + getPdf417Barcode().hashCode();
-      }
-      hash = (37 * hash) + DOCUMENTIMAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getDocumentImage().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11416,12 +10726,7 @@ public final class Service {
                 .alwaysUseFieldBuilders) {
           getDetectionFieldBuilder();
           getClassificationFieldBuilder();
-          getTextFieldFieldBuilder();
-          getVisualFieldFieldBuilder();
-          getDateFieldFieldBuilder();
-          getSexFieldFieldBuilder();
-          getMrzFieldBuilder();
-          getPdf417BarcodeFieldBuilder();
+          getDataFieldBuilder();
         }
       }
       @java.lang.Override
@@ -11439,45 +10744,11 @@ public final class Service {
           classificationBuilder_.dispose();
           classificationBuilder_ = null;
         }
-        if (textFieldBuilder_ == null) {
-          textField_ = java.util.Collections.emptyList();
-        } else {
-          textField_ = null;
-          textFieldBuilder_.clear();
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
+          dataBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        if (visualFieldBuilder_ == null) {
-          visualField_ = java.util.Collections.emptyList();
-        } else {
-          visualField_ = null;
-          visualFieldBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000010);
-        if (dateFieldBuilder_ == null) {
-          dateField_ = java.util.Collections.emptyList();
-        } else {
-          dateField_ = null;
-          dateFieldBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000020);
-        if (sexFieldBuilder_ == null) {
-          sexField_ = java.util.Collections.emptyList();
-        } else {
-          sexField_ = null;
-          sexFieldBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        mrz_ = null;
-        if (mrzBuilder_ != null) {
-          mrzBuilder_.dispose();
-          mrzBuilder_ = null;
-        }
-        pdf417Barcode_ = null;
-        if (pdf417BarcodeBuilder_ != null) {
-          pdf417BarcodeBuilder_.dispose();
-          pdf417BarcodeBuilder_ = null;
-        }
-        documentImage_ = com.google.protobuf.ByteString.EMPTY;
         return this;
       }
 
@@ -11504,49 +10775,9 @@ public final class Service {
       @java.lang.Override
       public proto.ddx.v1.Service.ScanDocumentResponse buildPartial() {
         proto.ddx.v1.Service.ScanDocumentResponse result = new proto.ddx.v1.Service.ScanDocumentResponse(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(proto.ddx.v1.Service.ScanDocumentResponse result) {
-        if (textFieldBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            textField_ = java.util.Collections.unmodifiableList(textField_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.textField_ = textField_;
-        } else {
-          result.textField_ = textFieldBuilder_.build();
-        }
-        if (visualFieldBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
-            visualField_ = java.util.Collections.unmodifiableList(visualField_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.visualField_ = visualField_;
-        } else {
-          result.visualField_ = visualFieldBuilder_.build();
-        }
-        if (dateFieldBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
-            dateField_ = java.util.Collections.unmodifiableList(dateField_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.dateField_ = dateField_;
-        } else {
-          result.dateField_ = dateFieldBuilder_.build();
-        }
-        if (sexFieldBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
-            sexField_ = java.util.Collections.unmodifiableList(sexField_);
-            bitField0_ = (bitField0_ & ~0x00000040);
-          }
-          result.sexField_ = sexField_;
-        } else {
-          result.sexField_ = sexFieldBuilder_.build();
-        }
       }
 
       private void buildPartial0(proto.ddx.v1.Service.ScanDocumentResponse result) {
@@ -11567,20 +10798,11 @@ public final class Service {
               : classificationBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.mrz_ = mrzBuilder_ == null
-              ? mrz_
-              : mrzBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.data_ = dataBuilder_ == null
+              ? data_
+              : dataBuilder_.build();
           to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.pdf417Barcode_ = pdf417BarcodeBuilder_ == null
-              ? pdf417Barcode_
-              : pdf417BarcodeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.documentImage_ = documentImage_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -11606,118 +10828,8 @@ public final class Service {
         if (other.hasClassification()) {
           mergeClassification(other.getClassification());
         }
-        if (textFieldBuilder_ == null) {
-          if (!other.textField_.isEmpty()) {
-            if (textField_.isEmpty()) {
-              textField_ = other.textField_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureTextFieldIsMutable();
-              textField_.addAll(other.textField_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.textField_.isEmpty()) {
-            if (textFieldBuilder_.isEmpty()) {
-              textFieldBuilder_.dispose();
-              textFieldBuilder_ = null;
-              textField_ = other.textField_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              textFieldBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getTextFieldFieldBuilder() : null;
-            } else {
-              textFieldBuilder_.addAllMessages(other.textField_);
-            }
-          }
-        }
-        if (visualFieldBuilder_ == null) {
-          if (!other.visualField_.isEmpty()) {
-            if (visualField_.isEmpty()) {
-              visualField_ = other.visualField_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensureVisualFieldIsMutable();
-              visualField_.addAll(other.visualField_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.visualField_.isEmpty()) {
-            if (visualFieldBuilder_.isEmpty()) {
-              visualFieldBuilder_.dispose();
-              visualFieldBuilder_ = null;
-              visualField_ = other.visualField_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              visualFieldBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getVisualFieldFieldBuilder() : null;
-            } else {
-              visualFieldBuilder_.addAllMessages(other.visualField_);
-            }
-          }
-        }
-        if (dateFieldBuilder_ == null) {
-          if (!other.dateField_.isEmpty()) {
-            if (dateField_.isEmpty()) {
-              dateField_ = other.dateField_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-            } else {
-              ensureDateFieldIsMutable();
-              dateField_.addAll(other.dateField_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.dateField_.isEmpty()) {
-            if (dateFieldBuilder_.isEmpty()) {
-              dateFieldBuilder_.dispose();
-              dateFieldBuilder_ = null;
-              dateField_ = other.dateField_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              dateFieldBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getDateFieldFieldBuilder() : null;
-            } else {
-              dateFieldBuilder_.addAllMessages(other.dateField_);
-            }
-          }
-        }
-        if (sexFieldBuilder_ == null) {
-          if (!other.sexField_.isEmpty()) {
-            if (sexField_.isEmpty()) {
-              sexField_ = other.sexField_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-            } else {
-              ensureSexFieldIsMutable();
-              sexField_.addAll(other.sexField_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sexField_.isEmpty()) {
-            if (sexFieldBuilder_.isEmpty()) {
-              sexFieldBuilder_.dispose();
-              sexFieldBuilder_ = null;
-              sexField_ = other.sexField_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-              sexFieldBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getSexFieldFieldBuilder() : null;
-            } else {
-              sexFieldBuilder_.addAllMessages(other.sexField_);
-            }
-          }
-        }
-        if (other.hasMrz()) {
-          mergeMrz(other.getMrz());
-        }
-        if (other.hasPdf417Barcode()) {
-          mergePdf417Barcode(other.getPdf417Barcode());
-        }
-        if (other.getDocumentImage() != com.google.protobuf.ByteString.EMPTY) {
-          setDocumentImage(other.getDocumentImage());
+        if (other.hasData()) {
+          mergeData(other.getData());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -11765,76 +10877,12 @@ public final class Service {
                 break;
               } // case 26
               case 34: {
-                proto.ddx.v1.Fields.TextField m =
-                    input.readMessage(
-                        proto.ddx.v1.Fields.TextField.parser(),
-                        extensionRegistry);
-                if (textFieldBuilder_ == null) {
-                  ensureTextFieldIsMutable();
-                  textField_.add(m);
-                } else {
-                  textFieldBuilder_.addMessage(m);
-                }
+                input.readMessage(
+                    getDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
-              case 42: {
-                proto.ddx.v1.Fields.VisualField m =
-                    input.readMessage(
-                        proto.ddx.v1.Fields.VisualField.parser(),
-                        extensionRegistry);
-                if (visualFieldBuilder_ == null) {
-                  ensureVisualFieldIsMutable();
-                  visualField_.add(m);
-                } else {
-                  visualFieldBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 50: {
-                proto.ddx.v1.Fields.DateField m =
-                    input.readMessage(
-                        proto.ddx.v1.Fields.DateField.parser(),
-                        extensionRegistry);
-                if (dateFieldBuilder_ == null) {
-                  ensureDateFieldIsMutable();
-                  dateField_.add(m);
-                } else {
-                  dateFieldBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 58: {
-                proto.ddx.v1.Fields.SexField m =
-                    input.readMessage(
-                        proto.ddx.v1.Fields.SexField.parser(),
-                        extensionRegistry);
-                if (sexFieldBuilder_ == null) {
-                  ensureSexFieldIsMutable();
-                  sexField_.add(m);
-                } else {
-                  sexFieldBuilder_.addMessage(m);
-                }
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getMrzFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 66
-              case 74: {
-                input.readMessage(
-                    getPdf417BarcodeFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 74
-              case 82: {
-                documentImage_ = input.readBytes();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -12228,1793 +11276,170 @@ public final class Service {
         return classificationBuilder_;
       }
 
-      private java.util.List<proto.ddx.v1.Fields.TextField> textField_ =
-        java.util.Collections.emptyList();
-      private void ensureTextFieldIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          textField_ = new java.util.ArrayList<proto.ddx.v1.Fields.TextField>(textField_);
+      private proto.ddx.v1.Service.DocumentData data_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> dataBuilder_;
+      /**
+       * <pre>
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+       * @return Whether the data field is set.
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public proto.ddx.v1.Service.DocumentData getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+       */
+      public Builder setData(proto.ddx.v1.Service.DocumentData value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+       */
+      public Builder setData(
+          proto.ddx.v1.Service.DocumentData.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
+       */
+      public Builder mergeData(proto.ddx.v1.Service.DocumentData value) {
+        if (dataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            data_ != null &&
+            data_ != proto.ddx.v1.Service.DocumentData.getDefaultInstance()) {
+            getDataBuilder().mergeFrom(value);
+          } else {
+            data_ = value;
+          }
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+        if (data_ != null) {
           bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder> textFieldBuilder_;
-
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.TextField> getTextFieldList() {
-        if (textFieldBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(textField_);
-        } else {
-          return textFieldBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public int getTextFieldCount() {
-        if (textFieldBuilder_ == null) {
-          return textField_.size();
-        } else {
-          return textFieldBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public proto.ddx.v1.Fields.TextField getTextField(int index) {
-        if (textFieldBuilder_ == null) {
-          return textField_.get(index);
-        } else {
-          return textFieldBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder setTextField(
-          int index, proto.ddx.v1.Fields.TextField value) {
-        if (textFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextFieldIsMutable();
-          textField_.set(index, value);
-          onChanged();
-        } else {
-          textFieldBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder setTextField(
-          int index, proto.ddx.v1.Fields.TextField.Builder builderForValue) {
-        if (textFieldBuilder_ == null) {
-          ensureTextFieldIsMutable();
-          textField_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          textFieldBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder addTextField(proto.ddx.v1.Fields.TextField value) {
-        if (textFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextFieldIsMutable();
-          textField_.add(value);
-          onChanged();
-        } else {
-          textFieldBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder addTextField(
-          int index, proto.ddx.v1.Fields.TextField value) {
-        if (textFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextFieldIsMutable();
-          textField_.add(index, value);
-          onChanged();
-        } else {
-          textFieldBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder addTextField(
-          proto.ddx.v1.Fields.TextField.Builder builderForValue) {
-        if (textFieldBuilder_ == null) {
-          ensureTextFieldIsMutable();
-          textField_.add(builderForValue.build());
-          onChanged();
-        } else {
-          textFieldBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder addTextField(
-          int index, proto.ddx.v1.Fields.TextField.Builder builderForValue) {
-        if (textFieldBuilder_ == null) {
-          ensureTextFieldIsMutable();
-          textField_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          textFieldBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder addAllTextField(
-          java.lang.Iterable<? extends proto.ddx.v1.Fields.TextField> values) {
-        if (textFieldBuilder_ == null) {
-          ensureTextFieldIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, textField_);
-          onChanged();
-        } else {
-          textFieldBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder clearTextField() {
-        if (textFieldBuilder_ == null) {
-          textField_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          textFieldBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public Builder removeTextField(int index) {
-        if (textFieldBuilder_ == null) {
-          ensureTextFieldIsMutable();
-          textField_.remove(index);
-          onChanged();
-        } else {
-          textFieldBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public proto.ddx.v1.Fields.TextField.Builder getTextFieldBuilder(
-          int index) {
-        return getTextFieldFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
-          int index) {
-        if (textFieldBuilder_ == null) {
-          return textField_.get(index);  } else {
-          return textFieldBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
-           getTextFieldOrBuilderList() {
-        if (textFieldBuilder_ != null) {
-          return textFieldBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(textField_);
-        }
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public proto.ddx.v1.Fields.TextField.Builder addTextFieldBuilder() {
-        return getTextFieldFieldBuilder().addBuilder(
-            proto.ddx.v1.Fields.TextField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public proto.ddx.v1.Fields.TextField.Builder addTextFieldBuilder(
-          int index) {
-        return getTextFieldFieldBuilder().addBuilder(
-            index, proto.ddx.v1.Fields.TextField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * field holds detected document textual fields.
-       * Textual fields are all the fields that have textual representation and we expect
-       * out users to use the OCRed and transcribed text.
-       * Will be empty if status is not OK
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.TextField textField = 4 [json_name = "textField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.TextField.Builder> 
-           getTextFieldBuilderList() {
-        return getTextFieldFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder> 
-          getTextFieldFieldBuilder() {
-        if (textFieldBuilder_ == null) {
-          textFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder>(
-                  textField_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          textField_ = null;
-        }
-        return textFieldBuilder_;
-      }
-
-      private java.util.List<proto.ddx.v1.Fields.VisualField> visualField_ =
-        java.util.Collections.emptyList();
-      private void ensureVisualFieldIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          visualField_ = new java.util.ArrayList<proto.ddx.v1.Fields.VisualField>(visualField_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder> visualFieldBuilder_;
-
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.VisualField> getVisualFieldList() {
-        if (visualFieldBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(visualField_);
-        } else {
-          return visualFieldBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public int getVisualFieldCount() {
-        if (visualFieldBuilder_ == null) {
-          return visualField_.size();
-        } else {
-          return visualFieldBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public proto.ddx.v1.Fields.VisualField getVisualField(int index) {
-        if (visualFieldBuilder_ == null) {
-          return visualField_.get(index);
-        } else {
-          return visualFieldBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder setVisualField(
-          int index, proto.ddx.v1.Fields.VisualField value) {
-        if (visualFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVisualFieldIsMutable();
-          visualField_.set(index, value);
-          onChanged();
-        } else {
-          visualFieldBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder setVisualField(
-          int index, proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
-        if (visualFieldBuilder_ == null) {
-          ensureVisualFieldIsMutable();
-          visualField_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          visualFieldBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder addVisualField(proto.ddx.v1.Fields.VisualField value) {
-        if (visualFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVisualFieldIsMutable();
-          visualField_.add(value);
-          onChanged();
-        } else {
-          visualFieldBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder addVisualField(
-          int index, proto.ddx.v1.Fields.VisualField value) {
-        if (visualFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVisualFieldIsMutable();
-          visualField_.add(index, value);
-          onChanged();
-        } else {
-          visualFieldBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder addVisualField(
-          proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
-        if (visualFieldBuilder_ == null) {
-          ensureVisualFieldIsMutable();
-          visualField_.add(builderForValue.build());
-          onChanged();
-        } else {
-          visualFieldBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder addVisualField(
-          int index, proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
-        if (visualFieldBuilder_ == null) {
-          ensureVisualFieldIsMutable();
-          visualField_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          visualFieldBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder addAllVisualField(
-          java.lang.Iterable<? extends proto.ddx.v1.Fields.VisualField> values) {
-        if (visualFieldBuilder_ == null) {
-          ensureVisualFieldIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, visualField_);
-          onChanged();
-        } else {
-          visualFieldBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder clearVisualField() {
-        if (visualFieldBuilder_ == null) {
-          visualField_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          visualFieldBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public Builder removeVisualField(int index) {
-        if (visualFieldBuilder_ == null) {
-          ensureVisualFieldIsMutable();
-          visualField_.remove(index);
-          onChanged();
-        } else {
-          visualFieldBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public proto.ddx.v1.Fields.VisualField.Builder getVisualFieldBuilder(
-          int index) {
-        return getVisualFieldFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
-          int index) {
-        if (visualFieldBuilder_ == null) {
-          return visualField_.get(index);  } else {
-          return visualFieldBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
-           getVisualFieldOrBuilderList() {
-        if (visualFieldBuilder_ != null) {
-          return visualFieldBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(visualField_);
-        }
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public proto.ddx.v1.Fields.VisualField.Builder addVisualFieldBuilder() {
-        return getVisualFieldFieldBuilder().addBuilder(
-            proto.ddx.v1.Fields.VisualField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public proto.ddx.v1.Fields.VisualField.Builder addVisualFieldBuilder(
-          int index) {
-        return getVisualFieldFieldBuilder().addBuilder(
-            index, proto.ddx.v1.Fields.VisualField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * visualField holds detected document visual fields.
-       * Visual fields are those whose values can't be extracted as text, and are
-       * expected to be extracted as an image or position in the given image.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.VisualField visualField = 5 [json_name = "visualField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.VisualField.Builder> 
-           getVisualFieldBuilderList() {
-        return getVisualFieldFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder> 
-          getVisualFieldFieldBuilder() {
-        if (visualFieldBuilder_ == null) {
-          visualFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder>(
-                  visualField_,
-                  ((bitField0_ & 0x00000010) != 0),
-                  getParentForChildren(),
-                  isClean());
-          visualField_ = null;
-        }
-        return visualFieldBuilder_;
-      }
-
-      private java.util.List<proto.ddx.v1.Fields.DateField> dateField_ =
-        java.util.Collections.emptyList();
-      private void ensureDateFieldIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          dateField_ = new java.util.ArrayList<proto.ddx.v1.Fields.DateField>(dateField_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder> dateFieldBuilder_;
-
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.DateField> getDateFieldList() {
-        if (dateFieldBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(dateField_);
-        } else {
-          return dateFieldBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public int getDateFieldCount() {
-        if (dateFieldBuilder_ == null) {
-          return dateField_.size();
-        } else {
-          return dateFieldBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public proto.ddx.v1.Fields.DateField getDateField(int index) {
-        if (dateFieldBuilder_ == null) {
-          return dateField_.get(index);
-        } else {
-          return dateFieldBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder setDateField(
-          int index, proto.ddx.v1.Fields.DateField value) {
-        if (dateFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDateFieldIsMutable();
-          dateField_.set(index, value);
-          onChanged();
-        } else {
-          dateFieldBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder setDateField(
-          int index, proto.ddx.v1.Fields.DateField.Builder builderForValue) {
-        if (dateFieldBuilder_ == null) {
-          ensureDateFieldIsMutable();
-          dateField_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          dateFieldBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder addDateField(proto.ddx.v1.Fields.DateField value) {
-        if (dateFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDateFieldIsMutable();
-          dateField_.add(value);
-          onChanged();
-        } else {
-          dateFieldBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder addDateField(
-          int index, proto.ddx.v1.Fields.DateField value) {
-        if (dateFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDateFieldIsMutable();
-          dateField_.add(index, value);
-          onChanged();
-        } else {
-          dateFieldBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder addDateField(
-          proto.ddx.v1.Fields.DateField.Builder builderForValue) {
-        if (dateFieldBuilder_ == null) {
-          ensureDateFieldIsMutable();
-          dateField_.add(builderForValue.build());
-          onChanged();
-        } else {
-          dateFieldBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder addDateField(
-          int index, proto.ddx.v1.Fields.DateField.Builder builderForValue) {
-        if (dateFieldBuilder_ == null) {
-          ensureDateFieldIsMutable();
-          dateField_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          dateFieldBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder addAllDateField(
-          java.lang.Iterable<? extends proto.ddx.v1.Fields.DateField> values) {
-        if (dateFieldBuilder_ == null) {
-          ensureDateFieldIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, dateField_);
-          onChanged();
-        } else {
-          dateFieldBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder clearDateField() {
-        if (dateFieldBuilder_ == null) {
-          dateField_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          dateFieldBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public Builder removeDateField(int index) {
-        if (dateFieldBuilder_ == null) {
-          ensureDateFieldIsMutable();
-          dateField_.remove(index);
-          onChanged();
-        } else {
-          dateFieldBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public proto.ddx.v1.Fields.DateField.Builder getDateFieldBuilder(
-          int index) {
-        return getDateFieldFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
-          int index) {
-        if (dateFieldBuilder_ == null) {
-          return dateField_.get(index);  } else {
-          return dateFieldBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
-           getDateFieldOrBuilderList() {
-        if (dateFieldBuilder_ != null) {
-          return dateFieldBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(dateField_);
-        }
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public proto.ddx.v1.Fields.DateField.Builder addDateFieldBuilder() {
-        return getDateFieldFieldBuilder().addBuilder(
-            proto.ddx.v1.Fields.DateField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public proto.ddx.v1.Fields.DateField.Builder addDateFieldBuilder(
-          int index) {
-        return getDateFieldFieldBuilder().addBuilder(
-            index, proto.ddx.v1.Fields.DateField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * dateField holds detected document date fields.
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
-       * representation.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.DateField dateField = 6 [json_name = "dateField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.DateField.Builder> 
-           getDateFieldBuilderList() {
-        return getDateFieldFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder> 
-          getDateFieldFieldBuilder() {
-        if (dateFieldBuilder_ == null) {
-          dateFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder>(
-                  dateField_,
-                  ((bitField0_ & 0x00000020) != 0),
-                  getParentForChildren(),
-                  isClean());
-          dateField_ = null;
-        }
-        return dateFieldBuilder_;
-      }
-
-      private java.util.List<proto.ddx.v1.Fields.SexField> sexField_ =
-        java.util.Collections.emptyList();
-      private void ensureSexFieldIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
-          sexField_ = new java.util.ArrayList<proto.ddx.v1.Fields.SexField>(sexField_);
-          bitField0_ |= 0x00000040;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder> sexFieldBuilder_;
-
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.SexField> getSexFieldList() {
-        if (sexFieldBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sexField_);
-        } else {
-          return sexFieldBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public int getSexFieldCount() {
-        if (sexFieldBuilder_ == null) {
-          return sexField_.size();
-        } else {
-          return sexFieldBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public proto.ddx.v1.Fields.SexField getSexField(int index) {
-        if (sexFieldBuilder_ == null) {
-          return sexField_.get(index);
-        } else {
-          return sexFieldBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder setSexField(
-          int index, proto.ddx.v1.Fields.SexField value) {
-        if (sexFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSexFieldIsMutable();
-          sexField_.set(index, value);
-          onChanged();
-        } else {
-          sexFieldBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder setSexField(
-          int index, proto.ddx.v1.Fields.SexField.Builder builderForValue) {
-        if (sexFieldBuilder_ == null) {
-          ensureSexFieldIsMutable();
-          sexField_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sexFieldBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder addSexField(proto.ddx.v1.Fields.SexField value) {
-        if (sexFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSexFieldIsMutable();
-          sexField_.add(value);
-          onChanged();
-        } else {
-          sexFieldBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder addSexField(
-          int index, proto.ddx.v1.Fields.SexField value) {
-        if (sexFieldBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSexFieldIsMutable();
-          sexField_.add(index, value);
-          onChanged();
-        } else {
-          sexFieldBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder addSexField(
-          proto.ddx.v1.Fields.SexField.Builder builderForValue) {
-        if (sexFieldBuilder_ == null) {
-          ensureSexFieldIsMutable();
-          sexField_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sexFieldBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder addSexField(
-          int index, proto.ddx.v1.Fields.SexField.Builder builderForValue) {
-        if (sexFieldBuilder_ == null) {
-          ensureSexFieldIsMutable();
-          sexField_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sexFieldBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder addAllSexField(
-          java.lang.Iterable<? extends proto.ddx.v1.Fields.SexField> values) {
-        if (sexFieldBuilder_ == null) {
-          ensureSexFieldIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sexField_);
-          onChanged();
-        } else {
-          sexFieldBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder clearSexField() {
-        if (sexFieldBuilder_ == null) {
-          sexField_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
-          onChanged();
-        } else {
-          sexFieldBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public Builder removeSexField(int index) {
-        if (sexFieldBuilder_ == null) {
-          ensureSexFieldIsMutable();
-          sexField_.remove(index);
-          onChanged();
-        } else {
-          sexFieldBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public proto.ddx.v1.Fields.SexField.Builder getSexFieldBuilder(
-          int index) {
-        return getSexFieldFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
-          int index) {
-        if (sexFieldBuilder_ == null) {
-          return sexField_.get(index);  } else {
-          return sexFieldBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
-           getSexFieldOrBuilderList() {
-        if (sexFieldBuilder_ != null) {
-          return sexFieldBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sexField_);
-        }
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public proto.ddx.v1.Fields.SexField.Builder addSexFieldBuilder() {
-        return getSexFieldFieldBuilder().addBuilder(
-            proto.ddx.v1.Fields.SexField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public proto.ddx.v1.Fields.SexField.Builder addSexFieldBuilder(
-          int index) {
-        return getSexFieldFieldBuilder().addBuilder(
-            index, proto.ddx.v1.Fields.SexField.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * sexField holds detected document gender fields
-       * Compared to textual fields, they don't just hold textual information present on the document
-       * but offer gender information as an parsed enumeration.
-       * </pre>
-       *
-       * <code>repeated .proto.ddx.v1.SexField sexField = 7 [json_name = "sexField"];</code>
-       */
-      public java.util.List<proto.ddx.v1.Fields.SexField.Builder> 
-           getSexFieldBuilderList() {
-        return getSexFieldFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder> 
-          getSexFieldFieldBuilder() {
-        if (sexFieldBuilder_ == null) {
-          sexFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder>(
-                  sexField_,
-                  ((bitField0_ & 0x00000040) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sexField_ = null;
-        }
-        return sexFieldBuilder_;
-      }
-
-      private proto.ddx.v1.Service.Mrz mrz_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder> mrzBuilder_;
-      /**
-       * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-       * @return Whether the mrz field is set.
-       */
-      public boolean hasMrz() {
-        return ((bitField0_ & 0x00000080) != 0);
-      }
-      /**
-       * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-       * @return The mrz.
-       */
-      public proto.ddx.v1.Service.Mrz getMrz() {
-        if (mrzBuilder_ == null) {
-          return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
-        } else {
-          return mrzBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-       */
-      public Builder setMrz(proto.ddx.v1.Service.Mrz value) {
-        if (mrzBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          mrz_ = value;
-        } else {
-          mrzBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-       */
-      public Builder setMrz(
-          proto.ddx.v1.Service.Mrz.Builder builderForValue) {
-        if (mrzBuilder_ == null) {
-          mrz_ = builderForValue.build();
-        } else {
-          mrzBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
-       */
-      public Builder mergeMrz(proto.ddx.v1.Service.Mrz value) {
-        if (mrzBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
-            mrz_ != null &&
-            mrz_ != proto.ddx.v1.Service.Mrz.getDefaultInstance()) {
-            getMrzBuilder().mergeFrom(value);
-          } else {
-            mrz_ = value;
-          }
-        } else {
-          mrzBuilder_.mergeFrom(value);
-        }
-        if (mrz_ != null) {
-          bitField0_ |= 0x00000080;
           onChanged();
         }
         return this;
       }
       /**
        * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
        * </pre>
        *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
        */
-      public Builder clearMrz() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        mrz_ = null;
-        if (mrzBuilder_ != null) {
-          mrzBuilder_.dispose();
-          mrzBuilder_ = null;
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
+          dataBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
        * </pre>
        *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
        */
-      public proto.ddx.v1.Service.Mrz.Builder getMrzBuilder() {
-        bitField0_ |= 0x00000080;
+      public proto.ddx.v1.Service.DocumentData.Builder getDataBuilder() {
+        bitField0_ |= 0x00000008;
         onChanged();
-        return getMrzFieldBuilder().getBuilder();
+        return getDataFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
        * </pre>
        *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
        */
-      public proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder() {
-        if (mrzBuilder_ != null) {
-          return mrzBuilder_.getMessageOrBuilder();
+      public proto.ddx.v1.Service.DocumentDataOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
         } else {
-          return mrz_ == null ?
-              proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+          return data_ == null ?
+              proto.ddx.v1.Service.DocumentData.getDefaultInstance() : data_;
         }
       }
       /**
        * <pre>
-       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * data holds all information extracted from the document
+       * It will be empty if status is STATUS_DOCUMENT_NOT_FOUND
        * </pre>
        *
-       * <code>.proto.ddx.v1.Mrz mrz = 8 [json_name = "mrz"];</code>
+       * <code>.proto.ddx.v1.DocumentData data = 4 [json_name = "data"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder> 
-          getMrzFieldBuilder() {
-        if (mrzBuilder_ == null) {
-          mrzBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder>(
-                  getMrz(),
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder>(
+                  getData(),
                   getParentForChildren(),
                   isClean());
-          mrz_ = null;
+          data_ = null;
         }
-        return mrzBuilder_;
-      }
-
-      private proto.ddx.v1.Barcode.Pdf417Barcode pdf417Barcode_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder> pdf417BarcodeBuilder_;
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       * @return Whether the pdf417Barcode field is set.
-       */
-      public boolean hasPdf417Barcode() {
-        return ((bitField0_ & 0x00000100) != 0);
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       * @return The pdf417Barcode.
-       */
-      public proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode() {
-        if (pdf417BarcodeBuilder_ == null) {
-          return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
-        } else {
-          return pdf417BarcodeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public Builder setPdf417Barcode(proto.ddx.v1.Barcode.Pdf417Barcode value) {
-        if (pdf417BarcodeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pdf417Barcode_ = value;
-        } else {
-          pdf417BarcodeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public Builder setPdf417Barcode(
-          proto.ddx.v1.Barcode.Pdf417Barcode.Builder builderForValue) {
-        if (pdf417BarcodeBuilder_ == null) {
-          pdf417Barcode_ = builderForValue.build();
-        } else {
-          pdf417BarcodeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public Builder mergePdf417Barcode(proto.ddx.v1.Barcode.Pdf417Barcode value) {
-        if (pdf417BarcodeBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
-            pdf417Barcode_ != null &&
-            pdf417Barcode_ != proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance()) {
-            getPdf417BarcodeBuilder().mergeFrom(value);
-          } else {
-            pdf417Barcode_ = value;
-          }
-        } else {
-          pdf417BarcodeBuilder_.mergeFrom(value);
-        }
-        if (pdf417Barcode_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public Builder clearPdf417Barcode() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        pdf417Barcode_ = null;
-        if (pdf417BarcodeBuilder_ != null) {
-          pdf417BarcodeBuilder_.dispose();
-          pdf417BarcodeBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public proto.ddx.v1.Barcode.Pdf417Barcode.Builder getPdf417BarcodeBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getPdf417BarcodeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      public proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder() {
-        if (pdf417BarcodeBuilder_ != null) {
-          return pdf417BarcodeBuilder_.getMessageOrBuilder();
-        } else {
-          return pdf417Barcode_ == null ?
-              proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
-        }
-      }
-      /**
-       * <pre>
-       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 9 [json_name = "pdf417Barcode"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder> 
-          getPdf417BarcodeFieldBuilder() {
-        if (pdf417BarcodeBuilder_ == null) {
-          pdf417BarcodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder>(
-                  getPdf417Barcode(),
-                  getParentForChildren(),
-                  isClean());
-          pdf417Barcode_ = null;
-        }
-        return pdf417BarcodeBuilder_;
-      }
-
-      private com.google.protobuf.ByteString documentImage_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * Optional, empty by default, returned if specified in requests "config" field.
-       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
-       * </pre>
-       *
-       * <code>bytes documentImage = 10 [json_name = "documentImage"];</code>
-       * @return The documentImage.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getDocumentImage() {
-        return documentImage_;
-      }
-      /**
-       * <pre>
-       * Optional, empty by default, returned if specified in requests "config" field.
-       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
-       * </pre>
-       *
-       * <code>bytes documentImage = 10 [json_name = "documentImage"];</code>
-       * @param value The documentImage to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDocumentImage(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        documentImage_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional, empty by default, returned if specified in requests "config" field.
-       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
-       * </pre>
-       *
-       * <code>bytes documentImage = 10 [json_name = "documentImage"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDocumentImage() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        documentImage_ = getDefaultInstance().getDocumentImage();
-        onChanged();
-        return this;
+        return dataBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.ddx.v1.ScanDocumentResponse)
@@ -14063,6 +11488,5447 @@ public final class Service {
 
     @java.lang.Override
     public proto.ddx.v1.Service.ScanDocumentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DocumentDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ddx.v1.DocumentData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    java.util.List<proto.ddx.v1.Fields.TextField> 
+        getTextFieldList();
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    proto.ddx.v1.Fields.TextField getTextField(int index);
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    int getTextFieldCount();
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
+        getTextFieldOrBuilderList();
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    java.util.List<proto.ddx.v1.Fields.VisualField> 
+        getVisualFieldList();
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    proto.ddx.v1.Fields.VisualField getVisualField(int index);
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    int getVisualFieldCount();
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
+        getVisualFieldOrBuilderList();
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    java.util.List<proto.ddx.v1.Fields.DateField> 
+        getDateFieldList();
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    proto.ddx.v1.Fields.DateField getDateField(int index);
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    int getDateFieldCount();
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
+        getDateFieldOrBuilderList();
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    java.util.List<proto.ddx.v1.Fields.SexField> 
+        getSexFieldList();
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    proto.ddx.v1.Fields.SexField getSexField(int index);
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    int getSexFieldCount();
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
+        getSexFieldOrBuilderList();
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     * @return Whether the mrz field is set.
+     */
+    boolean hasMrz();
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     * @return The mrz.
+     */
+    proto.ddx.v1.Service.Mrz getMrz();
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     */
+    proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder();
+
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     * @return Whether the pdf417Barcode field is set.
+     */
+    boolean hasPdf417Barcode();
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     * @return The pdf417Barcode.
+     */
+    proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode();
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     */
+    proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder();
+
+    /**
+     * <pre>
+     * Optional, empty by default, returned if specified in requests "config" field.
+     * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
+     * </pre>
+     *
+     * <code>bytes documentImage = 7 [json_name = "documentImage"];</code>
+     * @return The documentImage.
+     */
+    com.google.protobuf.ByteString getDocumentImage();
+  }
+  /**
+   * Protobuf type {@code proto.ddx.v1.DocumentData}
+   */
+  public static final class DocumentData extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:proto.ddx.v1.DocumentData)
+      DocumentDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        DocumentData.class.getName());
+    }
+    // Use DocumentData.newBuilder() to construct.
+    private DocumentData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DocumentData() {
+      textField_ = java.util.Collections.emptyList();
+      visualField_ = java.util.Collections.emptyList();
+      dateField_ = java.util.Collections.emptyList();
+      sexField_ = java.util.Collections.emptyList();
+      documentImage_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_DocumentData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_DocumentData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ddx.v1.Service.DocumentData.class, proto.ddx.v1.Service.DocumentData.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TEXTFIELD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<proto.ddx.v1.Fields.TextField> textField_;
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<proto.ddx.v1.Fields.TextField> getTextFieldList() {
+      return textField_;
+    }
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
+        getTextFieldOrBuilderList() {
+      return textField_;
+    }
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    @java.lang.Override
+    public int getTextFieldCount() {
+      return textField_.size();
+    }
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.TextField getTextField(int index) {
+      return textField_.get(index);
+    }
+    /**
+     * <pre>
+     * field holds detected document textual fields.
+     * Textual fields are all the fields that have textual representation and we expect
+     * out users to use the OCRed and transcribed text.
+     * Will be empty if status is not OK
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
+        int index) {
+      return textField_.get(index);
+    }
+
+    public static final int VISUALFIELD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<proto.ddx.v1.Fields.VisualField> visualField_;
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<proto.ddx.v1.Fields.VisualField> getVisualFieldList() {
+      return visualField_;
+    }
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
+        getVisualFieldOrBuilderList() {
+      return visualField_;
+    }
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    @java.lang.Override
+    public int getVisualFieldCount() {
+      return visualField_.size();
+    }
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.VisualField getVisualField(int index) {
+      return visualField_.get(index);
+    }
+    /**
+     * <pre>
+     * visualField holds detected document visual fields.
+     * Visual fields are those whose values can't be extracted as text, and are
+     * expected to be extracted as an image or position in the given image.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
+        int index) {
+      return visualField_.get(index);
+    }
+
+    public static final int DATEFIELD_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<proto.ddx.v1.Fields.DateField> dateField_;
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<proto.ddx.v1.Fields.DateField> getDateFieldList() {
+      return dateField_;
+    }
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
+        getDateFieldOrBuilderList() {
+      return dateField_;
+    }
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    @java.lang.Override
+    public int getDateFieldCount() {
+      return dateField_.size();
+    }
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.DateField getDateField(int index) {
+      return dateField_.get(index);
+    }
+    /**
+     * <pre>
+     * dateField holds detected document date fields.
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+     * representation.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
+        int index) {
+      return dateField_.get(index);
+    }
+
+    public static final int SEXFIELD_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<proto.ddx.v1.Fields.SexField> sexField_;
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<proto.ddx.v1.Fields.SexField> getSexFieldList() {
+      return sexField_;
+    }
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
+        getSexFieldOrBuilderList() {
+      return sexField_;
+    }
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    @java.lang.Override
+    public int getSexFieldCount() {
+      return sexField_.size();
+    }
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.SexField getSexField(int index) {
+      return sexField_.get(index);
+    }
+    /**
+     * <pre>
+     * sexField holds detected document gender fields
+     * Compared to textual fields, they don't just hold textual information present on the document
+     * but offer gender information as an parsed enumeration.
+     * </pre>
+     *
+     * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
+        int index) {
+      return sexField_.get(index);
+    }
+
+    public static final int MRZ_FIELD_NUMBER = 5;
+    private proto.ddx.v1.Service.Mrz mrz_;
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     * @return Whether the mrz field is set.
+     */
+    @java.lang.Override
+    public boolean hasMrz() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     * @return The mrz.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.Mrz getMrz() {
+      return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+    }
+    /**
+     * <pre>
+     * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder() {
+      return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+    }
+
+    public static final int PDF417BARCODE_FIELD_NUMBER = 6;
+    private proto.ddx.v1.Barcode.Pdf417Barcode pdf417Barcode_;
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     * @return Whether the pdf417Barcode field is set.
+     */
+    @java.lang.Override
+    public boolean hasPdf417Barcode() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     * @return The pdf417Barcode.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode() {
+      return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
+    }
+    /**
+     * <pre>
+     * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder() {
+      return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
+    }
+
+    public static final int DOCUMENTIMAGE_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString documentImage_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Optional, empty by default, returned if specified in requests "config" field.
+     * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
+     * </pre>
+     *
+     * <code>bytes documentImage = 7 [json_name = "documentImage"];</code>
+     * @return The documentImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDocumentImage() {
+      return documentImage_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < textField_.size(); i++) {
+        output.writeMessage(1, textField_.get(i));
+      }
+      for (int i = 0; i < visualField_.size(); i++) {
+        output.writeMessage(2, visualField_.get(i));
+      }
+      for (int i = 0; i < dateField_.size(); i++) {
+        output.writeMessage(3, dateField_.get(i));
+      }
+      for (int i = 0; i < sexField_.size(); i++) {
+        output.writeMessage(4, sexField_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(5, getMrz());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(6, getPdf417Barcode());
+      }
+      if (!documentImage_.isEmpty()) {
+        output.writeBytes(7, documentImage_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < textField_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, textField_.get(i));
+      }
+      for (int i = 0; i < visualField_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, visualField_.get(i));
+      }
+      for (int i = 0; i < dateField_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dateField_.get(i));
+      }
+      for (int i = 0; i < sexField_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sexField_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getMrz());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getPdf417Barcode());
+      }
+      if (!documentImage_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, documentImage_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ddx.v1.Service.DocumentData)) {
+        return super.equals(obj);
+      }
+      proto.ddx.v1.Service.DocumentData other = (proto.ddx.v1.Service.DocumentData) obj;
+
+      if (!getTextFieldList()
+          .equals(other.getTextFieldList())) return false;
+      if (!getVisualFieldList()
+          .equals(other.getVisualFieldList())) return false;
+      if (!getDateFieldList()
+          .equals(other.getDateFieldList())) return false;
+      if (!getSexFieldList()
+          .equals(other.getSexFieldList())) return false;
+      if (hasMrz() != other.hasMrz()) return false;
+      if (hasMrz()) {
+        if (!getMrz()
+            .equals(other.getMrz())) return false;
+      }
+      if (hasPdf417Barcode() != other.hasPdf417Barcode()) return false;
+      if (hasPdf417Barcode()) {
+        if (!getPdf417Barcode()
+            .equals(other.getPdf417Barcode())) return false;
+      }
+      if (!getDocumentImage()
+          .equals(other.getDocumentImage())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTextFieldCount() > 0) {
+        hash = (37 * hash) + TEXTFIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getTextFieldList().hashCode();
+      }
+      if (getVisualFieldCount() > 0) {
+        hash = (37 * hash) + VISUALFIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getVisualFieldList().hashCode();
+      }
+      if (getDateFieldCount() > 0) {
+        hash = (37 * hash) + DATEFIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getDateFieldList().hashCode();
+      }
+      if (getSexFieldCount() > 0) {
+        hash = (37 * hash) + SEXFIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getSexFieldList().hashCode();
+      }
+      if (hasMrz()) {
+        hash = (37 * hash) + MRZ_FIELD_NUMBER;
+        hash = (53 * hash) + getMrz().hashCode();
+      }
+      if (hasPdf417Barcode()) {
+        hash = (37 * hash) + PDF417BARCODE_FIELD_NUMBER;
+        hash = (53 * hash) + getPdf417Barcode().hashCode();
+      }
+      hash = (37 * hash) + DOCUMENTIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getDocumentImage().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static proto.ddx.v1.Service.DocumentData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static proto.ddx.v1.Service.DocumentData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.DocumentData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ddx.v1.Service.DocumentData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.ddx.v1.DocumentData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ddx.v1.DocumentData)
+        proto.ddx.v1.Service.DocumentDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_DocumentData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_DocumentData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ddx.v1.Service.DocumentData.class, proto.ddx.v1.Service.DocumentData.Builder.class);
+      }
+
+      // Construct using proto.ddx.v1.Service.DocumentData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getTextFieldFieldBuilder();
+          getVisualFieldFieldBuilder();
+          getDateFieldFieldBuilder();
+          getSexFieldFieldBuilder();
+          getMrzFieldBuilder();
+          getPdf417BarcodeFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (textFieldBuilder_ == null) {
+          textField_ = java.util.Collections.emptyList();
+        } else {
+          textField_ = null;
+          textFieldBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (visualFieldBuilder_ == null) {
+          visualField_ = java.util.Collections.emptyList();
+        } else {
+          visualField_ = null;
+          visualFieldBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (dateFieldBuilder_ == null) {
+          dateField_ = java.util.Collections.emptyList();
+        } else {
+          dateField_ = null;
+          dateFieldBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (sexFieldBuilder_ == null) {
+          sexField_ = java.util.Collections.emptyList();
+        } else {
+          sexField_ = null;
+          sexFieldBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        mrz_ = null;
+        if (mrzBuilder_ != null) {
+          mrzBuilder_.dispose();
+          mrzBuilder_ = null;
+        }
+        pdf417Barcode_ = null;
+        if (pdf417BarcodeBuilder_ != null) {
+          pdf417BarcodeBuilder_.dispose();
+          pdf417BarcodeBuilder_ = null;
+        }
+        documentImage_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_DocumentData_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.DocumentData getDefaultInstanceForType() {
+        return proto.ddx.v1.Service.DocumentData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.DocumentData build() {
+        proto.ddx.v1.Service.DocumentData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.DocumentData buildPartial() {
+        proto.ddx.v1.Service.DocumentData result = new proto.ddx.v1.Service.DocumentData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(proto.ddx.v1.Service.DocumentData result) {
+        if (textFieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            textField_ = java.util.Collections.unmodifiableList(textField_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.textField_ = textField_;
+        } else {
+          result.textField_ = textFieldBuilder_.build();
+        }
+        if (visualFieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            visualField_ = java.util.Collections.unmodifiableList(visualField_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.visualField_ = visualField_;
+        } else {
+          result.visualField_ = visualFieldBuilder_.build();
+        }
+        if (dateFieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            dateField_ = java.util.Collections.unmodifiableList(dateField_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dateField_ = dateField_;
+        } else {
+          result.dateField_ = dateFieldBuilder_.build();
+        }
+        if (sexFieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            sexField_ = java.util.Collections.unmodifiableList(sexField_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.sexField_ = sexField_;
+        } else {
+          result.sexField_ = sexFieldBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(proto.ddx.v1.Service.DocumentData result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.mrz_ = mrzBuilder_ == null
+              ? mrz_
+              : mrzBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.pdf417Barcode_ = pdf417BarcodeBuilder_ == null
+              ? pdf417Barcode_
+              : pdf417BarcodeBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.documentImage_ = documentImage_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ddx.v1.Service.DocumentData) {
+          return mergeFrom((proto.ddx.v1.Service.DocumentData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ddx.v1.Service.DocumentData other) {
+        if (other == proto.ddx.v1.Service.DocumentData.getDefaultInstance()) return this;
+        if (textFieldBuilder_ == null) {
+          if (!other.textField_.isEmpty()) {
+            if (textField_.isEmpty()) {
+              textField_ = other.textField_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTextFieldIsMutable();
+              textField_.addAll(other.textField_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textField_.isEmpty()) {
+            if (textFieldBuilder_.isEmpty()) {
+              textFieldBuilder_.dispose();
+              textFieldBuilder_ = null;
+              textField_ = other.textField_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              textFieldBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTextFieldFieldBuilder() : null;
+            } else {
+              textFieldBuilder_.addAllMessages(other.textField_);
+            }
+          }
+        }
+        if (visualFieldBuilder_ == null) {
+          if (!other.visualField_.isEmpty()) {
+            if (visualField_.isEmpty()) {
+              visualField_ = other.visualField_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureVisualFieldIsMutable();
+              visualField_.addAll(other.visualField_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.visualField_.isEmpty()) {
+            if (visualFieldBuilder_.isEmpty()) {
+              visualFieldBuilder_.dispose();
+              visualFieldBuilder_ = null;
+              visualField_ = other.visualField_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              visualFieldBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getVisualFieldFieldBuilder() : null;
+            } else {
+              visualFieldBuilder_.addAllMessages(other.visualField_);
+            }
+          }
+        }
+        if (dateFieldBuilder_ == null) {
+          if (!other.dateField_.isEmpty()) {
+            if (dateField_.isEmpty()) {
+              dateField_ = other.dateField_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDateFieldIsMutable();
+              dateField_.addAll(other.dateField_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dateField_.isEmpty()) {
+            if (dateFieldBuilder_.isEmpty()) {
+              dateFieldBuilder_.dispose();
+              dateFieldBuilder_ = null;
+              dateField_ = other.dateField_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dateFieldBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getDateFieldFieldBuilder() : null;
+            } else {
+              dateFieldBuilder_.addAllMessages(other.dateField_);
+            }
+          }
+        }
+        if (sexFieldBuilder_ == null) {
+          if (!other.sexField_.isEmpty()) {
+            if (sexField_.isEmpty()) {
+              sexField_ = other.sexField_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSexFieldIsMutable();
+              sexField_.addAll(other.sexField_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sexField_.isEmpty()) {
+            if (sexFieldBuilder_.isEmpty()) {
+              sexFieldBuilder_.dispose();
+              sexFieldBuilder_ = null;
+              sexField_ = other.sexField_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              sexFieldBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getSexFieldFieldBuilder() : null;
+            } else {
+              sexFieldBuilder_.addAllMessages(other.sexField_);
+            }
+          }
+        }
+        if (other.hasMrz()) {
+          mergeMrz(other.getMrz());
+        }
+        if (other.hasPdf417Barcode()) {
+          mergePdf417Barcode(other.getPdf417Barcode());
+        }
+        if (other.getDocumentImage() != com.google.protobuf.ByteString.EMPTY) {
+          setDocumentImage(other.getDocumentImage());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                proto.ddx.v1.Fields.TextField m =
+                    input.readMessage(
+                        proto.ddx.v1.Fields.TextField.parser(),
+                        extensionRegistry);
+                if (textFieldBuilder_ == null) {
+                  ensureTextFieldIsMutable();
+                  textField_.add(m);
+                } else {
+                  textFieldBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                proto.ddx.v1.Fields.VisualField m =
+                    input.readMessage(
+                        proto.ddx.v1.Fields.VisualField.parser(),
+                        extensionRegistry);
+                if (visualFieldBuilder_ == null) {
+                  ensureVisualFieldIsMutable();
+                  visualField_.add(m);
+                } else {
+                  visualFieldBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                proto.ddx.v1.Fields.DateField m =
+                    input.readMessage(
+                        proto.ddx.v1.Fields.DateField.parser(),
+                        extensionRegistry);
+                if (dateFieldBuilder_ == null) {
+                  ensureDateFieldIsMutable();
+                  dateField_.add(m);
+                } else {
+                  dateFieldBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                proto.ddx.v1.Fields.SexField m =
+                    input.readMessage(
+                        proto.ddx.v1.Fields.SexField.parser(),
+                        extensionRegistry);
+                if (sexFieldBuilder_ == null) {
+                  ensureSexFieldIsMutable();
+                  sexField_.add(m);
+                } else {
+                  sexFieldBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getMrzFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getPdf417BarcodeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                documentImage_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<proto.ddx.v1.Fields.TextField> textField_ =
+        java.util.Collections.emptyList();
+      private void ensureTextFieldIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          textField_ = new java.util.ArrayList<proto.ddx.v1.Fields.TextField>(textField_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder> textFieldBuilder_;
+
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.TextField> getTextFieldList() {
+        if (textFieldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(textField_);
+        } else {
+          return textFieldBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public int getTextFieldCount() {
+        if (textFieldBuilder_ == null) {
+          return textField_.size();
+        } else {
+          return textFieldBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public proto.ddx.v1.Fields.TextField getTextField(int index) {
+        if (textFieldBuilder_ == null) {
+          return textField_.get(index);
+        } else {
+          return textFieldBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder setTextField(
+          int index, proto.ddx.v1.Fields.TextField value) {
+        if (textFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextFieldIsMutable();
+          textField_.set(index, value);
+          onChanged();
+        } else {
+          textFieldBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder setTextField(
+          int index, proto.ddx.v1.Fields.TextField.Builder builderForValue) {
+        if (textFieldBuilder_ == null) {
+          ensureTextFieldIsMutable();
+          textField_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textFieldBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder addTextField(proto.ddx.v1.Fields.TextField value) {
+        if (textFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextFieldIsMutable();
+          textField_.add(value);
+          onChanged();
+        } else {
+          textFieldBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder addTextField(
+          int index, proto.ddx.v1.Fields.TextField value) {
+        if (textFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextFieldIsMutable();
+          textField_.add(index, value);
+          onChanged();
+        } else {
+          textFieldBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder addTextField(
+          proto.ddx.v1.Fields.TextField.Builder builderForValue) {
+        if (textFieldBuilder_ == null) {
+          ensureTextFieldIsMutable();
+          textField_.add(builderForValue.build());
+          onChanged();
+        } else {
+          textFieldBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder addTextField(
+          int index, proto.ddx.v1.Fields.TextField.Builder builderForValue) {
+        if (textFieldBuilder_ == null) {
+          ensureTextFieldIsMutable();
+          textField_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          textFieldBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder addAllTextField(
+          java.lang.Iterable<? extends proto.ddx.v1.Fields.TextField> values) {
+        if (textFieldBuilder_ == null) {
+          ensureTextFieldIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textField_);
+          onChanged();
+        } else {
+          textFieldBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder clearTextField() {
+        if (textFieldBuilder_ == null) {
+          textField_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          textFieldBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public Builder removeTextField(int index) {
+        if (textFieldBuilder_ == null) {
+          ensureTextFieldIsMutable();
+          textField_.remove(index);
+          onChanged();
+        } else {
+          textFieldBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public proto.ddx.v1.Fields.TextField.Builder getTextFieldBuilder(
+          int index) {
+        return getTextFieldFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public proto.ddx.v1.Fields.TextFieldOrBuilder getTextFieldOrBuilder(
+          int index) {
+        if (textFieldBuilder_ == null) {
+          return textField_.get(index);  } else {
+          return textFieldBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public java.util.List<? extends proto.ddx.v1.Fields.TextFieldOrBuilder> 
+           getTextFieldOrBuilderList() {
+        if (textFieldBuilder_ != null) {
+          return textFieldBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textField_);
+        }
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public proto.ddx.v1.Fields.TextField.Builder addTextFieldBuilder() {
+        return getTextFieldFieldBuilder().addBuilder(
+            proto.ddx.v1.Fields.TextField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public proto.ddx.v1.Fields.TextField.Builder addTextFieldBuilder(
+          int index) {
+        return getTextFieldFieldBuilder().addBuilder(
+            index, proto.ddx.v1.Fields.TextField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * field holds detected document textual fields.
+       * Textual fields are all the fields that have textual representation and we expect
+       * out users to use the OCRed and transcribed text.
+       * Will be empty if status is not OK
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.TextField textField = 1 [json_name = "textField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.TextField.Builder> 
+           getTextFieldBuilderList() {
+        return getTextFieldFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder> 
+          getTextFieldFieldBuilder() {
+        if (textFieldBuilder_ == null) {
+          textFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              proto.ddx.v1.Fields.TextField, proto.ddx.v1.Fields.TextField.Builder, proto.ddx.v1.Fields.TextFieldOrBuilder>(
+                  textField_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          textField_ = null;
+        }
+        return textFieldBuilder_;
+      }
+
+      private java.util.List<proto.ddx.v1.Fields.VisualField> visualField_ =
+        java.util.Collections.emptyList();
+      private void ensureVisualFieldIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          visualField_ = new java.util.ArrayList<proto.ddx.v1.Fields.VisualField>(visualField_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder> visualFieldBuilder_;
+
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.VisualField> getVisualFieldList() {
+        if (visualFieldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(visualField_);
+        } else {
+          return visualFieldBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public int getVisualFieldCount() {
+        if (visualFieldBuilder_ == null) {
+          return visualField_.size();
+        } else {
+          return visualFieldBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public proto.ddx.v1.Fields.VisualField getVisualField(int index) {
+        if (visualFieldBuilder_ == null) {
+          return visualField_.get(index);
+        } else {
+          return visualFieldBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder setVisualField(
+          int index, proto.ddx.v1.Fields.VisualField value) {
+        if (visualFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVisualFieldIsMutable();
+          visualField_.set(index, value);
+          onChanged();
+        } else {
+          visualFieldBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder setVisualField(
+          int index, proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
+        if (visualFieldBuilder_ == null) {
+          ensureVisualFieldIsMutable();
+          visualField_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          visualFieldBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder addVisualField(proto.ddx.v1.Fields.VisualField value) {
+        if (visualFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVisualFieldIsMutable();
+          visualField_.add(value);
+          onChanged();
+        } else {
+          visualFieldBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder addVisualField(
+          int index, proto.ddx.v1.Fields.VisualField value) {
+        if (visualFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVisualFieldIsMutable();
+          visualField_.add(index, value);
+          onChanged();
+        } else {
+          visualFieldBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder addVisualField(
+          proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
+        if (visualFieldBuilder_ == null) {
+          ensureVisualFieldIsMutable();
+          visualField_.add(builderForValue.build());
+          onChanged();
+        } else {
+          visualFieldBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder addVisualField(
+          int index, proto.ddx.v1.Fields.VisualField.Builder builderForValue) {
+        if (visualFieldBuilder_ == null) {
+          ensureVisualFieldIsMutable();
+          visualField_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          visualFieldBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder addAllVisualField(
+          java.lang.Iterable<? extends proto.ddx.v1.Fields.VisualField> values) {
+        if (visualFieldBuilder_ == null) {
+          ensureVisualFieldIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, visualField_);
+          onChanged();
+        } else {
+          visualFieldBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder clearVisualField() {
+        if (visualFieldBuilder_ == null) {
+          visualField_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          visualFieldBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public Builder removeVisualField(int index) {
+        if (visualFieldBuilder_ == null) {
+          ensureVisualFieldIsMutable();
+          visualField_.remove(index);
+          onChanged();
+        } else {
+          visualFieldBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public proto.ddx.v1.Fields.VisualField.Builder getVisualFieldBuilder(
+          int index) {
+        return getVisualFieldFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public proto.ddx.v1.Fields.VisualFieldOrBuilder getVisualFieldOrBuilder(
+          int index) {
+        if (visualFieldBuilder_ == null) {
+          return visualField_.get(index);  } else {
+          return visualFieldBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public java.util.List<? extends proto.ddx.v1.Fields.VisualFieldOrBuilder> 
+           getVisualFieldOrBuilderList() {
+        if (visualFieldBuilder_ != null) {
+          return visualFieldBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(visualField_);
+        }
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public proto.ddx.v1.Fields.VisualField.Builder addVisualFieldBuilder() {
+        return getVisualFieldFieldBuilder().addBuilder(
+            proto.ddx.v1.Fields.VisualField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public proto.ddx.v1.Fields.VisualField.Builder addVisualFieldBuilder(
+          int index) {
+        return getVisualFieldFieldBuilder().addBuilder(
+            index, proto.ddx.v1.Fields.VisualField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * visualField holds detected document visual fields.
+       * Visual fields are those whose values can't be extracted as text, and are
+       * expected to be extracted as an image or position in the given image.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.VisualField visualField = 2 [json_name = "visualField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.VisualField.Builder> 
+           getVisualFieldBuilderList() {
+        return getVisualFieldFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder> 
+          getVisualFieldFieldBuilder() {
+        if (visualFieldBuilder_ == null) {
+          visualFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              proto.ddx.v1.Fields.VisualField, proto.ddx.v1.Fields.VisualField.Builder, proto.ddx.v1.Fields.VisualFieldOrBuilder>(
+                  visualField_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          visualField_ = null;
+        }
+        return visualFieldBuilder_;
+      }
+
+      private java.util.List<proto.ddx.v1.Fields.DateField> dateField_ =
+        java.util.Collections.emptyList();
+      private void ensureDateFieldIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          dateField_ = new java.util.ArrayList<proto.ddx.v1.Fields.DateField>(dateField_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder> dateFieldBuilder_;
+
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.DateField> getDateFieldList() {
+        if (dateFieldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dateField_);
+        } else {
+          return dateFieldBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public int getDateFieldCount() {
+        if (dateFieldBuilder_ == null) {
+          return dateField_.size();
+        } else {
+          return dateFieldBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public proto.ddx.v1.Fields.DateField getDateField(int index) {
+        if (dateFieldBuilder_ == null) {
+          return dateField_.get(index);
+        } else {
+          return dateFieldBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder setDateField(
+          int index, proto.ddx.v1.Fields.DateField value) {
+        if (dateFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDateFieldIsMutable();
+          dateField_.set(index, value);
+          onChanged();
+        } else {
+          dateFieldBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder setDateField(
+          int index, proto.ddx.v1.Fields.DateField.Builder builderForValue) {
+        if (dateFieldBuilder_ == null) {
+          ensureDateFieldIsMutable();
+          dateField_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dateFieldBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder addDateField(proto.ddx.v1.Fields.DateField value) {
+        if (dateFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDateFieldIsMutable();
+          dateField_.add(value);
+          onChanged();
+        } else {
+          dateFieldBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder addDateField(
+          int index, proto.ddx.v1.Fields.DateField value) {
+        if (dateFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDateFieldIsMutable();
+          dateField_.add(index, value);
+          onChanged();
+        } else {
+          dateFieldBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder addDateField(
+          proto.ddx.v1.Fields.DateField.Builder builderForValue) {
+        if (dateFieldBuilder_ == null) {
+          ensureDateFieldIsMutable();
+          dateField_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dateFieldBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder addDateField(
+          int index, proto.ddx.v1.Fields.DateField.Builder builderForValue) {
+        if (dateFieldBuilder_ == null) {
+          ensureDateFieldIsMutable();
+          dateField_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dateFieldBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder addAllDateField(
+          java.lang.Iterable<? extends proto.ddx.v1.Fields.DateField> values) {
+        if (dateFieldBuilder_ == null) {
+          ensureDateFieldIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dateField_);
+          onChanged();
+        } else {
+          dateFieldBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder clearDateField() {
+        if (dateFieldBuilder_ == null) {
+          dateField_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dateFieldBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public Builder removeDateField(int index) {
+        if (dateFieldBuilder_ == null) {
+          ensureDateFieldIsMutable();
+          dateField_.remove(index);
+          onChanged();
+        } else {
+          dateFieldBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public proto.ddx.v1.Fields.DateField.Builder getDateFieldBuilder(
+          int index) {
+        return getDateFieldFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public proto.ddx.v1.Fields.DateFieldOrBuilder getDateFieldOrBuilder(
+          int index) {
+        if (dateFieldBuilder_ == null) {
+          return dateField_.get(index);  } else {
+          return dateFieldBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public java.util.List<? extends proto.ddx.v1.Fields.DateFieldOrBuilder> 
+           getDateFieldOrBuilderList() {
+        if (dateFieldBuilder_ != null) {
+          return dateFieldBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dateField_);
+        }
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public proto.ddx.v1.Fields.DateField.Builder addDateFieldBuilder() {
+        return getDateFieldFieldBuilder().addBuilder(
+            proto.ddx.v1.Fields.DateField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public proto.ddx.v1.Fields.DateField.Builder addDateFieldBuilder(
+          int index) {
+        return getDateFieldFieldBuilder().addBuilder(
+            index, proto.ddx.v1.Fields.DateField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * dateField holds detected document date fields.
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer "date" in a structured parsed format (year, month, day) regardless of textual
+       * representation.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.DateField dateField = 3 [json_name = "dateField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.DateField.Builder> 
+           getDateFieldBuilderList() {
+        return getDateFieldFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder> 
+          getDateFieldFieldBuilder() {
+        if (dateFieldBuilder_ == null) {
+          dateFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              proto.ddx.v1.Fields.DateField, proto.ddx.v1.Fields.DateField.Builder, proto.ddx.v1.Fields.DateFieldOrBuilder>(
+                  dateField_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dateField_ = null;
+        }
+        return dateFieldBuilder_;
+      }
+
+      private java.util.List<proto.ddx.v1.Fields.SexField> sexField_ =
+        java.util.Collections.emptyList();
+      private void ensureSexFieldIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          sexField_ = new java.util.ArrayList<proto.ddx.v1.Fields.SexField>(sexField_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder> sexFieldBuilder_;
+
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.SexField> getSexFieldList() {
+        if (sexFieldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sexField_);
+        } else {
+          return sexFieldBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public int getSexFieldCount() {
+        if (sexFieldBuilder_ == null) {
+          return sexField_.size();
+        } else {
+          return sexFieldBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public proto.ddx.v1.Fields.SexField getSexField(int index) {
+        if (sexFieldBuilder_ == null) {
+          return sexField_.get(index);
+        } else {
+          return sexFieldBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder setSexField(
+          int index, proto.ddx.v1.Fields.SexField value) {
+        if (sexFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSexFieldIsMutable();
+          sexField_.set(index, value);
+          onChanged();
+        } else {
+          sexFieldBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder setSexField(
+          int index, proto.ddx.v1.Fields.SexField.Builder builderForValue) {
+        if (sexFieldBuilder_ == null) {
+          ensureSexFieldIsMutable();
+          sexField_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sexFieldBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder addSexField(proto.ddx.v1.Fields.SexField value) {
+        if (sexFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSexFieldIsMutable();
+          sexField_.add(value);
+          onChanged();
+        } else {
+          sexFieldBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder addSexField(
+          int index, proto.ddx.v1.Fields.SexField value) {
+        if (sexFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSexFieldIsMutable();
+          sexField_.add(index, value);
+          onChanged();
+        } else {
+          sexFieldBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder addSexField(
+          proto.ddx.v1.Fields.SexField.Builder builderForValue) {
+        if (sexFieldBuilder_ == null) {
+          ensureSexFieldIsMutable();
+          sexField_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sexFieldBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder addSexField(
+          int index, proto.ddx.v1.Fields.SexField.Builder builderForValue) {
+        if (sexFieldBuilder_ == null) {
+          ensureSexFieldIsMutable();
+          sexField_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sexFieldBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder addAllSexField(
+          java.lang.Iterable<? extends proto.ddx.v1.Fields.SexField> values) {
+        if (sexFieldBuilder_ == null) {
+          ensureSexFieldIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sexField_);
+          onChanged();
+        } else {
+          sexFieldBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder clearSexField() {
+        if (sexFieldBuilder_ == null) {
+          sexField_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          sexFieldBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public Builder removeSexField(int index) {
+        if (sexFieldBuilder_ == null) {
+          ensureSexFieldIsMutable();
+          sexField_.remove(index);
+          onChanged();
+        } else {
+          sexFieldBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public proto.ddx.v1.Fields.SexField.Builder getSexFieldBuilder(
+          int index) {
+        return getSexFieldFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public proto.ddx.v1.Fields.SexFieldOrBuilder getSexFieldOrBuilder(
+          int index) {
+        if (sexFieldBuilder_ == null) {
+          return sexField_.get(index);  } else {
+          return sexFieldBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public java.util.List<? extends proto.ddx.v1.Fields.SexFieldOrBuilder> 
+           getSexFieldOrBuilderList() {
+        if (sexFieldBuilder_ != null) {
+          return sexFieldBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sexField_);
+        }
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public proto.ddx.v1.Fields.SexField.Builder addSexFieldBuilder() {
+        return getSexFieldFieldBuilder().addBuilder(
+            proto.ddx.v1.Fields.SexField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public proto.ddx.v1.Fields.SexField.Builder addSexFieldBuilder(
+          int index) {
+        return getSexFieldFieldBuilder().addBuilder(
+            index, proto.ddx.v1.Fields.SexField.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * sexField holds detected document gender fields
+       * Compared to textual fields, they don't just hold textual information present on the document
+       * but offer gender information as an parsed enumeration.
+       * </pre>
+       *
+       * <code>repeated .proto.ddx.v1.SexField sexField = 4 [json_name = "sexField"];</code>
+       */
+      public java.util.List<proto.ddx.v1.Fields.SexField.Builder> 
+           getSexFieldBuilderList() {
+        return getSexFieldFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder> 
+          getSexFieldFieldBuilder() {
+        if (sexFieldBuilder_ == null) {
+          sexFieldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              proto.ddx.v1.Fields.SexField, proto.ddx.v1.Fields.SexField.Builder, proto.ddx.v1.Fields.SexFieldOrBuilder>(
+                  sexField_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sexField_ = null;
+        }
+        return sexFieldBuilder_;
+      }
+
+      private proto.ddx.v1.Service.Mrz mrz_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder> mrzBuilder_;
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       * @return Whether the mrz field is set.
+       */
+      public boolean hasMrz() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       * @return The mrz.
+       */
+      public proto.ddx.v1.Service.Mrz getMrz() {
+        if (mrzBuilder_ == null) {
+          return mrz_ == null ? proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+        } else {
+          return mrzBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public Builder setMrz(proto.ddx.v1.Service.Mrz value) {
+        if (mrzBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mrz_ = value;
+        } else {
+          mrzBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public Builder setMrz(
+          proto.ddx.v1.Service.Mrz.Builder builderForValue) {
+        if (mrzBuilder_ == null) {
+          mrz_ = builderForValue.build();
+        } else {
+          mrzBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public Builder mergeMrz(proto.ddx.v1.Service.Mrz value) {
+        if (mrzBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            mrz_ != null &&
+            mrz_ != proto.ddx.v1.Service.Mrz.getDefaultInstance()) {
+            getMrzBuilder().mergeFrom(value);
+          } else {
+            mrz_ = value;
+          }
+        } else {
+          mrzBuilder_.mergeFrom(value);
+        }
+        if (mrz_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public Builder clearMrz() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        mrz_ = null;
+        if (mrzBuilder_ != null) {
+          mrzBuilder_.dispose();
+          mrzBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public proto.ddx.v1.Service.Mrz.Builder getMrzBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMrzFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      public proto.ddx.v1.Service.MrzOrBuilder getMrzOrBuilder() {
+        if (mrzBuilder_ != null) {
+          return mrzBuilder_.getMessageOrBuilder();
+        } else {
+          return mrz_ == null ?
+              proto.ddx.v1.Service.Mrz.getDefaultInstance() : mrz_;
+        }
+      }
+      /**
+       * <pre>
+       * mrz holds the mrz data extracted from the image if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Mrz mrz = 5 [json_name = "mrz"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder> 
+          getMrzFieldBuilder() {
+        if (mrzBuilder_ == null) {
+          mrzBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.Mrz, proto.ddx.v1.Service.Mrz.Builder, proto.ddx.v1.Service.MrzOrBuilder>(
+                  getMrz(),
+                  getParentForChildren(),
+                  isClean());
+          mrz_ = null;
+        }
+        return mrzBuilder_;
+      }
+
+      private proto.ddx.v1.Barcode.Pdf417Barcode pdf417Barcode_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder> pdf417BarcodeBuilder_;
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       * @return Whether the pdf417Barcode field is set.
+       */
+      public boolean hasPdf417Barcode() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       * @return The pdf417Barcode.
+       */
+      public proto.ddx.v1.Barcode.Pdf417Barcode getPdf417Barcode() {
+        if (pdf417BarcodeBuilder_ == null) {
+          return pdf417Barcode_ == null ? proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
+        } else {
+          return pdf417BarcodeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public Builder setPdf417Barcode(proto.ddx.v1.Barcode.Pdf417Barcode value) {
+        if (pdf417BarcodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pdf417Barcode_ = value;
+        } else {
+          pdf417BarcodeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public Builder setPdf417Barcode(
+          proto.ddx.v1.Barcode.Pdf417Barcode.Builder builderForValue) {
+        if (pdf417BarcodeBuilder_ == null) {
+          pdf417Barcode_ = builderForValue.build();
+        } else {
+          pdf417BarcodeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public Builder mergePdf417Barcode(proto.ddx.v1.Barcode.Pdf417Barcode value) {
+        if (pdf417BarcodeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            pdf417Barcode_ != null &&
+            pdf417Barcode_ != proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance()) {
+            getPdf417BarcodeBuilder().mergeFrom(value);
+          } else {
+            pdf417Barcode_ = value;
+          }
+        } else {
+          pdf417BarcodeBuilder_.mergeFrom(value);
+        }
+        if (pdf417Barcode_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public Builder clearPdf417Barcode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pdf417Barcode_ = null;
+        if (pdf417BarcodeBuilder_ != null) {
+          pdf417BarcodeBuilder_.dispose();
+          pdf417BarcodeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public proto.ddx.v1.Barcode.Pdf417Barcode.Builder getPdf417BarcodeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getPdf417BarcodeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      public proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder getPdf417BarcodeOrBuilder() {
+        if (pdf417BarcodeBuilder_ != null) {
+          return pdf417BarcodeBuilder_.getMessageOrBuilder();
+        } else {
+          return pdf417Barcode_ == null ?
+              proto.ddx.v1.Barcode.Pdf417Barcode.getDefaultInstance() : pdf417Barcode_;
+        }
+      }
+      /**
+       * <pre>
+       * pdf417Barcode - holds data extracted from PDF417 barcode detected on the document if one was found, empty otherwise
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Pdf417Barcode pdf417Barcode = 6 [json_name = "pdf417Barcode"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder> 
+          getPdf417BarcodeFieldBuilder() {
+        if (pdf417BarcodeBuilder_ == null) {
+          pdf417BarcodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Barcode.Pdf417Barcode, proto.ddx.v1.Barcode.Pdf417Barcode.Builder, proto.ddx.v1.Barcode.Pdf417BarcodeOrBuilder>(
+                  getPdf417Barcode(),
+                  getParentForChildren(),
+                  isClean());
+          pdf417Barcode_ = null;
+        }
+        return pdf417BarcodeBuilder_;
+      }
+
+      private com.google.protobuf.ByteString documentImage_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Optional, empty by default, returned if specified in requests "config" field.
+       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>bytes documentImage = 7 [json_name = "documentImage"];</code>
+       * @return The documentImage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDocumentImage() {
+        return documentImage_;
+      }
+      /**
+       * <pre>
+       * Optional, empty by default, returned if specified in requests "config" field.
+       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>bytes documentImage = 7 [json_name = "documentImage"];</code>
+       * @param value The documentImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDocumentImage(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        documentImage_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional, empty by default, returned if specified in requests "config" field.
+       * Of course, it will be empty if status is DOCUMENT_NOT_FOUND
+       * </pre>
+       *
+       * <code>bytes documentImage = 7 [json_name = "documentImage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDocumentImage() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        documentImage_ = getDefaultInstance().getDocumentImage();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.ddx.v1.DocumentData)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ddx.v1.DocumentData)
+    private static final proto.ddx.v1.Service.DocumentData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ddx.v1.Service.DocumentData();
+    }
+
+    public static proto.ddx.v1.Service.DocumentData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DocumentData>
+        PARSER = new com.google.protobuf.AbstractParser<DocumentData>() {
+      @java.lang.Override
+      public DocumentData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DocumentData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DocumentData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ScanTwoSidedDocumentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ddx.v1.ScanTwoSidedDocumentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+     * </pre>
+     *
+     * <code>bytes firstImage = 1 [json_name = "firstImage"];</code>
+     * @return The firstImage.
+     */
+    com.google.protobuf.ByteString getFirstImage();
+
+    /**
+     * <pre>
+     * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+     * </pre>
+     *
+     * <code>bytes secondImage = 2 [json_name = "secondImage"];</code>
+     * @return The secondImage.
+     */
+    com.google.protobuf.ByteString getSecondImage();
+
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     * @return The config.
+     */
+    proto.ddx.v1.Service.ScanConfig getConfig();
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     */
+    proto.ddx.v1.Service.ScanConfigOrBuilder getConfigOrBuilder();
+  }
+  /**
+   * Protobuf type {@code proto.ddx.v1.ScanTwoSidedDocumentRequest}
+   */
+  public static final class ScanTwoSidedDocumentRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:proto.ddx.v1.ScanTwoSidedDocumentRequest)
+      ScanTwoSidedDocumentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        ScanTwoSidedDocumentRequest.class.getName());
+    }
+    // Use ScanTwoSidedDocumentRequest.newBuilder() to construct.
+    private ScanTwoSidedDocumentRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ScanTwoSidedDocumentRequest() {
+      firstImage_ = com.google.protobuf.ByteString.EMPTY;
+      secondImage_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.class, proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int FIRSTIMAGE_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString firstImage_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+     * </pre>
+     *
+     * <code>bytes firstImage = 1 [json_name = "firstImage"];</code>
+     * @return The firstImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getFirstImage() {
+      return firstImage_;
+    }
+
+    public static final int SECONDIMAGE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString secondImage_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+     * </pre>
+     *
+     * <code>bytes secondImage = 2 [json_name = "secondImage"];</code>
+     * @return The secondImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSecondImage() {
+      return secondImage_;
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 3;
+    private proto.ddx.v1.Service.ScanConfig config_;
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     * @return The config.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.ScanConfig getConfig() {
+      return config_ == null ? proto.ddx.v1.Service.ScanConfig.getDefaultInstance() : config_;
+    }
+    /**
+     * <pre>
+     * config - optional, this can be set to configure some server parameters and what do you want the server to
+     * return. This includes selection of returning images, selecting fields etc.
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.ScanConfigOrBuilder getConfigOrBuilder() {
+      return config_ == null ? proto.ddx.v1.Service.ScanConfig.getDefaultInstance() : config_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!firstImage_.isEmpty()) {
+        output.writeBytes(1, firstImage_);
+      }
+      if (!secondImage_.isEmpty()) {
+        output.writeBytes(2, secondImage_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(3, getConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!firstImage_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, firstImage_);
+      }
+      if (!secondImage_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, secondImage_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ddx.v1.Service.ScanTwoSidedDocumentRequest)) {
+        return super.equals(obj);
+      }
+      proto.ddx.v1.Service.ScanTwoSidedDocumentRequest other = (proto.ddx.v1.Service.ScanTwoSidedDocumentRequest) obj;
+
+      if (!getFirstImage()
+          .equals(other.getFirstImage())) return false;
+      if (!getSecondImage()
+          .equals(other.getSecondImage())) return false;
+      if (hasConfig() != other.hasConfig()) return false;
+      if (hasConfig()) {
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FIRSTIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getFirstImage().hashCode();
+      hash = (37 * hash) + SECONDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getSecondImage().hashCode();
+      if (hasConfig()) {
+        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.ddx.v1.ScanTwoSidedDocumentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ddx.v1.ScanTwoSidedDocumentRequest)
+        proto.ddx.v1.Service.ScanTwoSidedDocumentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.class, proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.Builder.class);
+      }
+
+      // Construct using proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getConfigFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        firstImage_ = com.google.protobuf.ByteString.EMPTY;
+        secondImage_ = com.google.protobuf.ByteString.EMPTY;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentRequest getDefaultInstanceForType() {
+        return proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentRequest build() {
+        proto.ddx.v1.Service.ScanTwoSidedDocumentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentRequest buildPartial() {
+        proto.ddx.v1.Service.ScanTwoSidedDocumentRequest result = new proto.ddx.v1.Service.ScanTwoSidedDocumentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.firstImage_ = firstImage_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.secondImage_ = secondImage_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ddx.v1.Service.ScanTwoSidedDocumentRequest) {
+          return mergeFrom((proto.ddx.v1.Service.ScanTwoSidedDocumentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest other) {
+        if (other == proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.getDefaultInstance()) return this;
+        if (other.getFirstImage() != com.google.protobuf.ByteString.EMPTY) {
+          setFirstImage(other.getFirstImage());
+        }
+        if (other.getSecondImage() != com.google.protobuf.ByteString.EMPTY) {
+          setSecondImage(other.getSecondImage());
+        }
+        if (other.hasConfig()) {
+          mergeConfig(other.getConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                firstImage_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                secondImage_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString firstImage_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes firstImage = 1 [json_name = "firstImage"];</code>
+       * @return The firstImage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getFirstImage() {
+        return firstImage_;
+      }
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes firstImage = 1 [json_name = "firstImage"];</code>
+       * @param value The firstImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstImage(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        firstImage_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes firstImage = 1 [json_name = "firstImage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstImage() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        firstImage_ = getDefaultInstance().getFirstImage();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString secondImage_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes secondImage = 2 [json_name = "secondImage"];</code>
+       * @return The secondImage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSecondImage() {
+        return secondImage_;
+      }
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes secondImage = 2 [json_name = "secondImage"];</code>
+       * @param value The secondImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondImage(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        secondImage_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * image jpeg data bytes. If using http gateway (rest w json) this is base64 encoded string of image jpeg bytes
+       * </pre>
+       *
+       * <code>bytes secondImage = 2 [json_name = "secondImage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecondImage() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        secondImage_ = getDefaultInstance().getSecondImage();
+        onChanged();
+        return this;
+      }
+
+      private proto.ddx.v1.Service.ScanConfig config_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.ScanConfig, proto.ddx.v1.Service.ScanConfig.Builder, proto.ddx.v1.Service.ScanConfigOrBuilder> configBuilder_;
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       * @return Whether the config field is set.
+       */
+      public boolean hasConfig() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       * @return The config.
+       */
+      public proto.ddx.v1.Service.ScanConfig getConfig() {
+        if (configBuilder_ == null) {
+          return config_ == null ? proto.ddx.v1.Service.ScanConfig.getDefaultInstance() : config_;
+        } else {
+          return configBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public Builder setConfig(proto.ddx.v1.Service.ScanConfig value) {
+        if (configBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          config_ = value;
+        } else {
+          configBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public Builder setConfig(
+          proto.ddx.v1.Service.ScanConfig.Builder builderForValue) {
+        if (configBuilder_ == null) {
+          config_ = builderForValue.build();
+        } else {
+          configBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public Builder mergeConfig(proto.ddx.v1.Service.ScanConfig value) {
+        if (configBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            config_ != null &&
+            config_ != proto.ddx.v1.Service.ScanConfig.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
+          } else {
+            config_ = value;
+          }
+        } else {
+          configBuilder_.mergeFrom(value);
+        }
+        if (config_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public Builder clearConfig() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public proto.ddx.v1.Service.ScanConfig.Builder getConfigBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      public proto.ddx.v1.Service.ScanConfigOrBuilder getConfigOrBuilder() {
+        if (configBuilder_ != null) {
+          return configBuilder_.getMessageOrBuilder();
+        } else {
+          return config_ == null ?
+              proto.ddx.v1.Service.ScanConfig.getDefaultInstance() : config_;
+        }
+      }
+      /**
+       * <pre>
+       * config - optional, this can be set to configure some server parameters and what do you want the server to
+       * return. This includes selection of returning images, selecting fields etc.
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.ScanConfig config = 3 [json_name = "config"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.ScanConfig, proto.ddx.v1.Service.ScanConfig.Builder, proto.ddx.v1.Service.ScanConfigOrBuilder> 
+          getConfigFieldBuilder() {
+        if (configBuilder_ == null) {
+          configBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.ScanConfig, proto.ddx.v1.Service.ScanConfig.Builder, proto.ddx.v1.Service.ScanConfigOrBuilder>(
+                  getConfig(),
+                  getParentForChildren(),
+                  isClean());
+          config_ = null;
+        }
+        return configBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.ddx.v1.ScanTwoSidedDocumentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ddx.v1.ScanTwoSidedDocumentRequest)
+    private static final proto.ddx.v1.Service.ScanTwoSidedDocumentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ddx.v1.Service.ScanTwoSidedDocumentRequest();
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScanTwoSidedDocumentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ScanTwoSidedDocumentRequest>() {
+      @java.lang.Override
+      public ScanTwoSidedDocumentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScanTwoSidedDocumentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScanTwoSidedDocumentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ddx.v1.Service.ScanTwoSidedDocumentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ScanTwoSidedDocumentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ddx.v1.ScanTwoSidedDocumentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status getStatus();
+
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     * @return Whether the classification field is set.
+     */
+    boolean hasClassification();
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     * @return The classification.
+     */
+    proto.ddx.v1.Service.DocumentClass getClassification();
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     */
+    proto.ddx.v1.Service.DocumentClassOrBuilder getClassificationOrBuilder();
+
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     * @return Whether the frontSide field is set.
+     */
+    boolean hasFrontSide();
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     * @return The frontSide.
+     */
+    proto.ddx.v1.Service.DocumentData getFrontSide();
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     */
+    proto.ddx.v1.Service.DocumentDataOrBuilder getFrontSideOrBuilder();
+
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     * @return Whether the backSide field is set.
+     */
+    boolean hasBackSide();
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     * @return The backSide.
+     */
+    proto.ddx.v1.Service.DocumentData getBackSide();
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     */
+    proto.ddx.v1.Service.DocumentDataOrBuilder getBackSideOrBuilder();
+  }
+  /**
+   * Protobuf type {@code proto.ddx.v1.ScanTwoSidedDocumentResponse}
+   */
+  public static final class ScanTwoSidedDocumentResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:proto.ddx.v1.ScanTwoSidedDocumentResponse)
+      ScanTwoSidedDocumentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        ScanTwoSidedDocumentResponse.class.getName());
+    }
+    // Use ScanTwoSidedDocumentResponse.newBuilder() to construct.
+    private ScanTwoSidedDocumentResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ScanTwoSidedDocumentResponse() {
+      status_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.class, proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code proto.ddx.v1.ScanTwoSidedDocumentResponse.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_OK = 0;</code>
+       */
+      STATUS_OK(0),
+      /**
+       * <code>STATUS_FRONT_SIDE_NOT_FOUND = 1;</code>
+       */
+      STATUS_FRONT_SIDE_NOT_FOUND(1),
+      /**
+       * <code>STATUS_BACK_SIDE_NOT_FOUND = 2;</code>
+       */
+      STATUS_BACK_SIDE_NOT_FOUND(2),
+      /**
+       * <code>STATUS_NOT_SUPPORTED = 3;</code>
+       */
+      STATUS_NOT_SUPPORTED(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 28,
+          /* patch= */ 2,
+          /* suffix= */ "",
+          Status.class.getName());
+      }
+      /**
+       * <code>STATUS_OK = 0;</code>
+       */
+      public static final int STATUS_OK_VALUE = 0;
+      /**
+       * <code>STATUS_FRONT_SIDE_NOT_FOUND = 1;</code>
+       */
+      public static final int STATUS_FRONT_SIDE_NOT_FOUND_VALUE = 1;
+      /**
+       * <code>STATUS_BACK_SIDE_NOT_FOUND = 2;</code>
+       */
+      public static final int STATUS_BACK_SIDE_NOT_FOUND_VALUE = 2;
+      /**
+       * <code>STATUS_NOT_SUPPORTED = 3;</code>
+       */
+      public static final int STATUS_NOT_SUPPORTED_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_OK;
+          case 1: return STATUS_FRONT_SIDE_NOT_FOUND;
+          case 2: return STATUS_BACK_SIDE_NOT_FOUND;
+          case 3: return STATUS_NOT_SUPPORTED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:proto.ddx.v1.ScanTwoSidedDocumentResponse.Status)
+    }
+
+    private int bitField0_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_ = 0;
+    /**
+     * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status getStatus() {
+      proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status result = proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.forNumber(status_);
+      return result == null ? proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int CLASSIFICATION_FIELD_NUMBER = 2;
+    private proto.ddx.v1.Service.DocumentClass classification_;
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     * @return Whether the classification field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassification() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     * @return The classification.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentClass getClassification() {
+      return classification_ == null ? proto.ddx.v1.Service.DocumentClass.getDefaultInstance() : classification_;
+    }
+    /**
+     * <pre>
+     * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentClassOrBuilder getClassificationOrBuilder() {
+      return classification_ == null ? proto.ddx.v1.Service.DocumentClass.getDefaultInstance() : classification_;
+    }
+
+    public static final int FRONTSIDE_FIELD_NUMBER = 3;
+    private proto.ddx.v1.Service.DocumentData frontSide_;
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     * @return Whether the frontSide field is set.
+     */
+    @java.lang.Override
+    public boolean hasFrontSide() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     * @return The frontSide.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentData getFrontSide() {
+      return frontSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : frontSide_;
+    }
+    /**
+     * <pre>
+     * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentDataOrBuilder getFrontSideOrBuilder() {
+      return frontSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : frontSide_;
+    }
+
+    public static final int BACKSIDE_FIELD_NUMBER = 4;
+    private proto.ddx.v1.Service.DocumentData backSide_;
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     * @return Whether the backSide field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackSide() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     * @return The backSide.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentData getBackSide() {
+      return backSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : backSide_;
+    }
+    /**
+     * <pre>
+     * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Service.DocumentDataOrBuilder getBackSideOrBuilder() {
+      return backSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : backSide_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.STATUS_OK.getNumber()) {
+        output.writeEnum(1, status_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(2, getClassification());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getFrontSide());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(4, getBackSide());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.STATUS_OK.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getClassification());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFrontSide());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBackSide());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ddx.v1.Service.ScanTwoSidedDocumentResponse)) {
+        return super.equals(obj);
+      }
+      proto.ddx.v1.Service.ScanTwoSidedDocumentResponse other = (proto.ddx.v1.Service.ScanTwoSidedDocumentResponse) obj;
+
+      if (status_ != other.status_) return false;
+      if (hasClassification() != other.hasClassification()) return false;
+      if (hasClassification()) {
+        if (!getClassification()
+            .equals(other.getClassification())) return false;
+      }
+      if (hasFrontSide() != other.hasFrontSide()) return false;
+      if (hasFrontSide()) {
+        if (!getFrontSide()
+            .equals(other.getFrontSide())) return false;
+      }
+      if (hasBackSide() != other.hasBackSide()) return false;
+      if (hasBackSide()) {
+        if (!getBackSide()
+            .equals(other.getBackSide())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasClassification()) {
+        hash = (37 * hash) + CLASSIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getClassification().hashCode();
+      }
+      if (hasFrontSide()) {
+        hash = (37 * hash) + FRONTSIDE_FIELD_NUMBER;
+        hash = (53 * hash) + getFrontSide().hashCode();
+      }
+      if (hasBackSide()) {
+        hash = (37 * hash) + BACKSIDE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackSide().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ddx.v1.Service.ScanTwoSidedDocumentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.ddx.v1.ScanTwoSidedDocumentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ddx.v1.ScanTwoSidedDocumentResponse)
+        proto.ddx.v1.Service.ScanTwoSidedDocumentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.class, proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Builder.class);
+      }
+
+      // Construct using proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getClassificationFieldBuilder();
+          getFrontSideFieldBuilder();
+          getBackSideFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        status_ = 0;
+        classification_ = null;
+        if (classificationBuilder_ != null) {
+          classificationBuilder_.dispose();
+          classificationBuilder_ = null;
+        }
+        frontSide_ = null;
+        if (frontSideBuilder_ != null) {
+          frontSideBuilder_.dispose();
+          frontSideBuilder_ = null;
+        }
+        backSide_ = null;
+        if (backSideBuilder_ != null) {
+          backSideBuilder_.dispose();
+          backSideBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ddx.v1.Service.internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse getDefaultInstanceForType() {
+        return proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse build() {
+        proto.ddx.v1.Service.ScanTwoSidedDocumentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse buildPartial() {
+        proto.ddx.v1.Service.ScanTwoSidedDocumentResponse result = new proto.ddx.v1.Service.ScanTwoSidedDocumentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(proto.ddx.v1.Service.ScanTwoSidedDocumentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.status_ = status_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classification_ = classificationBuilder_ == null
+              ? classification_
+              : classificationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.frontSide_ = frontSideBuilder_ == null
+              ? frontSide_
+              : frontSideBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.backSide_ = backSideBuilder_ == null
+              ? backSide_
+              : backSideBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ddx.v1.Service.ScanTwoSidedDocumentResponse) {
+          return mergeFrom((proto.ddx.v1.Service.ScanTwoSidedDocumentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ddx.v1.Service.ScanTwoSidedDocumentResponse other) {
+        if (other == proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasClassification()) {
+          mergeClassification(other.getClassification());
+        }
+        if (other.hasFrontSide()) {
+          mergeFrontSide(other.getFrontSide());
+        }
+        if (other.hasBackSide()) {
+          mergeBackSide(other.getBackSide());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getClassificationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getFrontSideFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBackSideFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int status_ = 0;
+      /**
+       * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status getStatus() {
+        proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status result = proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.forNumber(status_);
+        return result == null ? proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.ScanTwoSidedDocumentResponse.Status status = 1 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private proto.ddx.v1.Service.DocumentClass classification_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentClass, proto.ddx.v1.Service.DocumentClass.Builder, proto.ddx.v1.Service.DocumentClassOrBuilder> classificationBuilder_;
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       * @return Whether the classification field is set.
+       */
+      public boolean hasClassification() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       * @return The classification.
+       */
+      public proto.ddx.v1.Service.DocumentClass getClassification() {
+        if (classificationBuilder_ == null) {
+          return classification_ == null ? proto.ddx.v1.Service.DocumentClass.getDefaultInstance() : classification_;
+        } else {
+          return classificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public Builder setClassification(proto.ddx.v1.Service.DocumentClass value) {
+        if (classificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          classification_ = value;
+        } else {
+          classificationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public Builder setClassification(
+          proto.ddx.v1.Service.DocumentClass.Builder builderForValue) {
+        if (classificationBuilder_ == null) {
+          classification_ = builderForValue.build();
+        } else {
+          classificationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public Builder mergeClassification(proto.ddx.v1.Service.DocumentClass value) {
+        if (classificationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            classification_ != null &&
+            classification_ != proto.ddx.v1.Service.DocumentClass.getDefaultInstance()) {
+            getClassificationBuilder().mergeFrom(value);
+          } else {
+            classification_ = value;
+          }
+        } else {
+          classificationBuilder_.mergeFrom(value);
+        }
+        if (classification_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public Builder clearClassification() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        classification_ = null;
+        if (classificationBuilder_ != null) {
+          classificationBuilder_.dispose();
+          classificationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentClass.Builder getClassificationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getClassificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentClassOrBuilder getClassificationOrBuilder() {
+        if (classificationBuilder_ != null) {
+          return classificationBuilder_.getMessageOrBuilder();
+        } else {
+          return classification_ == null ?
+              proto.ddx.v1.Service.DocumentClass.getDefaultInstance() : classification_;
+        }
+      }
+      /**
+       * <pre>
+       * classification holds detected document class. Will be empty if status is STATUS_FRONT_SIDE_NOT_FOUND or STATUS_NOT_SUPPORTED
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentClass classification = 2 [json_name = "classification"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentClass, proto.ddx.v1.Service.DocumentClass.Builder, proto.ddx.v1.Service.DocumentClassOrBuilder> 
+          getClassificationFieldBuilder() {
+        if (classificationBuilder_ == null) {
+          classificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.DocumentClass, proto.ddx.v1.Service.DocumentClass.Builder, proto.ddx.v1.Service.DocumentClassOrBuilder>(
+                  getClassification(),
+                  getParentForChildren(),
+                  isClean());
+          classification_ = null;
+        }
+        return classificationBuilder_;
+      }
+
+      private proto.ddx.v1.Service.DocumentData frontSide_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> frontSideBuilder_;
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       * @return Whether the frontSide field is set.
+       */
+      public boolean hasFrontSide() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       * @return The frontSide.
+       */
+      public proto.ddx.v1.Service.DocumentData getFrontSide() {
+        if (frontSideBuilder_ == null) {
+          return frontSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : frontSide_;
+        } else {
+          return frontSideBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public Builder setFrontSide(proto.ddx.v1.Service.DocumentData value) {
+        if (frontSideBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          frontSide_ = value;
+        } else {
+          frontSideBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public Builder setFrontSide(
+          proto.ddx.v1.Service.DocumentData.Builder builderForValue) {
+        if (frontSideBuilder_ == null) {
+          frontSide_ = builderForValue.build();
+        } else {
+          frontSideBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public Builder mergeFrontSide(proto.ddx.v1.Service.DocumentData value) {
+        if (frontSideBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            frontSide_ != null &&
+            frontSide_ != proto.ddx.v1.Service.DocumentData.getDefaultInstance()) {
+            getFrontSideBuilder().mergeFrom(value);
+          } else {
+            frontSide_ = value;
+          }
+        } else {
+          frontSideBuilder_.mergeFrom(value);
+        }
+        if (frontSide_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public Builder clearFrontSide() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        frontSide_ = null;
+        if (frontSideBuilder_ != null) {
+          frontSideBuilder_.dispose();
+          frontSideBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentData.Builder getFrontSideBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getFrontSideFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentDataOrBuilder getFrontSideOrBuilder() {
+        if (frontSideBuilder_ != null) {
+          return frontSideBuilder_.getMessageOrBuilder();
+        } else {
+          return frontSide_ == null ?
+              proto.ddx.v1.Service.DocumentData.getDefaultInstance() : frontSide_;
+        }
+      }
+      /**
+       * <pre>
+       * frontSide holds data extracted from the image of document front side. Empty if STATUS_FRONT_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData frontSide = 3 [json_name = "frontSide"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> 
+          getFrontSideFieldBuilder() {
+        if (frontSideBuilder_ == null) {
+          frontSideBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder>(
+                  getFrontSide(),
+                  getParentForChildren(),
+                  isClean());
+          frontSide_ = null;
+        }
+        return frontSideBuilder_;
+      }
+
+      private proto.ddx.v1.Service.DocumentData backSide_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> backSideBuilder_;
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       * @return Whether the backSide field is set.
+       */
+      public boolean hasBackSide() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       * @return The backSide.
+       */
+      public proto.ddx.v1.Service.DocumentData getBackSide() {
+        if (backSideBuilder_ == null) {
+          return backSide_ == null ? proto.ddx.v1.Service.DocumentData.getDefaultInstance() : backSide_;
+        } else {
+          return backSideBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public Builder setBackSide(proto.ddx.v1.Service.DocumentData value) {
+        if (backSideBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backSide_ = value;
+        } else {
+          backSideBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public Builder setBackSide(
+          proto.ddx.v1.Service.DocumentData.Builder builderForValue) {
+        if (backSideBuilder_ == null) {
+          backSide_ = builderForValue.build();
+        } else {
+          backSideBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public Builder mergeBackSide(proto.ddx.v1.Service.DocumentData value) {
+        if (backSideBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            backSide_ != null &&
+            backSide_ != proto.ddx.v1.Service.DocumentData.getDefaultInstance()) {
+            getBackSideBuilder().mergeFrom(value);
+          } else {
+            backSide_ = value;
+          }
+        } else {
+          backSideBuilder_.mergeFrom(value);
+        }
+        if (backSide_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public Builder clearBackSide() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        backSide_ = null;
+        if (backSideBuilder_ != null) {
+          backSideBuilder_.dispose();
+          backSideBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentData.Builder getBackSideBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getBackSideFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      public proto.ddx.v1.Service.DocumentDataOrBuilder getBackSideOrBuilder() {
+        if (backSideBuilder_ != null) {
+          return backSideBuilder_.getMessageOrBuilder();
+        } else {
+          return backSide_ == null ?
+              proto.ddx.v1.Service.DocumentData.getDefaultInstance() : backSide_;
+        }
+      }
+      /**
+       * <pre>
+       * backSide holds data extracted from the image of document back side. Empty if STATUS_BACK_SIDE_NOT_FOUND
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.DocumentData backSide = 4 [json_name = "backSide"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder> 
+          getBackSideFieldBuilder() {
+        if (backSideBuilder_ == null) {
+          backSideBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Service.DocumentData, proto.ddx.v1.Service.DocumentData.Builder, proto.ddx.v1.Service.DocumentDataOrBuilder>(
+                  getBackSide(),
+                  getParentForChildren(),
+                  isClean());
+          backSide_ = null;
+        }
+        return backSideBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.ddx.v1.ScanTwoSidedDocumentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ddx.v1.ScanTwoSidedDocumentResponse)
+    private static final proto.ddx.v1.Service.ScanTwoSidedDocumentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ddx.v1.Service.ScanTwoSidedDocumentResponse();
+    }
+
+    public static proto.ddx.v1.Service.ScanTwoSidedDocumentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScanTwoSidedDocumentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ScanTwoSidedDocumentResponse>() {
+      @java.lang.Override
+      public ScanTwoSidedDocumentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScanTwoSidedDocumentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScanTwoSidedDocumentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14128,6 +16994,21 @@ public final class Service {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_proto_ddx_v1_ScanDocumentResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ddx_v1_DocumentData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_proto_ddx_v1_DocumentData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14190,29 +17071,48 @@ public final class Service {
       "o.ddx.v1.MrzFieldsR\006fields\022\031\n\010mrz_code\030\003" +
       " \003(\tR\007mrzCode\"R\n\006Status\022\r\n\tSTATUS_OK\020\000\022\031" +
       "\n\025STATUS_INVALID_FORMAT\020\001\022\036\n\032STATUS_CHEC" +
-      "K_DIGIT_INVALID\020\002\"\267\005\n\024ScanDocumentRespon" +
+      "K_DIGIT_INVALID\020\002\"\372\002\n\024ScanDocumentRespon" +
       "se\022A\n\006status\030\001 \001(\0162).proto.ddx.v1.ScanDo" +
       "cumentResponse.StatusR\006status\0220\n\tdetecti" +
       "on\030\002 \001(\0132\022.proto.ddx.v1.QuadR\tdetection\022" +
       "C\n\016classification\030\003 \001(\0132\033.proto.ddx.v1.D" +
-      "ocumentClassR\016classification\0225\n\ttextFiel" +
-      "d\030\004 \003(\0132\027.proto.ddx.v1.TextFieldR\ttextFi" +
-      "eld\022;\n\013visualField\030\005 \003(\0132\031.proto.ddx.v1." +
-      "VisualFieldR\013visualField\0225\n\tdateField\030\006 " +
-      "\003(\0132\027.proto.ddx.v1.DateFieldR\tdateField\022" +
-      "2\n\010sexField\030\007 \003(\0132\026.proto.ddx.v1.SexFiel" +
-      "dR\010sexField\022#\n\003mrz\030\010 \001(\0132\021.proto.ddx.v1." +
-      "MrzR\003mrz\022A\n\rpdf417Barcode\030\t \001(\0132\033.proto." +
-      "ddx.v1.Pdf417BarcodeR\rpdf417Barcode\022$\n\rd" +
-      "ocumentImage\030\n \001(\014R\rdocumentImage\"x\n\006Sta" +
-      "tus\022\r\n\tSTATUS_OK\020\000\022\035\n\031STATUS_DOCUMENT_NO" +
-      "T_FOUND\020\001\022!\n\035STATUS_DOCUMENT_NOT_SUPPORT" +
-      "ED\020\002\022\035\n\031STATUS_DOCUMENT_BACK_SIDE\020\0032|\n\nE" +
-      "xtraction\022n\n\014ScanDocument\022!.proto.ddx.v1" +
-      ".ScanDocumentRequest\032\".proto.ddx.v1.Scan" +
-      "DocumentResponse\"\027\202\323\344\223\002\021\"\014/api/v1/scan:\001" +
-      "*B4Z2github.com/veridil/id-extract-servi" +
-      "ce/proto/ddx/v1b\006proto3"
+      "ocumentClassR\016classification\022.\n\004data\030\004 \001" +
+      "(\0132\032.proto.ddx.v1.DocumentDataR\004data\"x\n\006" +
+      "Status\022\r\n\tSTATUS_OK\020\000\022\035\n\031STATUS_DOCUMENT" +
+      "_NOT_FOUND\020\001\022!\n\035STATUS_DOCUMENT_NOT_SUPP" +
+      "ORTED\020\002\022\035\n\031STATUS_DOCUMENT_BACK_SIDE\020\003\"\373" +
+      "\002\n\014DocumentData\0225\n\ttextField\030\001 \003(\0132\027.pro" +
+      "to.ddx.v1.TextFieldR\ttextField\022;\n\013visual" +
+      "Field\030\002 \003(\0132\031.proto.ddx.v1.VisualFieldR\013" +
+      "visualField\0225\n\tdateField\030\003 \003(\0132\027.proto.d" +
+      "dx.v1.DateFieldR\tdateField\0222\n\010sexField\030\004" +
+      " \003(\0132\026.proto.ddx.v1.SexFieldR\010sexField\022#" +
+      "\n\003mrz\030\005 \001(\0132\021.proto.ddx.v1.MrzR\003mrz\022A\n\rp" +
+      "df417Barcode\030\006 \001(\0132\033.proto.ddx.v1.Pdf417" +
+      "BarcodeR\rpdf417Barcode\022$\n\rdocumentImage\030" +
+      "\007 \001(\014R\rdocumentImage\"\221\001\n\033ScanTwoSidedDoc" +
+      "umentRequest\022\036\n\nfirstImage\030\001 \001(\014R\nfirstI" +
+      "mage\022 \n\013secondImage\030\002 \001(\014R\013secondImage\0220" +
+      "\n\006config\030\003 \001(\0132\030.proto.ddx.v1.ScanConfig" +
+      "R\006config\"\224\003\n\034ScanTwoSidedDocumentRespons" +
+      "e\022I\n\006status\030\001 \001(\01621.proto.ddx.v1.ScanTwo" +
+      "SidedDocumentResponse.StatusR\006status\022C\n\016" +
+      "classification\030\002 \001(\0132\033.proto.ddx.v1.Docu" +
+      "mentClassR\016classification\0228\n\tfrontSide\030\003" +
+      " \001(\0132\032.proto.ddx.v1.DocumentDataR\tfrontS" +
+      "ide\0226\n\010backSide\030\004 \001(\0132\032.proto.ddx.v1.Doc" +
+      "umentDataR\010backSide\"r\n\006Status\022\r\n\tSTATUS_" +
+      "OK\020\000\022\037\n\033STATUS_FRONT_SIDE_NOT_FOUND\020\001\022\036\n" +
+      "\032STATUS_BACK_SIDE_NOT_FOUND\020\002\022\030\n\024STATUS_" +
+      "NOT_SUPPORTED\020\0032\215\002\n\nExtraction\022n\n\014ScanDo" +
+      "cument\022!.proto.ddx.v1.ScanDocumentReques" +
+      "t\032\".proto.ddx.v1.ScanDocumentResponse\"\027\202" +
+      "\323\344\223\002\021\"\014/api/v1/scan:\001*\022\216\001\n\024ScanTwoSidedD" +
+      "ocument\022).proto.ddx.v1.ScanTwoSidedDocum" +
+      "entRequest\032*.proto.ddx.v1.ScanTwoSidedDo" +
+      "cumentResponse\"\037\202\323\344\223\002\031\"\024/api/v1/scanTwoS" +
+      "ided:\001*B4Z2github.com/veridil/id-extract" +
+      "-service/proto/ddx/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14297,7 +17197,25 @@ public final class Service {
     internal_static_proto_ddx_v1_ScanDocumentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_ScanDocumentResponse_descriptor,
-        new java.lang.String[] { "Status", "Detection", "Classification", "TextField", "VisualField", "DateField", "SexField", "Mrz", "Pdf417Barcode", "DocumentImage", });
+        new java.lang.String[] { "Status", "Detection", "Classification", "Data", });
+    internal_static_proto_ddx_v1_DocumentData_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_proto_ddx_v1_DocumentData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_proto_ddx_v1_DocumentData_descriptor,
+        new java.lang.String[] { "TextField", "VisualField", "DateField", "SexField", "Mrz", "Pdf417Barcode", "DocumentImage", });
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_proto_ddx_v1_ScanTwoSidedDocumentRequest_descriptor,
+        new java.lang.String[] { "FirstImage", "SecondImage", "Config", });
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_proto_ddx_v1_ScanTwoSidedDocumentResponse_descriptor,
+        new java.lang.String[] { "Status", "Classification", "FrontSide", "BackSide", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
     io.envoyproxy.pgv.validate.Validate.getDescriptor();

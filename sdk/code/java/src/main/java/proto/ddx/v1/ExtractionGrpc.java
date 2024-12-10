@@ -46,6 +46,37 @@ public final class ExtractionGrpc {
     return getScanDocumentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.ddx.v1.Service.ScanTwoSidedDocumentRequest,
+      proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> getScanTwoSidedDocumentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ScanTwoSidedDocument",
+      requestType = proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.class,
+      responseType = proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.ddx.v1.Service.ScanTwoSidedDocumentRequest,
+      proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> getScanTwoSidedDocumentMethod() {
+    io.grpc.MethodDescriptor<proto.ddx.v1.Service.ScanTwoSidedDocumentRequest, proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> getScanTwoSidedDocumentMethod;
+    if ((getScanTwoSidedDocumentMethod = ExtractionGrpc.getScanTwoSidedDocumentMethod) == null) {
+      synchronized (ExtractionGrpc.class) {
+        if ((getScanTwoSidedDocumentMethod = ExtractionGrpc.getScanTwoSidedDocumentMethod) == null) {
+          ExtractionGrpc.getScanTwoSidedDocumentMethod = getScanTwoSidedDocumentMethod =
+              io.grpc.MethodDescriptor.<proto.ddx.v1.Service.ScanTwoSidedDocumentRequest, proto.ddx.v1.Service.ScanTwoSidedDocumentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScanTwoSidedDocument"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ddx.v1.Service.ScanTwoSidedDocumentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ddx.v1.Service.ScanTwoSidedDocumentResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExtractionMethodDescriptorSupplier("ScanTwoSidedDocument"))
+              .build();
+        }
+      }
+    }
+    return getScanTwoSidedDocumentMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -104,6 +135,13 @@ public final class ExtractionGrpc {
         io.grpc.stub.StreamObserver<proto.ddx.v1.Service.ScanDocumentResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScanDocumentMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void scanTwoSidedDocument(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest request,
+        io.grpc.stub.StreamObserver<proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScanTwoSidedDocumentMethod(), responseObserver);
+    }
   }
 
   /**
@@ -144,6 +182,14 @@ public final class ExtractionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getScanDocumentMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void scanTwoSidedDocument(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest request,
+        io.grpc.stub.StreamObserver<proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getScanTwoSidedDocumentMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -171,6 +217,13 @@ public final class ExtractionGrpc {
     public proto.ddx.v1.Service.ScanDocumentResponse scanDocument(proto.ddx.v1.Service.ScanDocumentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScanDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public proto.ddx.v1.Service.ScanTwoSidedDocumentResponse scanTwoSidedDocument(proto.ddx.v1.Service.ScanTwoSidedDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getScanTwoSidedDocumentMethod(), getCallOptions(), request);
     }
   }
 
@@ -201,9 +254,18 @@ public final class ExtractionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getScanDocumentMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.ddx.v1.Service.ScanTwoSidedDocumentResponse> scanTwoSidedDocument(
+        proto.ddx.v1.Service.ScanTwoSidedDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getScanTwoSidedDocumentMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SCAN_DOCUMENT = 0;
+  private static final int METHODID_SCAN_TWO_SIDED_DOCUMENT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -225,6 +287,10 @@ public final class ExtractionGrpc {
         case METHODID_SCAN_DOCUMENT:
           serviceImpl.scanDocument((proto.ddx.v1.Service.ScanDocumentRequest) request,
               (io.grpc.stub.StreamObserver<proto.ddx.v1.Service.ScanDocumentResponse>) responseObserver);
+          break;
+        case METHODID_SCAN_TWO_SIDED_DOCUMENT:
+          serviceImpl.scanTwoSidedDocument((proto.ddx.v1.Service.ScanTwoSidedDocumentRequest) request,
+              (io.grpc.stub.StreamObserver<proto.ddx.v1.Service.ScanTwoSidedDocumentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -251,6 +317,13 @@ public final class ExtractionGrpc {
               proto.ddx.v1.Service.ScanDocumentRequest,
               proto.ddx.v1.Service.ScanDocumentResponse>(
                 service, METHODID_SCAN_DOCUMENT)))
+        .addMethod(
+          getScanTwoSidedDocumentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.ddx.v1.Service.ScanTwoSidedDocumentRequest,
+              proto.ddx.v1.Service.ScanTwoSidedDocumentResponse>(
+                service, METHODID_SCAN_TWO_SIDED_DOCUMENT)))
         .build();
   }
 
@@ -300,6 +373,7 @@ public final class ExtractionGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ExtractionFileDescriptorSupplier())
               .addMethod(getScanDocumentMethod())
+              .addMethod(getScanTwoSidedDocumentMethod())
               .build();
         }
       }

@@ -25,6 +25,160 @@ public final class Fields {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   * Alphabet - enum specifying the alphabet in a field
+   * </pre>
+   *
+   * Protobuf enum {@code proto.ddx.v1.Alphabet}
+   */
+  public enum Alphabet
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Latin alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_LATIN = 0;</code>
+     */
+    ALPHABET_LATIN(0),
+    /**
+     * <pre>
+     * Cyrillic alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_CYRILLIC = 1;</code>
+     */
+    ALPHABET_CYRILLIC(1),
+    /**
+     * <pre>
+     * Arabic alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_ARABIC = 2;</code>
+     */
+    ALPHABET_ARABIC(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        Alphabet.class.getName());
+    }
+    /**
+     * <pre>
+     * Latin alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_LATIN = 0;</code>
+     */
+    public static final int ALPHABET_LATIN_VALUE = 0;
+    /**
+     * <pre>
+     * Cyrillic alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_CYRILLIC = 1;</code>
+     */
+    public static final int ALPHABET_CYRILLIC_VALUE = 1;
+    /**
+     * <pre>
+     * Arabic alphabet
+     * </pre>
+     *
+     * <code>ALPHABET_ARABIC = 2;</code>
+     */
+    public static final int ALPHABET_ARABIC_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Alphabet valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Alphabet forNumber(int value) {
+      switch (value) {
+        case 0: return ALPHABET_LATIN;
+        case 1: return ALPHABET_CYRILLIC;
+        case 2: return ALPHABET_ARABIC;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Alphabet>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Alphabet> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Alphabet>() {
+            public Alphabet findValueByNumber(int number) {
+              return Alphabet.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return proto.ddx.v1.Fields.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Alphabet[] VALUES = values();
+
+    public static Alphabet valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Alphabet(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:proto.ddx.v1.Alphabet)
+  }
+
   public interface PolygonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.ddx.v1.Polygon)
       com.google.protobuf.MessageOrBuilder {
@@ -1444,6 +1598,910 @@ public final class Fields {
 
   }
 
+  public interface LocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ddx.v1.Location)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     * @return Whether the detectionOnInputImage field is set.
+     */
+    boolean hasDetectionOnInputImage();
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     * @return The detectionOnInputImage.
+     */
+    proto.ddx.v1.Fields.Polygon getDetectionOnInputImage();
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     */
+    proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOnInputImageOrBuilder();
+
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     * @return Whether the positionOnDetectedDocument field is set.
+     */
+    boolean hasPositionOnDetectedDocument();
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     * @return The positionOnDetectedDocument.
+     */
+    proto.ddx.v1.Fields.Box getPositionOnDetectedDocument();
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     */
+    proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder();
+  }
+  /**
+   * <pre>
+   * Location specifies the position of a field on the input image and the position of a field on the dewarped document.
+   * Both polygon and box coordinates are relative to their respective image dimensions, and are all in range 0-1.
+   * E.g if an image resolution is 800x600 and x and y coordinates are 0.25 and 0.5 respectively, they translate
+   * to absolute coordinates of 200x300 = (800 * 0.25)x(600 * 0.5).
+   * </pre>
+   *
+   * Protobuf type {@code proto.ddx.v1.Location}
+   */
+  public static final class Location extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:proto.ddx.v1.Location)
+      LocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 28,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        Location.class.getName());
+    }
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Location() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ddx.v1.Fields.internal_static_proto_ddx_v1_Location_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ddx.v1.Fields.internal_static_proto_ddx_v1_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ddx.v1.Fields.Location.class, proto.ddx.v1.Fields.Location.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DETECTION_ON_INPUT_IMAGE_FIELD_NUMBER = 4;
+    private proto.ddx.v1.Fields.Polygon detectionOnInputImage_;
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     * @return Whether the detectionOnInputImage field is set.
+     */
+    @java.lang.Override
+    public boolean hasDetectionOnInputImage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     * @return The detectionOnInputImage.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.Polygon getDetectionOnInputImage() {
+      return detectionOnInputImage_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detectionOnInputImage_;
+    }
+    /**
+     * <pre>
+     * The position of the field on the input image (before detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOnInputImageOrBuilder() {
+      return detectionOnInputImage_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detectionOnInputImage_;
+    }
+
+    public static final int POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER = 5;
+    private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     * @return Whether the positionOnDetectedDocument field is set.
+     */
+    @java.lang.Override
+    public boolean hasPositionOnDetectedDocument() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     * @return The positionOnDetectedDocument.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
+      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+    }
+    /**
+     * <pre>
+     * The position of the field on the dewarped document image (after detection)
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
+      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(4, getDetectionOnInputImage());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(5, getPositionOnDetectedDocument());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDetectionOnInputImage());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPositionOnDetectedDocument());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ddx.v1.Fields.Location)) {
+        return super.equals(obj);
+      }
+      proto.ddx.v1.Fields.Location other = (proto.ddx.v1.Fields.Location) obj;
+
+      if (hasDetectionOnInputImage() != other.hasDetectionOnInputImage()) return false;
+      if (hasDetectionOnInputImage()) {
+        if (!getDetectionOnInputImage()
+            .equals(other.getDetectionOnInputImage())) return false;
+      }
+      if (hasPositionOnDetectedDocument() != other.hasPositionOnDetectedDocument()) return false;
+      if (hasPositionOnDetectedDocument()) {
+        if (!getPositionOnDetectedDocument()
+            .equals(other.getPositionOnDetectedDocument())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDetectionOnInputImage()) {
+        hash = (37 * hash) + DETECTION_ON_INPUT_IMAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getDetectionOnInputImage().hashCode();
+      }
+      if (hasPositionOnDetectedDocument()) {
+        hash = (37 * hash) + POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPositionOnDetectedDocument().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static proto.ddx.v1.Fields.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static proto.ddx.v1.Fields.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ddx.v1.Fields.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ddx.v1.Fields.Location prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Location specifies the position of a field on the input image and the position of a field on the dewarped document.
+     * Both polygon and box coordinates are relative to their respective image dimensions, and are all in range 0-1.
+     * E.g if an image resolution is 800x600 and x and y coordinates are 0.25 and 0.5 respectively, they translate
+     * to absolute coordinates of 200x300 = (800 * 0.25)x(600 * 0.5).
+     * </pre>
+     *
+     * Protobuf type {@code proto.ddx.v1.Location}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ddx.v1.Location)
+        proto.ddx.v1.Fields.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ddx.v1.Fields.internal_static_proto_ddx_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ddx.v1.Fields.internal_static_proto_ddx_v1_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ddx.v1.Fields.Location.class, proto.ddx.v1.Fields.Location.Builder.class);
+      }
+
+      // Construct using proto.ddx.v1.Fields.Location.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getDetectionOnInputImageFieldBuilder();
+          getPositionOnDetectedDocumentFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        detectionOnInputImage_ = null;
+        if (detectionOnInputImageBuilder_ != null) {
+          detectionOnInputImageBuilder_.dispose();
+          detectionOnInputImageBuilder_ = null;
+        }
+        positionOnDetectedDocument_ = null;
+        if (positionOnDetectedDocumentBuilder_ != null) {
+          positionOnDetectedDocumentBuilder_.dispose();
+          positionOnDetectedDocumentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ddx.v1.Fields.internal_static_proto_ddx_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Location getDefaultInstanceForType() {
+        return proto.ddx.v1.Fields.Location.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Location build() {
+        proto.ddx.v1.Fields.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Location buildPartial() {
+        proto.ddx.v1.Fields.Location result = new proto.ddx.v1.Fields.Location(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(proto.ddx.v1.Fields.Location result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.detectionOnInputImage_ = detectionOnInputImageBuilder_ == null
+              ? detectionOnInputImage_
+              : detectionOnInputImageBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.positionOnDetectedDocument_ = positionOnDetectedDocumentBuilder_ == null
+              ? positionOnDetectedDocument_
+              : positionOnDetectedDocumentBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ddx.v1.Fields.Location) {
+          return mergeFrom((proto.ddx.v1.Fields.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ddx.v1.Fields.Location other) {
+        if (other == proto.ddx.v1.Fields.Location.getDefaultInstance()) return this;
+        if (other.hasDetectionOnInputImage()) {
+          mergeDetectionOnInputImage(other.getDetectionOnInputImage());
+        }
+        if (other.hasPositionOnDetectedDocument()) {
+          mergePositionOnDetectedDocument(other.getPositionOnDetectedDocument());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                input.readMessage(
+                    getDetectionOnInputImageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getPositionOnDetectedDocumentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private proto.ddx.v1.Fields.Polygon detectionOnInputImage_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> detectionOnInputImageBuilder_;
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       * @return Whether the detectionOnInputImage field is set.
+       */
+      public boolean hasDetectionOnInputImage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       * @return The detectionOnInputImage.
+       */
+      public proto.ddx.v1.Fields.Polygon getDetectionOnInputImage() {
+        if (detectionOnInputImageBuilder_ == null) {
+          return detectionOnInputImage_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detectionOnInputImage_;
+        } else {
+          return detectionOnInputImageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public Builder setDetectionOnInputImage(proto.ddx.v1.Fields.Polygon value) {
+        if (detectionOnInputImageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          detectionOnInputImage_ = value;
+        } else {
+          detectionOnInputImageBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public Builder setDetectionOnInputImage(
+          proto.ddx.v1.Fields.Polygon.Builder builderForValue) {
+        if (detectionOnInputImageBuilder_ == null) {
+          detectionOnInputImage_ = builderForValue.build();
+        } else {
+          detectionOnInputImageBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public Builder mergeDetectionOnInputImage(proto.ddx.v1.Fields.Polygon value) {
+        if (detectionOnInputImageBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            detectionOnInputImage_ != null &&
+            detectionOnInputImage_ != proto.ddx.v1.Fields.Polygon.getDefaultInstance()) {
+            getDetectionOnInputImageBuilder().mergeFrom(value);
+          } else {
+            detectionOnInputImage_ = value;
+          }
+        } else {
+          detectionOnInputImageBuilder_.mergeFrom(value);
+        }
+        if (detectionOnInputImage_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public Builder clearDetectionOnInputImage() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        detectionOnInputImage_ = null;
+        if (detectionOnInputImageBuilder_ != null) {
+          detectionOnInputImageBuilder_.dispose();
+          detectionOnInputImageBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public proto.ddx.v1.Fields.Polygon.Builder getDetectionOnInputImageBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDetectionOnInputImageFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOnInputImageOrBuilder() {
+        if (detectionOnInputImageBuilder_ != null) {
+          return detectionOnInputImageBuilder_.getMessageOrBuilder();
+        } else {
+          return detectionOnInputImage_ == null ?
+              proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detectionOnInputImage_;
+        }
+      }
+      /**
+       * <pre>
+       * The position of the field on the input image (before detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Polygon detection_on_input_image = 4 [json_name = "detectionOnInputImage"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> 
+          getDetectionOnInputImageFieldBuilder() {
+        if (detectionOnInputImageBuilder_ == null) {
+          detectionOnInputImageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder>(
+                  getDetectionOnInputImage(),
+                  getParentForChildren(),
+                  isClean());
+          detectionOnInputImage_ = null;
+        }
+        return detectionOnInputImageBuilder_;
+      }
+
+      private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> positionOnDetectedDocumentBuilder_;
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * @return Whether the positionOnDetectedDocument field is set.
+       */
+      public boolean hasPositionOnDetectedDocument() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * @return The positionOnDetectedDocument.
+       */
+      public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
+        if (positionOnDetectedDocumentBuilder_ == null) {
+          return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+        } else {
+          return positionOnDetectedDocumentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public Builder setPositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
+        if (positionOnDetectedDocumentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          positionOnDetectedDocument_ = value;
+        } else {
+          positionOnDetectedDocumentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public Builder setPositionOnDetectedDocument(
+          proto.ddx.v1.Fields.Box.Builder builderForValue) {
+        if (positionOnDetectedDocumentBuilder_ == null) {
+          positionOnDetectedDocument_ = builderForValue.build();
+        } else {
+          positionOnDetectedDocumentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public Builder mergePositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
+        if (positionOnDetectedDocumentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            positionOnDetectedDocument_ != null &&
+            positionOnDetectedDocument_ != proto.ddx.v1.Fields.Box.getDefaultInstance()) {
+            getPositionOnDetectedDocumentBuilder().mergeFrom(value);
+          } else {
+            positionOnDetectedDocument_ = value;
+          }
+        } else {
+          positionOnDetectedDocumentBuilder_.mergeFrom(value);
+        }
+        if (positionOnDetectedDocument_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public Builder clearPositionOnDetectedDocument() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        positionOnDetectedDocument_ = null;
+        if (positionOnDetectedDocumentBuilder_ != null) {
+          positionOnDetectedDocumentBuilder_.dispose();
+          positionOnDetectedDocumentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public proto.ddx.v1.Fields.Box.Builder getPositionOnDetectedDocumentBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPositionOnDetectedDocumentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
+        if (positionOnDetectedDocumentBuilder_ != null) {
+          return positionOnDetectedDocumentBuilder_.getMessageOrBuilder();
+        } else {
+          return positionOnDetectedDocument_ == null ?
+              proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+        }
+      }
+      /**
+       * <pre>
+       * The position of the field on the dewarped document image (after detection)
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> 
+          getPositionOnDetectedDocumentFieldBuilder() {
+        if (positionOnDetectedDocumentBuilder_ == null) {
+          positionOnDetectedDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder>(
+                  getPositionOnDetectedDocument(),
+                  getParentForChildren(),
+                  isClean());
+          positionOnDetectedDocument_ = null;
+        }
+        return positionOnDetectedDocumentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.ddx.v1.Location)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ddx.v1.Location)
+    private static final proto.ddx.v1.Fields.Location DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ddx.v1.Fields.Location();
+    }
+
+    public static proto.ddx.v1.Fields.Location getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Location>
+        PARSER = new com.google.protobuf.AbstractParser<Location>() {
+      @java.lang.Override
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Location> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ddx.v1.Fields.Location getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TextFieldOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.ddx.v1.TextField)
       com.google.protobuf.MessageOrBuilder {
@@ -1488,68 +2546,55 @@ public final class Fields {
         getValueBytes();
 
     /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
+     */
+    int getAlphabetValue();
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The alphabet.
+     */
+    proto.ddx.v1.Fields.Alphabet getAlphabet();
+
+    /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 3 [json_name = "image"];</code>
+     * <code>bytes image = 4 [json_name = "image"];</code>
      * @return The image.
      */
     com.google.protobuf.ByteString getImage();
 
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
-    boolean hasDetection();
+    boolean hasLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return The location.
      */
-    proto.ddx.v1.Fields.Polygon getDetection();
+    proto.ddx.v1.Fields.Location getLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
      */
-    proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder();
-
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    boolean hasPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    proto.ddx.v1.Fields.Box getPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder();
+    proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder();
   }
   /**
    * <pre>
@@ -1579,6 +2624,7 @@ public final class Fields {
     private TextField() {
       type_ = 0;
       value_ = "";
+      alphabet_ = 0;
       image_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -1782,60 +2828,44 @@ public final class Fields {
       TYPE_MOTHERS_NAME(21),
       /**
        * <pre>
-       * Represents an additional type of licence or permit
-       * </pre>
-       *
-       * <code>TYPE_ADDITIONAL_LICENCE_TYPE = 22;</code>
-       */
-      TYPE_ADDITIONAL_LICENCE_TYPE(22),
-      /**
-       * <pre>
-       * Represents data on the document that is reduced for anonymization
-       * </pre>
-       *
-       * <code>TYPE_REDACTION_ZONE = 23;</code>
-       */
-      TYPE_REDACTION_ZONE(23),
-      /**
-       * <pre>
        * Represents the race or ethnicity of an individual
        * </pre>
        *
-       * <code>TYPE_RACE = 24;</code>
+       * <code>TYPE_RACE = 22;</code>
        */
-      TYPE_RACE(24),
+      TYPE_RACE(22),
       /**
        * <pre>
        * Represents the residential status of an individual
        * </pre>
        *
-       * <code>TYPE_RESIDENTIAL_TYPE = 25;</code>
+       * <code>TYPE_RESIDENTIAL_TYPE = 23;</code>
        */
-      TYPE_RESIDENTIAL_TYPE(25),
+      TYPE_RESIDENTIAL_TYPE(23),
       /**
        * <pre>
        * Represents restrictions or limitations
        * </pre>
        *
-       * <code>TYPE_RESTRICTIONS = 26;</code>
+       * <code>TYPE_RESTRICTIONS = 24;</code>
        */
-      TYPE_RESTRICTIONS(26),
+      TYPE_RESTRICTIONS(24),
       /**
        * <pre>
        * Represents the blood type of an individual
        * </pre>
        *
-       * <code>TYPE_BLOOD_TYPE = 27;</code>
+       * <code>TYPE_BLOOD_TYPE = 25;</code>
        */
-      TYPE_BLOOD_TYPE(27),
+      TYPE_BLOOD_TYPE(25),
       /**
        * <pre>
        * Represents an additional numbers/codes that can appear on some documents
        * </pre>
        *
-       * <code>TYPE_NUMBER = 28;</code>
+       * <code>TYPE_NUMBER = 26;</code>
        */
-      TYPE_NUMBER(28),
+      TYPE_NUMBER(26),
       UNRECOGNIZED(-1),
       ;
 
@@ -2026,60 +3056,44 @@ public final class Fields {
       public static final int TYPE_MOTHERS_NAME_VALUE = 21;
       /**
        * <pre>
-       * Represents an additional type of licence or permit
-       * </pre>
-       *
-       * <code>TYPE_ADDITIONAL_LICENCE_TYPE = 22;</code>
-       */
-      public static final int TYPE_ADDITIONAL_LICENCE_TYPE_VALUE = 22;
-      /**
-       * <pre>
-       * Represents data on the document that is reduced for anonymization
-       * </pre>
-       *
-       * <code>TYPE_REDACTION_ZONE = 23;</code>
-       */
-      public static final int TYPE_REDACTION_ZONE_VALUE = 23;
-      /**
-       * <pre>
        * Represents the race or ethnicity of an individual
        * </pre>
        *
-       * <code>TYPE_RACE = 24;</code>
+       * <code>TYPE_RACE = 22;</code>
        */
-      public static final int TYPE_RACE_VALUE = 24;
+      public static final int TYPE_RACE_VALUE = 22;
       /**
        * <pre>
        * Represents the residential status of an individual
        * </pre>
        *
-       * <code>TYPE_RESIDENTIAL_TYPE = 25;</code>
+       * <code>TYPE_RESIDENTIAL_TYPE = 23;</code>
        */
-      public static final int TYPE_RESIDENTIAL_TYPE_VALUE = 25;
+      public static final int TYPE_RESIDENTIAL_TYPE_VALUE = 23;
       /**
        * <pre>
        * Represents restrictions or limitations
        * </pre>
        *
-       * <code>TYPE_RESTRICTIONS = 26;</code>
+       * <code>TYPE_RESTRICTIONS = 24;</code>
        */
-      public static final int TYPE_RESTRICTIONS_VALUE = 26;
+      public static final int TYPE_RESTRICTIONS_VALUE = 24;
       /**
        * <pre>
        * Represents the blood type of an individual
        * </pre>
        *
-       * <code>TYPE_BLOOD_TYPE = 27;</code>
+       * <code>TYPE_BLOOD_TYPE = 25;</code>
        */
-      public static final int TYPE_BLOOD_TYPE_VALUE = 27;
+      public static final int TYPE_BLOOD_TYPE_VALUE = 25;
       /**
        * <pre>
        * Represents an additional numbers/codes that can appear on some documents
        * </pre>
        *
-       * <code>TYPE_NUMBER = 28;</code>
+       * <code>TYPE_NUMBER = 26;</code>
        */
-      public static final int TYPE_NUMBER_VALUE = 28;
+      public static final int TYPE_NUMBER_VALUE = 26;
 
 
       public final int getNumber() {
@@ -2128,13 +3142,11 @@ public final class Fields {
           case 19: return TYPE_EXTENDED_NAME;
           case 20: return TYPE_FATHERS_NAME;
           case 21: return TYPE_MOTHERS_NAME;
-          case 22: return TYPE_ADDITIONAL_LICENCE_TYPE;
-          case 23: return TYPE_REDACTION_ZONE;
-          case 24: return TYPE_RACE;
-          case 25: return TYPE_RESIDENTIAL_TYPE;
-          case 26: return TYPE_RESTRICTIONS;
-          case 27: return TYPE_BLOOD_TYPE;
-          case 28: return TYPE_NUMBER;
+          case 22: return TYPE_RACE;
+          case 23: return TYPE_RESIDENTIAL_TYPE;
+          case 24: return TYPE_RESTRICTIONS;
+          case 25: return TYPE_BLOOD_TYPE;
+          case 26: return TYPE_NUMBER;
           default: return null;
         }
       }
@@ -2265,14 +3277,32 @@ public final class Fields {
       }
     }
 
-    public static final int IMAGE_FIELD_NUMBER = 3;
+    public static final int ALPHABET_FIELD_NUMBER = 3;
+    private int alphabet_ = 0;
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
+     */
+    @java.lang.Override public int getAlphabetValue() {
+      return alphabet_;
+    }
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The alphabet.
+     */
+    @java.lang.Override public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+      proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+      return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
+    }
+
+    public static final int IMAGE_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 3 [json_name = "image"];</code>
+     * <code>bytes image = 4 [json_name = "image"];</code>
      * @return The image.
      */
     @java.lang.Override
@@ -2280,80 +3310,45 @@ public final class Fields {
       return image_;
     }
 
-    public static final int DETECTION_FIELD_NUMBER = 4;
-    private proto.ddx.v1.Fields.Polygon detection_;
+    public static final int LOCATION_FIELD_NUMBER = 5;
+    private proto.ddx.v1.Fields.Location location_;
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
     @java.lang.Override
-    public boolean hasDetection() {
+    public boolean hasLocation() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return The location.
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.Polygon getDetection() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+    public proto.ddx.v1.Fields.Location getLocation() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-    }
-
-    public static final int POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER = 5;
-    private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    @java.lang.Override
-    public boolean hasPositionOnDetectedDocument() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+    public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2376,14 +3371,14 @@ public final class Fields {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, value_);
       }
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
+        output.writeEnum(3, alphabet_);
+      }
       if (!image_.isEmpty()) {
-        output.writeBytes(3, image_);
+        output.writeBytes(4, image_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(4, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(5, getPositionOnDetectedDocument());
+        output.writeMessage(5, getLocation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -2401,17 +3396,17 @@ public final class Fields {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, value_);
       }
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, alphabet_);
+      }
       if (!image_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, image_);
+          .computeBytesSize(4, image_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getPositionOnDetectedDocument());
+          .computeMessageSize(5, getLocation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2431,17 +3426,13 @@ public final class Fields {
       if (type_ != other.type_) return false;
       if (!getValue()
           .equals(other.getValue())) return false;
+      if (alphabet_ != other.alphabet_) return false;
       if (!getImage()
           .equals(other.getImage())) return false;
-      if (hasDetection() != other.hasDetection()) return false;
-      if (hasDetection()) {
-        if (!getDetection()
-            .equals(other.getDetection())) return false;
-      }
-      if (hasPositionOnDetectedDocument() != other.hasPositionOnDetectedDocument()) return false;
-      if (hasPositionOnDetectedDocument()) {
-        if (!getPositionOnDetectedDocument()
-            .equals(other.getPositionOnDetectedDocument())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2458,15 +3449,13 @@ public final class Fields {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + ALPHABET_FIELD_NUMBER;
+      hash = (53 * hash) + alphabet_;
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
-      if (hasDetection()) {
-        hash = (37 * hash) + DETECTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDetection().hashCode();
-      }
-      if (hasPositionOnDetectedDocument()) {
-        hash = (37 * hash) + POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getPositionOnDetectedDocument().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2602,8 +3591,7 @@ public final class Fields {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
-          getDetectionFieldBuilder();
-          getPositionOnDetectedDocumentFieldBuilder();
+          getLocationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2612,16 +3600,12 @@ public final class Fields {
         bitField0_ = 0;
         type_ = 0;
         value_ = "";
+        alphabet_ = 0;
         image_ = com.google.protobuf.ByteString.EMPTY;
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         return this;
       }
@@ -2663,20 +3647,17 @@ public final class Fields {
           result.value_ = value_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.alphabet_ = alphabet_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.image_ = image_;
         }
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.detection_ = detectionBuilder_ == null
-              ? detection_
-              : detectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.positionOnDetectedDocument_ = positionOnDetectedDocumentBuilder_ == null
-              ? positionOnDetectedDocument_
-              : positionOnDetectedDocumentBuilder_.build();
-          to_bitField0_ |= 0x00000002;
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -2701,14 +3682,14 @@ public final class Fields {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (other.alphabet_ != 0) {
+          setAlphabetValue(other.getAlphabetValue());
+        }
         if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
           setImage(other.getImage());
         }
-        if (other.hasDetection()) {
-          mergeDetection(other.getDetection());
-        }
-        if (other.hasPositionOnDetectedDocument()) {
-          mergePositionOnDetectedDocument(other.getPositionOnDetectedDocument());
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2746,21 +3727,19 @@ public final class Fields {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 26: {
-                image_ = input.readBytes();
+              case 24: {
+                alphabet_ = input.readEnum();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
+              } // case 24
               case 34: {
-                input.readMessage(
-                    getDetectionFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                image_ = input.readBytes();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
-                    getPositionOnDetectedDocumentFieldBuilder().getBuilder(),
+                    getLocationFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000010;
                 break;
@@ -2947,13 +3926,66 @@ public final class Fields {
         return this;
       }
 
+      private int alphabet_ = 0;
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return The enum numeric value on the wire for alphabet.
+       */
+      @java.lang.Override public int getAlphabetValue() {
+        return alphabet_;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @param value The enum numeric value on the wire for alphabet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlphabetValue(int value) {
+        alphabet_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return The alphabet.
+       */
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+        proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+        return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @param value The alphabet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlphabet(proto.ddx.v1.Fields.Alphabet value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        alphabet_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAlphabet() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        alphabet_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 3 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @return The image.
        */
       @java.lang.Override
@@ -2965,14 +3997,14 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 3 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @param value The image to set.
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         image_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2981,217 +4013,63 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 3 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         image_ = getDefaultInstance().getImage();
         onChanged();
         return this;
       }
 
-      private proto.ddx.v1.Fields.Polygon detection_;
+      private proto.ddx.v1.Fields.Location location_;
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> detectionBuilder_;
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> locationBuilder_;
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       * @return Whether the detection field is set.
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       * @return Whether the location field is set.
        */
-      public boolean hasDetection() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       * @return The detection.
-       */
-      public proto.ddx.v1.Fields.Polygon getDetection() {
-        if (detectionBuilder_ == null) {
-          return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        } else {
-          return detectionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public Builder setDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          detection_ = value;
-        } else {
-          detectionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public Builder setDetection(
-          proto.ddx.v1.Fields.Polygon.Builder builderForValue) {
-        if (detectionBuilder_ == null) {
-          detection_ = builderForValue.build();
-        } else {
-          detectionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public Builder mergeDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            detection_ != null &&
-            detection_ != proto.ddx.v1.Fields.Polygon.getDefaultInstance()) {
-            getDetectionBuilder().mergeFrom(value);
-          } else {
-            detection_ = value;
-          }
-        } else {
-          detectionBuilder_.mergeFrom(value);
-        }
-        if (detection_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public Builder clearDetection() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.Polygon.Builder getDetectionBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getDetectionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-        if (detectionBuilder_ != null) {
-          return detectionBuilder_.getMessageOrBuilder();
-        } else {
-          return detection_ == null ?
-              proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 4 [json_name = "detection"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> 
-          getDetectionFieldBuilder() {
-        if (detectionBuilder_ == null) {
-          detectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder>(
-                  getDetection(),
-                  getParentForChildren(),
-                  isClean());
-          detection_ = null;
-        }
-        return detectionBuilder_;
-      }
-
-      private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> positionOnDetectedDocumentBuilder_;
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-       * @return Whether the positionOnDetectedDocument field is set.
-       */
-      public boolean hasPositionOnDetectedDocument() {
+      public boolean hasLocation() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
-       * @return The positionOnDetectedDocument.
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       * @return The location.
        */
-      public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+      public proto.ddx.v1.Fields.Location getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         } else {
-          return positionOnDetectedDocumentBuilder_.getMessage();
+          return locationBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public Builder setPositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
+      public Builder setLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          positionOnDetectedDocument_ = value;
+          location_ = value;
         } else {
-          positionOnDetectedDocumentBuilder_.setMessage(value);
+          locationBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000010;
         onChanged();
@@ -3199,17 +4077,18 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public Builder setPositionOnDetectedDocument(
-          proto.ddx.v1.Fields.Box.Builder builderForValue) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocument_ = builderForValue.build();
+      public Builder setLocation(
+          proto.ddx.v1.Fields.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
         } else {
-          positionOnDetectedDocumentBuilder_.setMessage(builderForValue.build());
+          locationBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000010;
         onChanged();
@@ -3217,24 +4096,25 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public Builder mergePositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
+      public Builder mergeLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0) &&
-            positionOnDetectedDocument_ != null &&
-            positionOnDetectedDocument_ != proto.ddx.v1.Fields.Box.getDefaultInstance()) {
-            getPositionOnDetectedDocumentBuilder().mergeFrom(value);
+            location_ != null &&
+            location_ != proto.ddx.v1.Fields.Location.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
           } else {
-            positionOnDetectedDocument_ = value;
+            location_ = value;
           }
         } else {
-          positionOnDetectedDocumentBuilder_.mergeFrom(value);
+          locationBuilder_.mergeFrom(value);
         }
-        if (positionOnDetectedDocument_ != null) {
+        if (location_ != null) {
           bitField0_ |= 0x00000010;
           onChanged();
         }
@@ -3242,67 +4122,71 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public Builder clearPositionOnDetectedDocument() {
+      public Builder clearLocation() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.Box.Builder getPositionOnDetectedDocumentBuilder() {
+      public proto.ddx.v1.Fields.Location.Builder getLocationBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
-        return getPositionOnDetectedDocumentFieldBuilder().getBuilder();
+        return getLocationFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          return positionOnDetectedDocumentBuilder_.getMessageOrBuilder();
+      public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
         } else {
-          return positionOnDetectedDocument_ == null ?
-              proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+          return location_ == null ?
+              proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 5 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> 
-          getPositionOnDetectedDocumentFieldBuilder() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder>(
-                  getPositionOnDetectedDocument(),
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder>(
+                  getLocation(),
                   getParentForChildren(),
                   isClean());
-          positionOnDetectedDocument_ = null;
+          location_ = null;
         }
-        return positionOnDetectedDocumentBuilder_;
+        return locationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.ddx.v1.TextField)
@@ -3411,84 +4295,71 @@ public final class Fields {
      * OCR text value of the field
      * </pre>
      *
-     * <code>string textValue = 3 [json_name = "textValue"];</code>
-     * @return The textValue.
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The value.
      */
-    java.lang.String getTextValue();
+    java.lang.String getValue();
     /**
      * <pre>
      * OCR text value of the field
      * </pre>
      *
-     * <code>string textValue = 3 [json_name = "textValue"];</code>
-     * @return The bytes for textValue.
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The bytes for value.
      */
     com.google.protobuf.ByteString
-        getTextValueBytes();
+        getValueBytes();
+
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
+     */
+    int getAlphabetValue();
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+     * @return The alphabet.
+     */
+    proto.ddx.v1.Fields.Alphabet getAlphabet();
 
     /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 4 [json_name = "image"];</code>
+     * <code>bytes image = 5 [json_name = "image"];</code>
      * @return The image.
      */
     com.google.protobuf.ByteString getImage();
 
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
-    boolean hasDetection();
+    boolean hasLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+     * @return The location.
      */
-    proto.ddx.v1.Fields.Polygon getDetection();
+    proto.ddx.v1.Fields.Location getLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
      */
-    proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder();
-
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    boolean hasPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    proto.ddx.v1.Fields.Box getPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder();
+    proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code proto.ddx.v1.DateField}
@@ -3513,7 +4384,8 @@ public final class Fields {
     }
     private DateField() {
       type_ = 0;
-      textValue_ = "";
+      value_ = "";
+      alphabet_ = 0;
       image_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -4429,27 +5301,27 @@ public final class Fields {
       return date_ == null ? proto.ddx.v1.Fields.DateField.Date.getDefaultInstance() : date_;
     }
 
-    public static final int TEXTVALUE_FIELD_NUMBER = 3;
+    public static final int VALUE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object textValue_ = "";
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * OCR text value of the field
      * </pre>
      *
-     * <code>string textValue = 3 [json_name = "textValue"];</code>
-     * @return The textValue.
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The value.
      */
     @java.lang.Override
-    public java.lang.String getTextValue() {
-      java.lang.Object ref = textValue_;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        textValue_ = s;
+        value_ = s;
         return s;
       }
     }
@@ -4458,32 +5330,50 @@ public final class Fields {
      * OCR text value of the field
      * </pre>
      *
-     * <code>string textValue = 3 [json_name = "textValue"];</code>
-     * @return The bytes for textValue.
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The bytes for value.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTextValueBytes() {
-      java.lang.Object ref = textValue_;
+        getValueBytes() {
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        textValue_ = b;
+        value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int IMAGE_FIELD_NUMBER = 4;
+    public static final int ALPHABET_FIELD_NUMBER = 4;
+    private int alphabet_ = 0;
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
+     */
+    @java.lang.Override public int getAlphabetValue() {
+      return alphabet_;
+    }
+    /**
+     * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+     * @return The alphabet.
+     */
+    @java.lang.Override public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+      proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+      return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
+    }
+
+    public static final int IMAGE_FIELD_NUMBER = 5;
     private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 4 [json_name = "image"];</code>
+     * <code>bytes image = 5 [json_name = "image"];</code>
      * @return The image.
      */
     @java.lang.Override
@@ -4491,80 +5381,45 @@ public final class Fields {
       return image_;
     }
 
-    public static final int DETECTION_FIELD_NUMBER = 5;
-    private proto.ddx.v1.Fields.Polygon detection_;
+    public static final int LOCATION_FIELD_NUMBER = 6;
+    private proto.ddx.v1.Fields.Location location_;
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
     @java.lang.Override
-    public boolean hasDetection() {
+    public boolean hasLocation() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+     * @return The location.
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.Polygon getDetection() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+    public proto.ddx.v1.Fields.Location getLocation() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-    }
-
-    public static final int POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER = 6;
-    private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    @java.lang.Override
-    public boolean hasPositionOnDetectedDocument() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+    public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4587,17 +5442,17 @@ public final class Fields {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getDate());
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(textValue_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, textValue_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, value_);
+      }
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
+        output.writeEnum(4, alphabet_);
       }
       if (!image_.isEmpty()) {
-        output.writeBytes(4, image_);
+        output.writeBytes(5, image_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(5, getDetection());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(6, getPositionOnDetectedDocument());
+        output.writeMessage(6, getLocation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4616,20 +5471,20 @@ public final class Fields {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDate());
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(textValue_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, textValue_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, value_);
+      }
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, alphabet_);
       }
       if (!image_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, image_);
+          .computeBytesSize(5, image_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getDetection());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getPositionOnDetectedDocument());
+          .computeMessageSize(6, getLocation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4652,19 +5507,15 @@ public final class Fields {
         if (!getDate()
             .equals(other.getDate())) return false;
       }
-      if (!getTextValue()
-          .equals(other.getTextValue())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (alphabet_ != other.alphabet_) return false;
       if (!getImage()
           .equals(other.getImage())) return false;
-      if (hasDetection() != other.hasDetection()) return false;
-      if (hasDetection()) {
-        if (!getDetection()
-            .equals(other.getDetection())) return false;
-      }
-      if (hasPositionOnDetectedDocument() != other.hasPositionOnDetectedDocument()) return false;
-      if (hasPositionOnDetectedDocument()) {
-        if (!getPositionOnDetectedDocument()
-            .equals(other.getPositionOnDetectedDocument())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -4683,17 +5534,15 @@ public final class Fields {
         hash = (37 * hash) + DATE_FIELD_NUMBER;
         hash = (53 * hash) + getDate().hashCode();
       }
-      hash = (37 * hash) + TEXTVALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getTextValue().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + ALPHABET_FIELD_NUMBER;
+      hash = (53 * hash) + alphabet_;
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
-      if (hasDetection()) {
-        hash = (37 * hash) + DETECTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDetection().hashCode();
-      }
-      if (hasPositionOnDetectedDocument()) {
-        hash = (37 * hash) + POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getPositionOnDetectedDocument().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4826,8 +5675,7 @@ public final class Fields {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           getDateFieldBuilder();
-          getDetectionFieldBuilder();
-          getPositionOnDetectedDocumentFieldBuilder();
+          getLocationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4840,17 +5688,13 @@ public final class Fields {
           dateBuilder_.dispose();
           dateBuilder_ = null;
         }
-        textValue_ = "";
+        value_ = "";
+        alphabet_ = 0;
         image_ = com.google.protobuf.ByteString.EMPTY;
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         return this;
       }
@@ -4896,22 +5740,19 @@ public final class Fields {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.textValue_ = textValue_;
+          result.value_ = value_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.image_ = image_;
+          result.alphabet_ = alphabet_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.detection_ = detectionBuilder_ == null
-              ? detection_
-              : detectionBuilder_.build();
-          to_bitField0_ |= 0x00000002;
+          result.image_ = image_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.positionOnDetectedDocument_ = positionOnDetectedDocumentBuilder_ == null
-              ? positionOnDetectedDocument_
-              : positionOnDetectedDocumentBuilder_.build();
-          to_bitField0_ |= 0x00000004;
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4934,19 +5775,19 @@ public final class Fields {
         if (other.hasDate()) {
           mergeDate(other.getDate());
         }
-        if (!other.getTextValue().isEmpty()) {
-          textValue_ = other.textValue_;
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
           bitField0_ |= 0x00000004;
           onChanged();
+        }
+        if (other.alphabet_ != 0) {
+          setAlphabetValue(other.getAlphabetValue());
         }
         if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
           setImage(other.getImage());
         }
-        if (other.hasDetection()) {
-          mergeDetection(other.getDetection());
-        }
-        if (other.hasPositionOnDetectedDocument()) {
-          mergePositionOnDetectedDocument(other.getPositionOnDetectedDocument());
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4987,25 +5828,23 @@ public final class Fields {
                 break;
               } // case 18
               case 26: {
-                textValue_ = input.readStringRequireUtf8();
+                value_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                image_ = input.readBytes();
+              case 32: {
+                alphabet_ = input.readEnum();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 34
+              } // case 32
               case 42: {
-                input.readMessage(
-                    getDetectionFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                image_ = input.readBytes();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
-                    getPositionOnDetectedDocumentFieldBuilder().getBuilder(),
+                    getLocationFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000020;
                 break;
@@ -5257,22 +6096,22 @@ public final class Fields {
         return dateBuilder_;
       }
 
-      private java.lang.Object textValue_ = "";
+      private java.lang.Object value_ = "";
       /**
        * <pre>
        * OCR text value of the field
        * </pre>
        *
-       * <code>string textValue = 3 [json_name = "textValue"];</code>
-       * @return The textValue.
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @return The value.
        */
-      public java.lang.String getTextValue() {
-        java.lang.Object ref = textValue_;
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          textValue_ = s;
+          value_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5283,17 +6122,17 @@ public final class Fields {
        * OCR text value of the field
        * </pre>
        *
-       * <code>string textValue = 3 [json_name = "textValue"];</code>
-       * @return The bytes for textValue.
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
-          getTextValueBytes() {
-        java.lang.Object ref = textValue_;
+          getValueBytes() {
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          textValue_ = b;
+          value_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -5304,14 +6143,14 @@ public final class Fields {
        * OCR text value of the field
        * </pre>
        *
-       * <code>string textValue = 3 [json_name = "textValue"];</code>
-       * @param value The textValue to set.
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @param value The value to set.
        * @return This builder for chaining.
        */
-      public Builder setTextValue(
+      public Builder setValue(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        textValue_ = value;
+        value_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
@@ -5321,11 +6160,11 @@ public final class Fields {
        * OCR text value of the field
        * </pre>
        *
-       * <code>string textValue = 3 [json_name = "textValue"];</code>
+       * <code>string value = 3 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearTextValue() {
-        textValue_ = getDefaultInstance().getTextValue();
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -5335,16 +6174,69 @@ public final class Fields {
        * OCR text value of the field
        * </pre>
        *
-       * <code>string textValue = 3 [json_name = "textValue"];</code>
-       * @param value The bytes for textValue to set.
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
-      public Builder setTextValueBytes(
+      public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        textValue_ = value;
+        value_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int alphabet_ = 0;
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+       * @return The enum numeric value on the wire for alphabet.
+       */
+      @java.lang.Override public int getAlphabetValue() {
+        return alphabet_;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+       * @param value The enum numeric value on the wire for alphabet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlphabetValue(int value) {
+        alphabet_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+       * @return The alphabet.
+       */
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+        proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+        return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+       * @param value The alphabet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlphabet(proto.ddx.v1.Fields.Alphabet value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        alphabet_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 4 [json_name = "alphabet"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAlphabet() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        alphabet_ = 0;
         onChanged();
         return this;
       }
@@ -5355,7 +6247,7 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 4 [json_name = "image"];</code>
+       * <code>bytes image = 5 [json_name = "image"];</code>
        * @return The image.
        */
       @java.lang.Override
@@ -5367,14 +6259,14 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 4 [json_name = "image"];</code>
+       * <code>bytes image = 5 [json_name = "image"];</code>
        * @param value The image to set.
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         image_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5383,217 +6275,63 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 4 [json_name = "image"];</code>
+       * <code>bytes image = 5 [json_name = "image"];</code>
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         image_ = getDefaultInstance().getImage();
         onChanged();
         return this;
       }
 
-      private proto.ddx.v1.Fields.Polygon detection_;
+      private proto.ddx.v1.Fields.Location location_;
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> detectionBuilder_;
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> locationBuilder_;
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       * @return Whether the detection field is set.
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+       * @return Whether the location field is set.
        */
-      public boolean hasDetection() {
-        return ((bitField0_ & 0x00000010) != 0);
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       * @return The detection.
-       */
-      public proto.ddx.v1.Fields.Polygon getDetection() {
-        if (detectionBuilder_ == null) {
-          return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        } else {
-          return detectionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public Builder setDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          detection_ = value;
-        } else {
-          detectionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public Builder setDetection(
-          proto.ddx.v1.Fields.Polygon.Builder builderForValue) {
-        if (detectionBuilder_ == null) {
-          detection_ = builderForValue.build();
-        } else {
-          detectionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public Builder mergeDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            detection_ != null &&
-            detection_ != proto.ddx.v1.Fields.Polygon.getDefaultInstance()) {
-            getDetectionBuilder().mergeFrom(value);
-          } else {
-            detection_ = value;
-          }
-        } else {
-          detectionBuilder_.mergeFrom(value);
-        }
-        if (detection_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public Builder clearDetection() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.Polygon.Builder getDetectionBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getDetectionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-        if (detectionBuilder_ != null) {
-          return detectionBuilder_.getMessageOrBuilder();
-        } else {
-          return detection_ == null ?
-              proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 5 [json_name = "detection"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> 
-          getDetectionFieldBuilder() {
-        if (detectionBuilder_ == null) {
-          detectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder>(
-                  getDetection(),
-                  getParentForChildren(),
-                  isClean());
-          detection_ = null;
-        }
-        return detectionBuilder_;
-      }
-
-      private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> positionOnDetectedDocumentBuilder_;
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-       * @return Whether the positionOnDetectedDocument field is set.
-       */
-      public boolean hasPositionOnDetectedDocument() {
+      public boolean hasLocation() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
-       * @return The positionOnDetectedDocument.
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
+       * @return The location.
        */
-      public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+      public proto.ddx.v1.Fields.Location getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         } else {
-          return positionOnDetectedDocumentBuilder_.getMessage();
+          return locationBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public Builder setPositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
+      public Builder setLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          positionOnDetectedDocument_ = value;
+          location_ = value;
         } else {
-          positionOnDetectedDocumentBuilder_.setMessage(value);
+          locationBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000020;
         onChanged();
@@ -5601,17 +6339,18 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public Builder setPositionOnDetectedDocument(
-          proto.ddx.v1.Fields.Box.Builder builderForValue) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocument_ = builderForValue.build();
+      public Builder setLocation(
+          proto.ddx.v1.Fields.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
         } else {
-          positionOnDetectedDocumentBuilder_.setMessage(builderForValue.build());
+          locationBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000020;
         onChanged();
@@ -5619,24 +6358,25 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public Builder mergePositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
+      public Builder mergeLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0) &&
-            positionOnDetectedDocument_ != null &&
-            positionOnDetectedDocument_ != proto.ddx.v1.Fields.Box.getDefaultInstance()) {
-            getPositionOnDetectedDocumentBuilder().mergeFrom(value);
+            location_ != null &&
+            location_ != proto.ddx.v1.Fields.Location.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
           } else {
-            positionOnDetectedDocument_ = value;
+            location_ = value;
           }
         } else {
-          positionOnDetectedDocumentBuilder_.mergeFrom(value);
+          locationBuilder_.mergeFrom(value);
         }
-        if (positionOnDetectedDocument_ != null) {
+        if (location_ != null) {
           bitField0_ |= 0x00000020;
           onChanged();
         }
@@ -5644,67 +6384,71 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public Builder clearPositionOnDetectedDocument() {
+      public Builder clearLocation() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.Box.Builder getPositionOnDetectedDocumentBuilder() {
+      public proto.ddx.v1.Fields.Location.Builder getLocationBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
-        return getPositionOnDetectedDocumentFieldBuilder().getBuilder();
+        return getLocationFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          return positionOnDetectedDocumentBuilder_.getMessageOrBuilder();
+      public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
         } else {
-          return positionOnDetectedDocument_ == null ?
-              proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+          return location_ == null ?
+              proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (after detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 6 [json_name = "positionOnDetectedDocument"];</code>
+       * <code>.proto.ddx.v1.Location location = 6 [json_name = "location"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> 
-          getPositionOnDetectedDocumentFieldBuilder() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder>(
-                  getPositionOnDetectedDocument(),
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder>(
+                  getLocation(),
                   getParentForChildren(),
                   isClean());
-          positionOnDetectedDocument_ = null;
+          location_ = null;
         }
-        return positionOnDetectedDocumentBuilder_;
+        return locationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.ddx.v1.DateField)
@@ -5781,57 +6525,33 @@ public final class Fields {
 
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
-    boolean hasDetection();
+    boolean hasLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+     * @return The location.
      */
-    proto.ddx.v1.Fields.Polygon getDetection();
+    proto.ddx.v1.Fields.Location getLocation();
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
      */
-    proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder();
-
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    boolean hasPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    proto.ddx.v1.Fields.Box getPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder();
+    proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder();
   }
   /**
    * <pre>
@@ -6044,80 +6764,45 @@ public final class Fields {
       return image_;
     }
 
-    public static final int DETECTION_FIELD_NUMBER = 3;
-    private proto.ddx.v1.Fields.Polygon detection_;
+    public static final int LOCATION_FIELD_NUMBER = 3;
+    private proto.ddx.v1.Fields.Location location_;
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+     * @return Whether the location field is set.
      */
     @java.lang.Override
-    public boolean hasDetection() {
+    public boolean hasLocation() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+     * @return The location.
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.Polygon getDetection() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+    public proto.ddx.v1.Fields.Location getLocation() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
     /**
      * <pre>
-     * The position of the field on the input image (before detection)
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
      * </pre>
      *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+     * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
      */
     @java.lang.Override
-    public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-    }
-
-    public static final int POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER = 4;
-    private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    @java.lang.Override
-    public boolean hasPositionOnDetectedDocument() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
+    public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6141,10 +6826,7 @@ public final class Fields {
         output.writeBytes(2, image_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(3, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(4, getPositionOnDetectedDocument());
+        output.writeMessage(3, getLocation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6165,11 +6847,7 @@ public final class Fields {
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPositionOnDetectedDocument());
+          .computeMessageSize(3, getLocation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6189,15 +6867,10 @@ public final class Fields {
       if (type_ != other.type_) return false;
       if (!getImage()
           .equals(other.getImage())) return false;
-      if (hasDetection() != other.hasDetection()) return false;
-      if (hasDetection()) {
-        if (!getDetection()
-            .equals(other.getDetection())) return false;
-      }
-      if (hasPositionOnDetectedDocument() != other.hasPositionOnDetectedDocument()) return false;
-      if (hasPositionOnDetectedDocument()) {
-        if (!getPositionOnDetectedDocument()
-            .equals(other.getPositionOnDetectedDocument())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -6214,13 +6887,9 @@ public final class Fields {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
-      if (hasDetection()) {
-        hash = (37 * hash) + DETECTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDetection().hashCode();
-      }
-      if (hasPositionOnDetectedDocument()) {
-        hash = (37 * hash) + POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getPositionOnDetectedDocument().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6356,8 +7025,7 @@ public final class Fields {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
-          getDetectionFieldBuilder();
-          getPositionOnDetectedDocumentFieldBuilder();
+          getLocationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6366,15 +7034,10 @@ public final class Fields {
         bitField0_ = 0;
         type_ = 0;
         image_ = com.google.protobuf.ByteString.EMPTY;
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         return this;
       }
@@ -6417,16 +7080,10 @@ public final class Fields {
         }
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.detection_ = detectionBuilder_ == null
-              ? detection_
-              : detectionBuilder_.build();
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
           to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.positionOnDetectedDocument_ = positionOnDetectedDocumentBuilder_ == null
-              ? positionOnDetectedDocument_
-              : positionOnDetectedDocumentBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -6449,11 +7106,8 @@ public final class Fields {
         if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
           setImage(other.getImage());
         }
-        if (other.hasDetection()) {
-          mergeDetection(other.getDetection());
-        }
-        if (other.hasPositionOnDetectedDocument()) {
-          mergePositionOnDetectedDocument(other.getPositionOnDetectedDocument());
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6493,18 +7147,11 @@ public final class Fields {
               } // case 18
               case 26: {
                 input.readMessage(
-                    getDetectionFieldBuilder().getBuilder(),
+                    getLocationFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 34: {
-                input.readMessage(
-                    getPositionOnDetectedDocumentFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6607,50 +7254,53 @@ public final class Fields {
         return this;
       }
 
-      private proto.ddx.v1.Fields.Polygon detection_;
+      private proto.ddx.v1.Fields.Location location_;
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> detectionBuilder_;
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> locationBuilder_;
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       * @return Whether the detection field is set.
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+       * @return Whether the location field is set.
        */
-      public boolean hasDetection() {
+      public boolean hasLocation() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       * @return The detection.
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
+       * @return The location.
        */
-      public proto.ddx.v1.Fields.Polygon getDetection() {
-        if (detectionBuilder_ == null) {
-          return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+      public proto.ddx.v1.Fields.Location getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         } else {
-          return detectionBuilder_.getMessage();
+          return locationBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public Builder setDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
+      public Builder setLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          detection_ = value;
+          location_ = value;
         } else {
-          detectionBuilder_.setMessage(value);
+          locationBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000004;
         onChanged();
@@ -6658,17 +7308,18 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public Builder setDetection(
-          proto.ddx.v1.Fields.Polygon.Builder builderForValue) {
-        if (detectionBuilder_ == null) {
-          detection_ = builderForValue.build();
+      public Builder setLocation(
+          proto.ddx.v1.Fields.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
         } else {
-          detectionBuilder_.setMessage(builderForValue.build());
+          locationBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000004;
         onChanged();
@@ -6676,24 +7327,25 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public Builder mergeDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
+      public Builder mergeLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0) &&
-            detection_ != null &&
-            detection_ != proto.ddx.v1.Fields.Polygon.getDefaultInstance()) {
-            getDetectionBuilder().mergeFrom(value);
+            location_ != null &&
+            location_ != proto.ddx.v1.Fields.Location.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
           } else {
-            detection_ = value;
+            location_ = value;
           }
         } else {
-          detectionBuilder_.mergeFrom(value);
+          locationBuilder_.mergeFrom(value);
         }
-        if (detection_ != null) {
+        if (location_ != null) {
           bitField0_ |= 0x00000004;
           onChanged();
         }
@@ -6701,224 +7353,71 @@ public final class Fields {
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public Builder clearDetection() {
+      public Builder clearLocation() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.Polygon.Builder getDetectionBuilder() {
+      public proto.ddx.v1.Fields.Location.Builder getLocationBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
-        return getDetectionFieldBuilder().getBuilder();
+        return getLocationFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
-      public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-        if (detectionBuilder_ != null) {
-          return detectionBuilder_.getMessageOrBuilder();
+      public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
         } else {
-          return detection_ == null ?
-              proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+          return location_ == null ?
+              proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
         }
       }
       /**
        * <pre>
-       * The position of the field on the input image (before detection)
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
        * </pre>
        *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Location location = 3 [json_name = "location"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> 
-          getDetectionFieldBuilder() {
-        if (detectionBuilder_ == null) {
-          detectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder>(
-                  getDetection(),
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder>(
+                  getLocation(),
                   getParentForChildren(),
                   isClean());
-          detection_ = null;
+          location_ = null;
         }
-        return detectionBuilder_;
-      }
-
-      private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> positionOnDetectedDocumentBuilder_;
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       * @return Whether the positionOnDetectedDocument field is set.
-       */
-      public boolean hasPositionOnDetectedDocument() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       * @return The positionOnDetectedDocument.
-       */
-      public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-        } else {
-          return positionOnDetectedDocumentBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder setPositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          positionOnDetectedDocument_ = value;
-        } else {
-          positionOnDetectedDocumentBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder setPositionOnDetectedDocument(
-          proto.ddx.v1.Fields.Box.Builder builderForValue) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocument_ = builderForValue.build();
-        } else {
-          positionOnDetectedDocumentBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder mergePositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            positionOnDetectedDocument_ != null &&
-            positionOnDetectedDocument_ != proto.ddx.v1.Fields.Box.getDefaultInstance()) {
-            getPositionOnDetectedDocumentBuilder().mergeFrom(value);
-          } else {
-            positionOnDetectedDocument_ = value;
-          }
-        } else {
-          positionOnDetectedDocumentBuilder_.mergeFrom(value);
-        }
-        if (positionOnDetectedDocument_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder clearPositionOnDetectedDocument() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public proto.ddx.v1.Fields.Box.Builder getPositionOnDetectedDocumentBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getPositionOnDetectedDocumentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          return positionOnDetectedDocumentBuilder_.getMessageOrBuilder();
-        } else {
-          return positionOnDetectedDocument_ == null ?
-              proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> 
-          getPositionOnDetectedDocumentFieldBuilder() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder>(
-                  getPositionOnDetectedDocument(),
-                  getParentForChildren(),
-                  isClean());
-          positionOnDetectedDocument_ = null;
-        }
-        return positionOnDetectedDocumentBuilder_;
+        return locationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.ddx.v1.VisualField)
@@ -7000,84 +7499,71 @@ public final class Fields {
      * textValue - holds OCR-ed value of the field
      * </pre>
      *
-     * <code>string textValue = 2 [json_name = "textValue"];</code>
-     * @return The textValue.
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
      */
-    java.lang.String getTextValue();
+    java.lang.String getValue();
     /**
      * <pre>
      * textValue - holds OCR-ed value of the field
      * </pre>
      *
-     * <code>string textValue = 2 [json_name = "textValue"];</code>
-     * @return The bytes for textValue.
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
      */
     com.google.protobuf.ByteString
-        getTextValueBytes();
+        getValueBytes();
 
     /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
      */
-    boolean hasDetection();
+    int getAlphabetValue();
     /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The alphabet.
      */
-    proto.ddx.v1.Fields.Polygon getDetection();
-    /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     */
-    proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder();
-
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    boolean hasPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    proto.ddx.v1.Fields.Box getPositionOnDetectedDocument();
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder();
+    proto.ddx.v1.Fields.Alphabet getAlphabet();
 
     /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 5 [json_name = "image"];</code>
+     * <code>bytes image = 4 [json_name = "image"];</code>
      * @return The image.
      */
     com.google.protobuf.ByteString getImage();
+
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return The location.
+     */
+    proto.ddx.v1.Fields.Location getLocation();
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     */
+    proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder();
   }
   /**
    * <pre>
@@ -7106,7 +7592,8 @@ public final class Fields {
     }
     private SexField() {
       sex_ = 0;
-      textValue_ = "";
+      value_ = "";
+      alphabet_ = 0;
       image_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -7304,27 +7791,27 @@ public final class Fields {
       return result == null ? proto.ddx.v1.Fields.SexField.Sex.UNRECOGNIZED : result;
     }
 
-    public static final int TEXTVALUE_FIELD_NUMBER = 2;
+    public static final int VALUE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object textValue_ = "";
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * textValue - holds OCR-ed value of the field
      * </pre>
      *
-     * <code>string textValue = 2 [json_name = "textValue"];</code>
-     * @return The textValue.
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The value.
      */
     @java.lang.Override
-    public java.lang.String getTextValue() {
-      java.lang.Object ref = textValue_;
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        textValue_ = s;
+        value_ = s;
         return s;
       }
     }
@@ -7333,113 +7820,96 @@ public final class Fields {
      * textValue - holds OCR-ed value of the field
      * </pre>
      *
-     * <code>string textValue = 2 [json_name = "textValue"];</code>
-     * @return The bytes for textValue.
+     * <code>string value = 2 [json_name = "value"];</code>
+     * @return The bytes for value.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTextValueBytes() {
-      java.lang.Object ref = textValue_;
+        getValueBytes() {
+      java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        textValue_ = b;
+        value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DETECTION_FIELD_NUMBER = 3;
-    private proto.ddx.v1.Fields.Polygon detection_;
+    public static final int ALPHABET_FIELD_NUMBER = 3;
+    private int alphabet_ = 0;
     /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return Whether the detection field is set.
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The enum numeric value on the wire for alphabet.
      */
-    @java.lang.Override
-    public boolean hasDetection() {
-      return ((bitField0_ & 0x00000001) != 0);
+    @java.lang.Override public int getAlphabetValue() {
+      return alphabet_;
     }
     /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     * @return The detection.
+     * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+     * @return The alphabet.
      */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.Polygon getDetection() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (before detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-      return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
+    @java.lang.Override public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+      proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+      return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
     }
 
-    public static final int POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER = 4;
-    private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return Whether the positionOnDetectedDocument field is set.
-     */
-    @java.lang.Override
-    public boolean hasPositionOnDetectedDocument() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     * @return The positionOnDetectedDocument.
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-    }
-    /**
-     * <pre>
-     * The position of the field on the input image (after detection)
-     * </pre>
-     *
-     * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-     */
-    @java.lang.Override
-    public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-      return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-    }
-
-    public static final int IMAGE_FIELD_NUMBER = 5;
+    public static final int IMAGE_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * optional, empty by default, returned if specified in the ScanDocumentRequest
      * </pre>
      *
-     * <code>bytes image = 5 [json_name = "image"];</code>
+     * <code>bytes image = 4 [json_name = "image"];</code>
      * @return The image.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString getImage() {
       return image_;
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 5;
+    private proto.ddx.v1.Fields.Location location_;
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.Location getLocation() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
+    }
+    /**
+     * <pre>
+     * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+     * on user license plan
+     * </pre>
+     *
+     * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7459,17 +7929,17 @@ public final class Fields {
       if (sex_ != proto.ddx.v1.Fields.SexField.Sex.UNKNOWN.getNumber()) {
         output.writeEnum(1, sex_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(textValue_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, textValue_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(3, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(4, getPositionOnDetectedDocument());
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
+        output.writeEnum(3, alphabet_);
       }
       if (!image_.isEmpty()) {
-        output.writeBytes(5, image_);
+        output.writeBytes(4, image_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(5, getLocation());
       }
       getUnknownFields().writeTo(output);
     }
@@ -7484,20 +7954,20 @@ public final class Fields {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, sex_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(textValue_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, textValue_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, value_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (alphabet_ != proto.ddx.v1.Fields.Alphabet.ALPHABET_LATIN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getDetection());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPositionOnDetectedDocument());
+          .computeEnumSize(3, alphabet_);
       }
       if (!image_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, image_);
+          .computeBytesSize(4, image_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLocation());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -7515,20 +7985,16 @@ public final class Fields {
       proto.ddx.v1.Fields.SexField other = (proto.ddx.v1.Fields.SexField) obj;
 
       if (sex_ != other.sex_) return false;
-      if (!getTextValue()
-          .equals(other.getTextValue())) return false;
-      if (hasDetection() != other.hasDetection()) return false;
-      if (hasDetection()) {
-        if (!getDetection()
-            .equals(other.getDetection())) return false;
-      }
-      if (hasPositionOnDetectedDocument() != other.hasPositionOnDetectedDocument()) return false;
-      if (hasPositionOnDetectedDocument()) {
-        if (!getPositionOnDetectedDocument()
-            .equals(other.getPositionOnDetectedDocument())) return false;
-      }
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (alphabet_ != other.alphabet_) return false;
       if (!getImage()
           .equals(other.getImage())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7542,18 +8008,16 @@ public final class Fields {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SEX_FIELD_NUMBER;
       hash = (53 * hash) + sex_;
-      hash = (37 * hash) + TEXTVALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getTextValue().hashCode();
-      if (hasDetection()) {
-        hash = (37 * hash) + DETECTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDetection().hashCode();
-      }
-      if (hasPositionOnDetectedDocument()) {
-        hash = (37 * hash) + POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getPositionOnDetectedDocument().hashCode();
-      }
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + ALPHABET_FIELD_NUMBER;
+      hash = (53 * hash) + alphabet_;
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7688,8 +8152,7 @@ public final class Fields {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
-          getDetectionFieldBuilder();
-          getPositionOnDetectedDocumentFieldBuilder();
+          getLocationFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7697,18 +8160,14 @@ public final class Fields {
         super.clear();
         bitField0_ = 0;
         sex_ = 0;
-        textValue_ = "";
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
-        }
+        value_ = "";
+        alphabet_ = 0;
         image_ = com.google.protobuf.ByteString.EMPTY;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
         return this;
       }
 
@@ -7746,23 +8205,20 @@ public final class Fields {
           result.sex_ = sex_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.textValue_ = textValue_;
+          result.value_ = value_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.detection_ = detectionBuilder_ == null
-              ? detection_
-              : detectionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
+          result.alphabet_ = alphabet_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.positionOnDetectedDocument_ = positionOnDetectedDocumentBuilder_ == null
-              ? positionOnDetectedDocument_
-              : positionOnDetectedDocumentBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.image_ = image_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -7782,19 +8238,19 @@ public final class Fields {
         if (other.sex_ != 0) {
           setSexValue(other.getSexValue());
         }
-        if (!other.getTextValue().isEmpty()) {
-          textValue_ = other.textValue_;
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (other.hasDetection()) {
-          mergeDetection(other.getDetection());
-        }
-        if (other.hasPositionOnDetectedDocument()) {
-          mergePositionOnDetectedDocument(other.getPositionOnDetectedDocument());
+        if (other.alphabet_ != 0) {
+          setAlphabetValue(other.getAlphabetValue());
         }
         if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
           setImage(other.getImage());
+        }
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7828,26 +8284,24 @@ public final class Fields {
                 break;
               } // case 8
               case 18: {
-                textValue_ = input.readStringRequireUtf8();
+                value_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 26: {
-                input.readMessage(
-                    getDetectionFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 24: {
+                alphabet_ = input.readEnum();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 26
+              } // case 24
               case 34: {
-                input.readMessage(
-                    getPositionOnDetectedDocumentFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                image_ = input.readBytes();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
-                image_ = input.readBytes();
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
@@ -7941,22 +8395,22 @@ public final class Fields {
         return this;
       }
 
-      private java.lang.Object textValue_ = "";
+      private java.lang.Object value_ = "";
       /**
        * <pre>
        * textValue - holds OCR-ed value of the field
        * </pre>
        *
-       * <code>string textValue = 2 [json_name = "textValue"];</code>
-       * @return The textValue.
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The value.
        */
-      public java.lang.String getTextValue() {
-        java.lang.Object ref = textValue_;
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          textValue_ = s;
+          value_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -7967,17 +8421,17 @@ public final class Fields {
        * textValue - holds OCR-ed value of the field
        * </pre>
        *
-       * <code>string textValue = 2 [json_name = "textValue"];</code>
-       * @return The bytes for textValue.
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @return The bytes for value.
        */
       public com.google.protobuf.ByteString
-          getTextValueBytes() {
-        java.lang.Object ref = textValue_;
+          getValueBytes() {
+        java.lang.Object ref = value_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          textValue_ = b;
+          value_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -7988,14 +8442,14 @@ public final class Fields {
        * textValue - holds OCR-ed value of the field
        * </pre>
        *
-       * <code>string textValue = 2 [json_name = "textValue"];</code>
-       * @param value The textValue to set.
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The value to set.
        * @return This builder for chaining.
        */
-      public Builder setTextValue(
+      public Builder setValue(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        textValue_ = value;
+        value_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
@@ -8005,11 +8459,11 @@ public final class Fields {
        * textValue - holds OCR-ed value of the field
        * </pre>
        *
-       * <code>string textValue = 2 [json_name = "textValue"];</code>
+       * <code>string value = 2 [json_name = "value"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearTextValue() {
-        textValue_ = getDefaultInstance().getTextValue();
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -8019,332 +8473,71 @@ public final class Fields {
        * textValue - holds OCR-ed value of the field
        * </pre>
        *
-       * <code>string textValue = 2 [json_name = "textValue"];</code>
-       * @param value The bytes for textValue to set.
+       * <code>string value = 2 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
-      public Builder setTextValueBytes(
+      public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        textValue_ = value;
+        value_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private proto.ddx.v1.Fields.Polygon detection_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> detectionBuilder_;
+      private int alphabet_ = 0;
       /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       * @return Whether the detection field is set.
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return The enum numeric value on the wire for alphabet.
        */
-      public boolean hasDetection() {
-        return ((bitField0_ & 0x00000004) != 0);
+      @java.lang.Override public int getAlphabetValue() {
+        return alphabet_;
       }
       /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       * @return The detection.
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @param value The enum numeric value on the wire for alphabet to set.
+       * @return This builder for chaining.
        */
-      public proto.ddx.v1.Fields.Polygon getDetection() {
-        if (detectionBuilder_ == null) {
-          return detection_ == null ? proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        } else {
-          return detectionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       */
-      public Builder setDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          detection_ = value;
-        } else {
-          detectionBuilder_.setMessage(value);
-        }
+      public Builder setAlphabetValue(int value) {
+        alphabet_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return The alphabet.
        */
-      public Builder setDetection(
-          proto.ddx.v1.Fields.Polygon.Builder builderForValue) {
-        if (detectionBuilder_ == null) {
-          detection_ = builderForValue.build();
-        } else {
-          detectionBuilder_.setMessage(builderForValue.build());
+      @java.lang.Override
+      public proto.ddx.v1.Fields.Alphabet getAlphabet() {
+        proto.ddx.v1.Fields.Alphabet result = proto.ddx.v1.Fields.Alphabet.forNumber(alphabet_);
+        return result == null ? proto.ddx.v1.Fields.Alphabet.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @param value The alphabet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlphabet(proto.ddx.v1.Fields.Alphabet value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
         bitField0_ |= 0x00000004;
+        alphabet_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
+       * <code>.proto.ddx.v1.Alphabet alphabet = 3 [json_name = "alphabet"];</code>
+       * @return This builder for chaining.
        */
-      public Builder mergeDetection(proto.ddx.v1.Fields.Polygon value) {
-        if (detectionBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            detection_ != null &&
-            detection_ != proto.ddx.v1.Fields.Polygon.getDefaultInstance()) {
-            getDetectionBuilder().mergeFrom(value);
-          } else {
-            detection_ = value;
-          }
-        } else {
-          detectionBuilder_.mergeFrom(value);
-        }
-        if (detection_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       */
-      public Builder clearDetection() {
+      public Builder clearAlphabet() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        detection_ = null;
-        if (detectionBuilder_ != null) {
-          detectionBuilder_.dispose();
-          detectionBuilder_ = null;
-        }
+        alphabet_ = 0;
         onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.Polygon.Builder getDetectionBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getDetectionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       */
-      public proto.ddx.v1.Fields.PolygonOrBuilder getDetectionOrBuilder() {
-        if (detectionBuilder_ != null) {
-          return detectionBuilder_.getMessageOrBuilder();
-        } else {
-          return detection_ == null ?
-              proto.ddx.v1.Fields.Polygon.getDefaultInstance() : detection_;
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (before detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Polygon detection = 3 [json_name = "detection"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder> 
-          getDetectionFieldBuilder() {
-        if (detectionBuilder_ == null) {
-          detectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Polygon, proto.ddx.v1.Fields.Polygon.Builder, proto.ddx.v1.Fields.PolygonOrBuilder>(
-                  getDetection(),
-                  getParentForChildren(),
-                  isClean());
-          detection_ = null;
-        }
-        return detectionBuilder_;
-      }
-
-      private proto.ddx.v1.Fields.Box positionOnDetectedDocument_;
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> positionOnDetectedDocumentBuilder_;
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       * @return Whether the positionOnDetectedDocument field is set.
-       */
-      public boolean hasPositionOnDetectedDocument() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       * @return The positionOnDetectedDocument.
-       */
-      public proto.ddx.v1.Fields.Box getPositionOnDetectedDocument() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          return positionOnDetectedDocument_ == null ? proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-        } else {
-          return positionOnDetectedDocumentBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder setPositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          positionOnDetectedDocument_ = value;
-        } else {
-          positionOnDetectedDocumentBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder setPositionOnDetectedDocument(
-          proto.ddx.v1.Fields.Box.Builder builderForValue) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocument_ = builderForValue.build();
-        } else {
-          positionOnDetectedDocumentBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder mergePositionOnDetectedDocument(proto.ddx.v1.Fields.Box value) {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            positionOnDetectedDocument_ != null &&
-            positionOnDetectedDocument_ != proto.ddx.v1.Fields.Box.getDefaultInstance()) {
-            getPositionOnDetectedDocumentBuilder().mergeFrom(value);
-          } else {
-            positionOnDetectedDocument_ = value;
-          }
-        } else {
-          positionOnDetectedDocumentBuilder_.mergeFrom(value);
-        }
-        if (positionOnDetectedDocument_ != null) {
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public Builder clearPositionOnDetectedDocument() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        positionOnDetectedDocument_ = null;
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          positionOnDetectedDocumentBuilder_.dispose();
-          positionOnDetectedDocumentBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public proto.ddx.v1.Fields.Box.Builder getPositionOnDetectedDocumentBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getPositionOnDetectedDocumentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      public proto.ddx.v1.Fields.BoxOrBuilder getPositionOnDetectedDocumentOrBuilder() {
-        if (positionOnDetectedDocumentBuilder_ != null) {
-          return positionOnDetectedDocumentBuilder_.getMessageOrBuilder();
-        } else {
-          return positionOnDetectedDocument_ == null ?
-              proto.ddx.v1.Fields.Box.getDefaultInstance() : positionOnDetectedDocument_;
-        }
-      }
-      /**
-       * <pre>
-       * The position of the field on the input image (after detection)
-       * </pre>
-       *
-       * <code>.proto.ddx.v1.Box position_on_detected_document = 4 [json_name = "positionOnDetectedDocument"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder> 
-          getPositionOnDetectedDocumentFieldBuilder() {
-        if (positionOnDetectedDocumentBuilder_ == null) {
-          positionOnDetectedDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              proto.ddx.v1.Fields.Box, proto.ddx.v1.Fields.Box.Builder, proto.ddx.v1.Fields.BoxOrBuilder>(
-                  getPositionOnDetectedDocument(),
-                  getParentForChildren(),
-                  isClean());
-          positionOnDetectedDocument_ = null;
-        }
-        return positionOnDetectedDocumentBuilder_;
       }
 
       private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
@@ -8353,7 +8546,7 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 5 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @return The image.
        */
       @java.lang.Override
@@ -8365,14 +8558,14 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 5 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @param value The image to set.
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         image_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8381,14 +8574,180 @@ public final class Fields {
        * optional, empty by default, returned if specified in the ScanDocumentRequest
        * </pre>
        *
-       * <code>bytes image = 5 [json_name = "image"];</code>
+       * <code>bytes image = 4 [json_name = "image"];</code>
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         image_ = getDefaultInstance().getImage();
         onChanged();
         return this;
+      }
+
+      private proto.ddx.v1.Fields.Location location_;
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> locationBuilder_;
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public proto.ddx.v1.Fields.Location getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public Builder setLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          proto.ddx.v1.Fields.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(proto.ddx.v1.Fields.Location value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            location_ != null &&
+            location_ != proto.ddx.v1.Fields.Location.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        if (location_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public proto.ddx.v1.Fields.Location.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      public proto.ddx.v1.Fields.LocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              proto.ddx.v1.Fields.Location.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <pre>
+       * EMPTY BY DEFAULT, the location of the field on the input image. Available depending
+       * on user license plan
+       * </pre>
+       *
+       * <code>.proto.ddx.v1.Location location = 5 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              proto.ddx.v1.Fields.Location, proto.ddx.v1.Fields.Location.Builder, proto.ddx.v1.Fields.LocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.ddx.v1.SexField)
@@ -8453,6 +8812,11 @@ public final class Fields {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_proto_ddx_v1_Box_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ddx_v1_Location_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_proto_ddx_v1_Location_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_ddx_v1_TextField_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -8490,59 +8854,58 @@ public final class Fields {
       "1\"%\n\007Polygon\022\014\n\001x\030\001 \003(\002R\001x\022\014\n\001y\030\002 \003(\002R\001y" +
       "\"O\n\003Box\022\014\n\001x\030\001 \001(\002R\001x\022\014\n\001y\030\002 \001(\002R\001y\022\024\n\005w" +
       "idth\030\003 \001(\002R\005width\022\026\n\006height\030\004 \001(\002R\006heigh" +
-      "t\"\257\007\n\tTextField\0220\n\004type\030\001 \001(\0162\034.proto.dd" +
-      "x.v1.TextField.TypeR\004type\022\024\n\005value\030\002 \001(\t" +
-      "R\005value\022\024\n\005image\030\003 \001(\014R\005image\0223\n\tdetecti" +
-      "on\030\004 \001(\0132\025.proto.ddx.v1.PolygonR\tdetecti" +
-      "on\022T\n\035position_on_detected_document\030\005 \001(" +
-      "\0132\021.proto.ddx.v1.BoxR\032positionOnDetected" +
-      "Document\"\270\005\n\004Type\022\023\n\017TYPE_FIRST_NAME\020\000\022\022" +
-      "\n\016TYPE_LAST_NAME\020\001\022\024\n\020TYPE_NATIONALITY\020\002" +
-      "\022!\n\035TYPE_DOCUMENT_IDENTITY_NUMBER\020\003\022\014\n\010T" +
-      "YPE_SEX\020\004\022\032\n\026TYPE_ISSUING_AUTHORITY\020\005\022\020\n" +
-      "\014TYPE_ADDRESS\020\006\022!\n\035TYPE_PERSONAL_IDENTIT" +
-      "Y_NUMBER\020\007\022\027\n\023TYPE_MARITAL_STATUS\020\010\022\031\n\025T" +
-      "YPE_EXTENDED_ADDRESS\020\t\022#\n\037TYPE_EXTENDED_" +
-      "ADDRESS_SPECIFICS\020\n\022\016\n\nTYPE_CLASS\020\013\022\023\n\017T" +
-      "YPE_CONDITIONS\020\014\022\025\n\021TYPE_ENDORSEMENTS\020\r\022" +
-      "\035\n\031TYPE_DRIVERS_LICENSE_TYPE\020\016\022\022\n\016TYPE_F" +
-      "ULL_NAME\020\017\022\027\n\023TYPE_PLACE_OF_BIRTH\020\020\022\023\n\017T" +
-      "YPE_PROFESSION\020\021\022\021\n\rTYPE_EMPLOYER\020\022\022\026\n\022T" +
-      "YPE_EXTENDED_NAME\020\023\022\025\n\021TYPE_FATHERS_NAME" +
-      "\020\024\022\025\n\021TYPE_MOTHERS_NAME\020\025\022 \n\034TYPE_ADDITI" +
-      "ONAL_LICENCE_TYPE\020\026\022\027\n\023TYPE_REDACTION_ZO" +
-      "NE\020\027\022\r\n\tTYPE_RACE\020\030\022\031\n\025TYPE_RESIDENTIAL_" +
-      "TYPE\020\031\022\025\n\021TYPE_RESTRICTIONS\020\032\022\023\n\017TYPE_BL" +
-      "OOD_TYPE\020\033\022\017\n\013TYPE_NUMBER\020\034\"\371\003\n\tDateFiel" +
-      "d\0220\n\004type\030\001 \001(\0162\034.proto.ddx.v1.DateField" +
-      ".TypeR\004type\0220\n\004date\030\002 \001(\0132\034.proto.ddx.v1" +
-      ".DateField.DateR\004date\022\034\n\ttextValue\030\003 \001(\t" +
-      "R\ttextValue\022\024\n\005image\030\004 \001(\014R\005image\0223\n\tdet" +
-      "ection\030\005 \001(\0132\025.proto.ddx.v1.PolygonR\tdet" +
-      "ection\022T\n\035position_on_detected_document\030" +
-      "\006 \001(\0132\021.proto.ddx.v1.BoxR\032positionOnDete" +
-      "ctedDocument\032B\n\004Date\022\022\n\004year\030\001 \001(\005R\004year" +
-      "\022\024\n\005month\030\002 \001(\005R\005month\022\020\n\003day\030\003 \001(\005R\003day" +
-      "\"\204\001\n\004Type\022\026\n\022TYPE_DATE_OF_BIRTH\020\000\022\023\n\017TYP" +
-      "E_ISSUE_DATE\020\001\022\024\n\020TYPE_EXPIRY_DATE\020\002\022\035\n\031" +
-      "TYPE_CLASS_EFFECTIVE_DATE\020\003\022\032\n\026TYPE_CLAS" +
-      "S_EXPIRY_DATE\020\004\"\223\002\n\013VisualField\0222\n\004type\030" +
-      "\001 \001(\0162\036.proto.ddx.v1.VisualField.TypeR\004t" +
-      "ype\022\024\n\005image\030\002 \001(\014R\005image\0223\n\tdetection\030\003" +
-      " \001(\0132\025.proto.ddx.v1.PolygonR\tdetection\022T" +
-      "\n\035position_on_detected_document\030\004 \001(\0132\021." +
-      "proto.ddx.v1.BoxR\032positionOnDetectedDocu" +
-      "ment\"/\n\004Type\022\023\n\017TYPE_FACE_PHOTO\020\000\022\022\n\016TYP" +
-      "E_SIGNATURE\020\001\"\241\002\n\010SexField\022,\n\003sex\030\001 \001(\0162" +
-      "\032.proto.ddx.v1.SexField.SexR\003sex\022\034\n\ttext" +
-      "Value\030\002 \001(\tR\ttextValue\0223\n\tdetection\030\003 \001(" +
-      "\0132\025.proto.ddx.v1.PolygonR\tdetection\022T\n\035p" +
-      "osition_on_detected_document\030\004 \001(\0132\021.pro" +
-      "to.ddx.v1.BoxR\032positionOnDetectedDocumen" +
-      "t\022\024\n\005image\030\005 \001(\014R\005image\"(\n\003Sex\022\013\n\007UNKNOW" +
-      "N\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002B4Z2github.com/" +
-      "veridil/id-extract-service/proto/ddx/v1b" +
-      "\006proto3"
+      "t\"\260\001\n\010Location\022N\n\030detection_on_input_ima" +
+      "ge\030\004 \001(\0132\025.proto.ddx.v1.PolygonR\025detecti" +
+      "onOnInputImage\022T\n\035position_on_detected_d" +
+      "ocument\030\005 \001(\0132\021.proto.ddx.v1.BoxR\032positi" +
+      "onOnDetectedDocument\"\321\006\n\tTextField\0220\n\004ty" +
+      "pe\030\001 \001(\0162\034.proto.ddx.v1.TextField.TypeR\004" +
+      "type\022\024\n\005value\030\002 \001(\tR\005value\0222\n\010alphabet\030\003" +
+      " \001(\0162\026.proto.ddx.v1.AlphabetR\010alphabet\022\024" +
+      "\n\005image\030\004 \001(\014R\005image\0222\n\010location\030\005 \001(\0132\026" +
+      ".proto.ddx.v1.LocationR\010location\"\375\004\n\004Typ" +
+      "e\022\023\n\017TYPE_FIRST_NAME\020\000\022\022\n\016TYPE_LAST_NAME" +
+      "\020\001\022\024\n\020TYPE_NATIONALITY\020\002\022!\n\035TYPE_DOCUMEN" +
+      "T_IDENTITY_NUMBER\020\003\022\014\n\010TYPE_SEX\020\004\022\032\n\026TYP" +
+      "E_ISSUING_AUTHORITY\020\005\022\020\n\014TYPE_ADDRESS\020\006\022" +
+      "!\n\035TYPE_PERSONAL_IDENTITY_NUMBER\020\007\022\027\n\023TY" +
+      "PE_MARITAL_STATUS\020\010\022\031\n\025TYPE_EXTENDED_ADD" +
+      "RESS\020\t\022#\n\037TYPE_EXTENDED_ADDRESS_SPECIFIC" +
+      "S\020\n\022\016\n\nTYPE_CLASS\020\013\022\023\n\017TYPE_CONDITIONS\020\014" +
+      "\022\025\n\021TYPE_ENDORSEMENTS\020\r\022\035\n\031TYPE_DRIVERS_" +
+      "LICENSE_TYPE\020\016\022\022\n\016TYPE_FULL_NAME\020\017\022\027\n\023TY" +
+      "PE_PLACE_OF_BIRTH\020\020\022\023\n\017TYPE_PROFESSION\020\021" +
+      "\022\021\n\rTYPE_EMPLOYER\020\022\022\026\n\022TYPE_EXTENDED_NAM" +
+      "E\020\023\022\025\n\021TYPE_FATHERS_NAME\020\024\022\025\n\021TYPE_MOTHE" +
+      "RS_NAME\020\025\022\r\n\tTYPE_RACE\020\026\022\031\n\025TYPE_RESIDEN" +
+      "TIAL_TYPE\020\027\022\025\n\021TYPE_RESTRICTIONS\020\030\022\023\n\017TY" +
+      "PE_BLOOD_TYPE\020\031\022\017\n\013TYPE_NUMBER\020\032\"\316\003\n\tDat" +
+      "eField\0220\n\004type\030\001 \001(\0162\034.proto.ddx.v1.Date" +
+      "Field.TypeR\004type\0220\n\004date\030\002 \001(\0132\034.proto.d" +
+      "dx.v1.DateField.DateR\004date\022\024\n\005value\030\003 \001(" +
+      "\tR\005value\0222\n\010alphabet\030\004 \001(\0162\026.proto.ddx.v" +
+      "1.AlphabetR\010alphabet\022\024\n\005image\030\005 \001(\014R\005ima" +
+      "ge\0222\n\010location\030\006 \001(\0132\026.proto.ddx.v1.Loca" +
+      "tionR\010location\032B\n\004Date\022\022\n\004year\030\001 \001(\005R\004ye" +
+      "ar\022\024\n\005month\030\002 \001(\005R\005month\022\020\n\003day\030\003 \001(\005R\003d" +
+      "ay\"\204\001\n\004Type\022\026\n\022TYPE_DATE_OF_BIRTH\020\000\022\023\n\017T" +
+      "YPE_ISSUE_DATE\020\001\022\024\n\020TYPE_EXPIRY_DATE\020\002\022\035" +
+      "\n\031TYPE_CLASS_EFFECTIVE_DATE\020\003\022\032\n\026TYPE_CL" +
+      "ASS_EXPIRY_DATE\020\004\"\274\001\n\013VisualField\0222\n\004typ" +
+      "e\030\001 \001(\0162\036.proto.ddx.v1.VisualField.TypeR" +
+      "\004type\022\024\n\005image\030\002 \001(\014R\005image\0222\n\010location\030" +
+      "\003 \001(\0132\026.proto.ddx.v1.LocationR\010location\"" +
+      "/\n\004Type\022\023\n\017TYPE_FACE_PHOTO\020\000\022\022\n\016TYPE_SIG" +
+      "NATURE\020\001\"\366\001\n\010SexField\022,\n\003sex\030\001 \001(\0162\032.pro" +
+      "to.ddx.v1.SexField.SexR\003sex\022\024\n\005value\030\002 \001" +
+      "(\tR\005value\0222\n\010alphabet\030\003 \001(\0162\026.proto.ddx." +
+      "v1.AlphabetR\010alphabet\022\024\n\005image\030\004 \001(\014R\005im" +
+      "age\0222\n\010location\030\005 \001(\0132\026.proto.ddx.v1.Loc" +
+      "ationR\010location\"(\n\003Sex\022\013\n\007UNKNOWN\020\000\022\010\n\004M" +
+      "ALE\020\001\022\n\n\006FEMALE\020\002*J\n\010Alphabet\022\022\n\016ALPHABE" +
+      "T_LATIN\020\000\022\025\n\021ALPHABET_CYRILLIC\020\001\022\023\n\017ALPH" +
+      "ABET_ARABIC\020\002B4Z2github.com/veridil/id-e" +
+      "xtract-service/proto/ddx/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8560,18 +8923,24 @@ public final class Fields {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_Box_descriptor,
         new java.lang.String[] { "X", "Y", "Width", "Height", });
-    internal_static_proto_ddx_v1_TextField_descriptor =
+    internal_static_proto_ddx_v1_Location_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_proto_ddx_v1_Location_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_proto_ddx_v1_Location_descriptor,
+        new java.lang.String[] { "DetectionOnInputImage", "PositionOnDetectedDocument", });
+    internal_static_proto_ddx_v1_TextField_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_proto_ddx_v1_TextField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_TextField_descriptor,
-        new java.lang.String[] { "Type", "Value", "Image", "Detection", "PositionOnDetectedDocument", });
+        new java.lang.String[] { "Type", "Value", "Alphabet", "Image", "Location", });
     internal_static_proto_ddx_v1_DateField_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_proto_ddx_v1_DateField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_DateField_descriptor,
-        new java.lang.String[] { "Type", "Date", "TextValue", "Image", "Detection", "PositionOnDetectedDocument", });
+        new java.lang.String[] { "Type", "Date", "Value", "Alphabet", "Image", "Location", });
     internal_static_proto_ddx_v1_DateField_Date_descriptor =
       internal_static_proto_ddx_v1_DateField_descriptor.getNestedTypes().get(0);
     internal_static_proto_ddx_v1_DateField_Date_fieldAccessorTable = new
@@ -8579,17 +8948,17 @@ public final class Fields {
         internal_static_proto_ddx_v1_DateField_Date_descriptor,
         new java.lang.String[] { "Year", "Month", "Day", });
     internal_static_proto_ddx_v1_VisualField_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_proto_ddx_v1_VisualField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_VisualField_descriptor,
-        new java.lang.String[] { "Type", "Image", "Detection", "PositionOnDetectedDocument", });
+        new java.lang.String[] { "Type", "Image", "Location", });
     internal_static_proto_ddx_v1_SexField_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_proto_ddx_v1_SexField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_ddx_v1_SexField_descriptor,
-        new java.lang.String[] { "Sex", "TextValue", "Detection", "PositionOnDetectedDocument", "Image", });
+        new java.lang.String[] { "Sex", "Value", "Alphabet", "Image", "Location", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
