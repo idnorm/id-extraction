@@ -6,6 +6,15 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
+class Alphabet(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    ALPHABET_LATIN: _ClassVar[Alphabet]
+    ALPHABET_CYRILLIC: _ClassVar[Alphabet]
+    ALPHABET_ARABIC: _ClassVar[Alphabet]
+ALPHABET_LATIN: Alphabet
+ALPHABET_CYRILLIC: Alphabet
+ALPHABET_ARABIC: Alphabet
+
 class Polygon(_message.Message):
     __slots__ = ("x", "y")
     X_FIELD_NUMBER: _ClassVar[int]
@@ -26,8 +35,16 @@ class Box(_message.Message):
     height: float
     def __init__(self, x: _Optional[float] = ..., y: _Optional[float] = ..., width: _Optional[float] = ..., height: _Optional[float] = ...) -> None: ...
 
+class Location(_message.Message):
+    __slots__ = ("detection_on_input_image", "position_on_detected_document")
+    DETECTION_ON_INPUT_IMAGE_FIELD_NUMBER: _ClassVar[int]
+    POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    detection_on_input_image: Polygon
+    position_on_detected_document: Box
+    def __init__(self, detection_on_input_image: _Optional[_Union[Polygon, _Mapping]] = ..., position_on_detected_document: _Optional[_Union[Box, _Mapping]] = ...) -> None: ...
+
 class TextField(_message.Message):
-    __slots__ = ("type", "value", "image", "detection", "position_on_detected_document")
+    __slots__ = ("type", "value", "alphabet", "image", "location")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         TYPE_FIRST_NAME: _ClassVar[TextField.Type]
@@ -52,8 +69,6 @@ class TextField(_message.Message):
         TYPE_EXTENDED_NAME: _ClassVar[TextField.Type]
         TYPE_FATHERS_NAME: _ClassVar[TextField.Type]
         TYPE_MOTHERS_NAME: _ClassVar[TextField.Type]
-        TYPE_ADDITIONAL_LICENCE_TYPE: _ClassVar[TextField.Type]
-        TYPE_REDACTION_ZONE: _ClassVar[TextField.Type]
         TYPE_RACE: _ClassVar[TextField.Type]
         TYPE_RESIDENTIAL_TYPE: _ClassVar[TextField.Type]
         TYPE_RESTRICTIONS: _ClassVar[TextField.Type]
@@ -81,8 +96,6 @@ class TextField(_message.Message):
     TYPE_EXTENDED_NAME: TextField.Type
     TYPE_FATHERS_NAME: TextField.Type
     TYPE_MOTHERS_NAME: TextField.Type
-    TYPE_ADDITIONAL_LICENCE_TYPE: TextField.Type
-    TYPE_REDACTION_ZONE: TextField.Type
     TYPE_RACE: TextField.Type
     TYPE_RESIDENTIAL_TYPE: TextField.Type
     TYPE_RESTRICTIONS: TextField.Type
@@ -90,18 +103,18 @@ class TextField(_message.Message):
     TYPE_NUMBER: TextField.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     VALUE_FIELD_NUMBER: _ClassVar[int]
+    ALPHABET_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
-    DETECTION_FIELD_NUMBER: _ClassVar[int]
-    POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    LOCATION_FIELD_NUMBER: _ClassVar[int]
     type: TextField.Type
     value: str
+    alphabet: Alphabet
     image: bytes
-    detection: Polygon
-    position_on_detected_document: Box
-    def __init__(self, type: _Optional[_Union[TextField.Type, str]] = ..., value: _Optional[str] = ..., image: _Optional[bytes] = ..., detection: _Optional[_Union[Polygon, _Mapping]] = ..., position_on_detected_document: _Optional[_Union[Box, _Mapping]] = ...) -> None: ...
+    location: Location
+    def __init__(self, type: _Optional[_Union[TextField.Type, str]] = ..., value: _Optional[str] = ..., alphabet: _Optional[_Union[Alphabet, str]] = ..., image: _Optional[bytes] = ..., location: _Optional[_Union[Location, _Mapping]] = ...) -> None: ...
 
 class DateField(_message.Message):
-    __slots__ = ("type", "date", "textValue", "image", "detection", "position_on_detected_document")
+    __slots__ = ("type", "date", "value", "alphabet", "image", "location")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         TYPE_DATE_OF_BIRTH: _ClassVar[DateField.Type]
@@ -125,20 +138,20 @@ class DateField(_message.Message):
         def __init__(self, year: _Optional[int] = ..., month: _Optional[int] = ..., day: _Optional[int] = ...) -> None: ...
     TYPE_FIELD_NUMBER: _ClassVar[int]
     DATE_FIELD_NUMBER: _ClassVar[int]
-    TEXTVALUE_FIELD_NUMBER: _ClassVar[int]
+    VALUE_FIELD_NUMBER: _ClassVar[int]
+    ALPHABET_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
-    DETECTION_FIELD_NUMBER: _ClassVar[int]
-    POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    LOCATION_FIELD_NUMBER: _ClassVar[int]
     type: DateField.Type
     date: DateField.Date
-    textValue: str
+    value: str
+    alphabet: Alphabet
     image: bytes
-    detection: Polygon
-    position_on_detected_document: Box
-    def __init__(self, type: _Optional[_Union[DateField.Type, str]] = ..., date: _Optional[_Union[DateField.Date, _Mapping]] = ..., textValue: _Optional[str] = ..., image: _Optional[bytes] = ..., detection: _Optional[_Union[Polygon, _Mapping]] = ..., position_on_detected_document: _Optional[_Union[Box, _Mapping]] = ...) -> None: ...
+    location: Location
+    def __init__(self, type: _Optional[_Union[DateField.Type, str]] = ..., date: _Optional[_Union[DateField.Date, _Mapping]] = ..., value: _Optional[str] = ..., alphabet: _Optional[_Union[Alphabet, str]] = ..., image: _Optional[bytes] = ..., location: _Optional[_Union[Location, _Mapping]] = ...) -> None: ...
 
 class VisualField(_message.Message):
-    __slots__ = ("type", "image", "detection", "position_on_detected_document")
+    __slots__ = ("type", "image", "location")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         TYPE_FACE_PHOTO: _ClassVar[VisualField.Type]
@@ -147,16 +160,14 @@ class VisualField(_message.Message):
     TYPE_SIGNATURE: VisualField.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
-    DETECTION_FIELD_NUMBER: _ClassVar[int]
-    POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    LOCATION_FIELD_NUMBER: _ClassVar[int]
     type: VisualField.Type
     image: bytes
-    detection: Polygon
-    position_on_detected_document: Box
-    def __init__(self, type: _Optional[_Union[VisualField.Type, str]] = ..., image: _Optional[bytes] = ..., detection: _Optional[_Union[Polygon, _Mapping]] = ..., position_on_detected_document: _Optional[_Union[Box, _Mapping]] = ...) -> None: ...
+    location: Location
+    def __init__(self, type: _Optional[_Union[VisualField.Type, str]] = ..., image: _Optional[bytes] = ..., location: _Optional[_Union[Location, _Mapping]] = ...) -> None: ...
 
 class SexField(_message.Message):
-    __slots__ = ("sex", "textValue", "detection", "position_on_detected_document", "image")
+    __slots__ = ("sex", "value", "alphabet", "image", "location")
     class Sex(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         UNKNOWN: _ClassVar[SexField.Sex]
@@ -166,13 +177,13 @@ class SexField(_message.Message):
     MALE: SexField.Sex
     FEMALE: SexField.Sex
     SEX_FIELD_NUMBER: _ClassVar[int]
-    TEXTVALUE_FIELD_NUMBER: _ClassVar[int]
-    DETECTION_FIELD_NUMBER: _ClassVar[int]
-    POSITION_ON_DETECTED_DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    VALUE_FIELD_NUMBER: _ClassVar[int]
+    ALPHABET_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
+    LOCATION_FIELD_NUMBER: _ClassVar[int]
     sex: SexField.Sex
-    textValue: str
-    detection: Polygon
-    position_on_detected_document: Box
+    value: str
+    alphabet: Alphabet
     image: bytes
-    def __init__(self, sex: _Optional[_Union[SexField.Sex, str]] = ..., textValue: _Optional[str] = ..., detection: _Optional[_Union[Polygon, _Mapping]] = ..., position_on_detected_document: _Optional[_Union[Box, _Mapping]] = ..., image: _Optional[bytes] = ...) -> None: ...
+    location: Location
+    def __init__(self, sex: _Optional[_Union[SexField.Sex, str]] = ..., value: _Optional[str] = ..., alphabet: _Optional[_Union[Alphabet, str]] = ..., image: _Optional[bytes] = ..., location: _Optional[_Union[Location, _Mapping]] = ...) -> None: ...

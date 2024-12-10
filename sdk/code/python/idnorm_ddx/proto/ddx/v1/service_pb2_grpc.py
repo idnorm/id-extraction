@@ -19,6 +19,11 @@ class ExtractionStub(object):
                 request_serializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentRequest.SerializeToString,
                 response_deserializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentResponse.FromString,
                 _registered_method=True)
+        self.ScanTwoSidedDocument = channel.unary_unary(
+                '/proto.ddx.v1.Extraction/ScanTwoSidedDocument',
+                request_serializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentRequest.SerializeToString,
+                response_deserializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentResponse.FromString,
+                _registered_method=True)
 
 
 class ExtractionServicer(object):
@@ -32,6 +37,12 @@ class ExtractionServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ScanTwoSidedDocument(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ExtractionServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -39,6 +50,11 @@ def add_ExtractionServicer_to_server(servicer, server):
                     servicer.ScanDocument,
                     request_deserializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentRequest.FromString,
                     response_serializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentResponse.SerializeToString,
+            ),
+            'ScanTwoSidedDocument': grpc.unary_unary_rpc_method_handler(
+                    servicer.ScanTwoSidedDocument,
+                    request_deserializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentRequest.FromString,
+                    response_serializer=proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -68,6 +84,33 @@ class Extraction(object):
             '/proto.ddx.v1.Extraction/ScanDocument',
             proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentRequest.SerializeToString,
             proto_dot_ddx_dot_v1_dot_service__pb2.ScanDocumentResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ScanTwoSidedDocument(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/proto.ddx.v1.Extraction/ScanTwoSidedDocument',
+            proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentRequest.SerializeToString,
+            proto_dot_ddx_dot_v1_dot_service__pb2.ScanTwoSidedDocumentResponse.FromString,
             options,
             channel_credentials,
             insecure,

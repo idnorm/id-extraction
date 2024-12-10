@@ -127,7 +127,7 @@ class Mrz(_message.Message):
     def __init__(self, status: _Optional[_Union[Mrz.Status, str]] = ..., fields: _Optional[_Union[_mrz_pb2.MrzFields, _Mapping]] = ..., mrz_code: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class ScanDocumentResponse(_message.Message):
-    __slots__ = ("status", "detection", "classification", "textField", "visualField", "dateField", "sexField", "mrz", "pdf417Barcode", "documentImage")
+    __slots__ = ("status", "detection", "classification", "data")
     class Status(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         STATUS_OK: _ClassVar[ScanDocumentResponse.Status]
@@ -141,6 +141,15 @@ class ScanDocumentResponse(_message.Message):
     STATUS_FIELD_NUMBER: _ClassVar[int]
     DETECTION_FIELD_NUMBER: _ClassVar[int]
     CLASSIFICATION_FIELD_NUMBER: _ClassVar[int]
+    DATA_FIELD_NUMBER: _ClassVar[int]
+    status: ScanDocumentResponse.Status
+    detection: Quad
+    classification: DocumentClass
+    data: DocumentData
+    def __init__(self, status: _Optional[_Union[ScanDocumentResponse.Status, str]] = ..., detection: _Optional[_Union[Quad, _Mapping]] = ..., classification: _Optional[_Union[DocumentClass, _Mapping]] = ..., data: _Optional[_Union[DocumentData, _Mapping]] = ...) -> None: ...
+
+class DocumentData(_message.Message):
+    __slots__ = ("textField", "visualField", "dateField", "sexField", "mrz", "pdf417Barcode", "documentImage")
     TEXTFIELD_FIELD_NUMBER: _ClassVar[int]
     VISUALFIELD_FIELD_NUMBER: _ClassVar[int]
     DATEFIELD_FIELD_NUMBER: _ClassVar[int]
@@ -148,9 +157,6 @@ class ScanDocumentResponse(_message.Message):
     MRZ_FIELD_NUMBER: _ClassVar[int]
     PDF417BARCODE_FIELD_NUMBER: _ClassVar[int]
     DOCUMENTIMAGE_FIELD_NUMBER: _ClassVar[int]
-    status: ScanDocumentResponse.Status
-    detection: Quad
-    classification: DocumentClass
     textField: _containers.RepeatedCompositeFieldContainer[_fields_pb2.TextField]
     visualField: _containers.RepeatedCompositeFieldContainer[_fields_pb2.VisualField]
     dateField: _containers.RepeatedCompositeFieldContainer[_fields_pb2.DateField]
@@ -158,4 +164,36 @@ class ScanDocumentResponse(_message.Message):
     mrz: Mrz
     pdf417Barcode: _barcode_pb2.Pdf417Barcode
     documentImage: bytes
-    def __init__(self, status: _Optional[_Union[ScanDocumentResponse.Status, str]] = ..., detection: _Optional[_Union[Quad, _Mapping]] = ..., classification: _Optional[_Union[DocumentClass, _Mapping]] = ..., textField: _Optional[_Iterable[_Union[_fields_pb2.TextField, _Mapping]]] = ..., visualField: _Optional[_Iterable[_Union[_fields_pb2.VisualField, _Mapping]]] = ..., dateField: _Optional[_Iterable[_Union[_fields_pb2.DateField, _Mapping]]] = ..., sexField: _Optional[_Iterable[_Union[_fields_pb2.SexField, _Mapping]]] = ..., mrz: _Optional[_Union[Mrz, _Mapping]] = ..., pdf417Barcode: _Optional[_Union[_barcode_pb2.Pdf417Barcode, _Mapping]] = ..., documentImage: _Optional[bytes] = ...) -> None: ...
+    def __init__(self, textField: _Optional[_Iterable[_Union[_fields_pb2.TextField, _Mapping]]] = ..., visualField: _Optional[_Iterable[_Union[_fields_pb2.VisualField, _Mapping]]] = ..., dateField: _Optional[_Iterable[_Union[_fields_pb2.DateField, _Mapping]]] = ..., sexField: _Optional[_Iterable[_Union[_fields_pb2.SexField, _Mapping]]] = ..., mrz: _Optional[_Union[Mrz, _Mapping]] = ..., pdf417Barcode: _Optional[_Union[_barcode_pb2.Pdf417Barcode, _Mapping]] = ..., documentImage: _Optional[bytes] = ...) -> None: ...
+
+class ScanTwoSidedDocumentRequest(_message.Message):
+    __slots__ = ("firstImage", "secondImage", "config")
+    FIRSTIMAGE_FIELD_NUMBER: _ClassVar[int]
+    SECONDIMAGE_FIELD_NUMBER: _ClassVar[int]
+    CONFIG_FIELD_NUMBER: _ClassVar[int]
+    firstImage: bytes
+    secondImage: bytes
+    config: ScanConfig
+    def __init__(self, firstImage: _Optional[bytes] = ..., secondImage: _Optional[bytes] = ..., config: _Optional[_Union[ScanConfig, _Mapping]] = ...) -> None: ...
+
+class ScanTwoSidedDocumentResponse(_message.Message):
+    __slots__ = ("status", "classification", "frontSide", "backSide")
+    class Status(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        STATUS_OK: _ClassVar[ScanTwoSidedDocumentResponse.Status]
+        STATUS_FRONT_SIDE_NOT_FOUND: _ClassVar[ScanTwoSidedDocumentResponse.Status]
+        STATUS_BACK_SIDE_NOT_FOUND: _ClassVar[ScanTwoSidedDocumentResponse.Status]
+        STATUS_NOT_SUPPORTED: _ClassVar[ScanTwoSidedDocumentResponse.Status]
+    STATUS_OK: ScanTwoSidedDocumentResponse.Status
+    STATUS_FRONT_SIDE_NOT_FOUND: ScanTwoSidedDocumentResponse.Status
+    STATUS_BACK_SIDE_NOT_FOUND: ScanTwoSidedDocumentResponse.Status
+    STATUS_NOT_SUPPORTED: ScanTwoSidedDocumentResponse.Status
+    STATUS_FIELD_NUMBER: _ClassVar[int]
+    CLASSIFICATION_FIELD_NUMBER: _ClassVar[int]
+    FRONTSIDE_FIELD_NUMBER: _ClassVar[int]
+    BACKSIDE_FIELD_NUMBER: _ClassVar[int]
+    status: ScanTwoSidedDocumentResponse.Status
+    classification: DocumentClass
+    frontSide: DocumentData
+    backSide: DocumentData
+    def __init__(self, status: _Optional[_Union[ScanTwoSidedDocumentResponse.Status, str]] = ..., classification: _Optional[_Union[DocumentClass, _Mapping]] = ..., frontSide: _Optional[_Union[DocumentData, _Mapping]] = ..., backSide: _Optional[_Union[DocumentData, _Mapping]] = ...) -> None: ...

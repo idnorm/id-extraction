@@ -8,7 +8,6 @@ class DocumentType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     DOCUMENT_TYPE_NOT_AVAILABLE: _ClassVar[DocumentType]
     DOCUMENT_TYPE_ADDRESS_CARD: _ClassVar[DocumentType]
-    DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD: _ClassVar[DocumentType]
     DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT: _ClassVar[DocumentType]
     DOCUMENT_TYPE_ASYLUM_SEEKER_CARD: _ClassVar[DocumentType]
     DOCUMENT_TYPE_BORDER_CROSSING_CARD: _ClassVar[DocumentType]
@@ -81,7 +80,6 @@ class DocumentType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     DOCUMENT_TYPE_IKAD: _ClassVar[DocumentType]
 DOCUMENT_TYPE_NOT_AVAILABLE: DocumentType
 DOCUMENT_TYPE_ADDRESS_CARD: DocumentType
-DOCUMENT_TYPE_AFGHAN_CITIZEN_CARD: DocumentType
 DOCUMENT_TYPE_ALIEN_IDENTIFICATION_DOCUMENT: DocumentType
 DOCUMENT_TYPE_ASYLUM_SEEKER_CARD: DocumentType
 DOCUMENT_TYPE_BORDER_CROSSING_CARD: DocumentType
