@@ -48,28 +48,31 @@ func main() {
 			fmt.Println("Detection coordinates")
 			fmt.Println(resp.Detection)
 		}
-		fmt.Println("Detected text fields: ")
-		for _, field := range resp.TextField {
-			fmt.Printf("%s: %s\n", field.Type, field.Value)
-		}
-		fmt.Println("Detected date fields: ")
-		for _, field := range resp.DateField {
-			fmt.Printf("%s: %s", field.Type, field.TextValue)
-			if field.Date != nil {
-				fmt.Printf("| Parsed -> Day: %d, Month: %d, Year: %d", field.Date.Day, field.Date.Month, field.Date.Year)
+		if resp.Data != nil {
+			data := resp.Data
+			fmt.Println("Detected text fields: ")
+			for _, field := range data.TextField {
+				fmt.Printf("%s: %s\n", field.Type, field.Value)
 			}
-			fmt.Println()
-		}
-		fmt.Println("Detected sex fields: ")
-		for _, field := range resp.SexField {
-			fmt.Printf("Sex: %s | Parsed -> %s\n", field.TextValue, field.Sex)
-		}
-		fmt.Println("Detected visual fields: ")
-		for _, field := range resp.VisualField {
-			fmt.Printf("%s: saving to %s.jpg\n", field.Type, field.Type.String())
-			err = os.WriteFile(field.Type.String()+".jpg", field.Image, 0644)
-			if err != nil {
-				log.Fatalf("failed to write file: %v", err)
+			fmt.Println("Detected date fields: ")
+			for _, field := range data.DateField {
+				fmt.Printf("%s: %s", field.Type, field.Value)
+				if field.Date != nil {
+					fmt.Printf("| Parsed -> Day: %d, Month: %d, Year: %d", field.Date.Day, field.Date.Month, field.Date.Year)
+				}
+				fmt.Println()
+			}
+			fmt.Println("Detected sex fields: ")
+			for _, field := range data.SexField {
+				fmt.Printf("Sex: %s | Parsed -> %s\n", field.Value, field.Sex)
+			}
+			fmt.Println("Detected visual fields: ")
+			for _, field := range data.VisualField {
+				fmt.Printf("%s: saving to %s.jpg\n", field.Type, field.Type.String())
+				err = os.WriteFile(field.Type.String()+".jpg", field.Image, 0644)
+				if err != nil {
+					log.Fatalf("failed to write file: %v", err)
+				}
 			}
 		}
 	}
