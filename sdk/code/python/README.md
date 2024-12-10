@@ -31,11 +31,16 @@ to easily integrate with your python codebase.
 You can see what is the expected usage in the snippet bellow.
 
 ```python
+
 import asyncio
 from typing import Tuple
 
-from idnorm_ddx.client import ExtractionClient, ExtractionClientConfig, ExtractionClientAsync, ScanDocumentResponse
+from idnorm_ddx import (
+    ExtractionClient, ExtractionClientConfig, ExtractionClientAsync, ScanDocumentResponse,
+    SexField, TextField, DateField, VisualField, ScanConfig, Mrz, Pdf417Barcode
+)
 import sys
+
 
 def parse_args() -> Tuple[str, str]:
     if len(sys.argv) != 3:
@@ -51,7 +56,13 @@ def main():
     with ExtractionClient(cfg=ExtractionClientConfig(
         license_key=license_key,
     )) as cli:
-        resp = cli.scan_document(img_bytes=image_bytes)
+        resp = cli.scan_document(
+            img_bytes=image_bytes,
+            config=ScanConfig(
+                # Request visual fields, not returned by default
+                returnVisualFields=ScanConfig.ReturnVisualFields()
+            )
+        )
         print_results(resp)
 
 
@@ -64,7 +75,13 @@ async def async_main():
     async with ExtractionClientAsync(cfg=ExtractionClientConfig(
         license_key=license_key,
     )) as async_cli:
-        result = await async_cli.scan_document(img_bytes=image_bytes)
+        result = await async_cli.scan_document(
+            img_bytes=image_bytes,
+            config=ScanConfig(
+                # Request visual fields, not returned by default
+                returnVisualFields=ScanConfig.ReturnVisualFields()
+            )
+        )
         print_results(result)
 
 def print_results(result: ScanDocumentResponse):
@@ -75,26 +92,39 @@ def print_results(result: ScanDocumentResponse):
         print("Detected document class: ")
         print(result.classification)
 
+        data = result.data
+
         print("Detected text fields: ")
-        for field in result.textField:
-            print(field)
+        for field in data.textField:
+            print(f"{TextField.Type.Name(field.type)}: {field.value}\n")
+
+        print("Detected date fields: ")
+        for field in data.dateField:
+            print(f"{DateField.Type.Name(field.type)}: {field.value}")
+            if field.date is not None:
+                print(f" | Parsed -> Day: {field.date.day}, Month: {field.date.month}, Year: {field.date.year}\n")
+
+        print("Detected sex field(s): ")
+        for field in data.sexField:
+            print(f"SEX: {field.value} | Parsed -> {SexField.Sex.Name(field.sex)}\n")
 
         # Stores all detected visual fields into current working dir
         print("Detected visual fields: ")
-        for field in result.visualField:
+        for field in data.visualField:
             img = field.image
-            with open(f"{field.type}.jpg", 'wb') as f:
+            with open(f"{VisualField.Type.Name(field.type)}_{field.type}.jpg", 'wb') as f:
                 f.write(img)
     else:
         print(result.status)
 
-    if result.mrz:
-        print("Detected MRZ: ")
-        print(result.mrz)
+    if result.status != ScanDocumentResponse.Status.STATUS_DOCUMENT_NOT_FOUND:
+        if result.data.HasField('mrz'):
+            print("Detected MRZ: ")
+            print(result.data.mrz)
 
-    if result.pdf417Barcode:
-        print("Detected PDF417 barcode: ")
-        print(result.pdf417Barcode)
+        if result.data.HasField('pdf417Barcode'):
+            print("Detected PDF417 barcode: ")
+            print(result.data.pdf417Barcode)
 
 if __name__ == '__main__':
     main()
