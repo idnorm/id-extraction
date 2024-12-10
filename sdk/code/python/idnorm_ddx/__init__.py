@@ -1,7 +1,8 @@
 
 from idnorm_ddx.client import ExtractionClient, ExtractionClientConfig, ExtractionClientAsync
 from idnorm_ddx.proto.ddx.v1.service_pb2_grpc import ExtractionStub
-from idnorm_ddx.proto.ddx.v1.service_pb2 import ScanDocumentRequest, ScanConfig, ScanDocumentResponse, DocumentData
+from idnorm_ddx.proto.ddx.v1.service_pb2 import ScanDocumentRequest, ScanConfig, ScanDocumentResponse, DocumentData, Mrz
+from idnorm_ddx.proto.ddx.v1.barcode_pb2 import Pdf417Barcode
 
 from idnorm_ddx.proto.ddx.v1.fields_pb2 import (
     SexField,
@@ -22,4 +23,6 @@ __all__ = [
     'DateField',
     'VisualField',
     'DocumentData',
+    'Mrz',
+    'Pdf417Barcode',
 ]
